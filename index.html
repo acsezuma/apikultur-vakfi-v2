@@ -93,8 +93,8 @@
         .nav-link { position: relative; padding: 0.5rem 0; }
         .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #B82618; transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
-        .feat-card { background:#fff; border:1px solid rgba(143,112,107,0.12); transition: all .4s cubic-bezier(0.23,1,0.32,1); }
-        .feat-card:hover { border-color:#B82618; transform: translateY(-8px); box-shadow: 0 24px 48px -18px rgba(51,38,27,0.12); }
+        .feat-card { background:rgba(251,243,233,0.80); border:1px solid rgba(184,38,24,0.10); backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); transition: all .4s cubic-bezier(0.23,1,0.32,1); }
+        .feat-card:hover { border-color:#B82618; background:#ffffff; transform: translateY(-8px); box-shadow: 0 24px 48px -18px rgba(51,38,27,0.16); }
         /* Hero — ince scroll göstergesi */
         .scroll-cue { position:absolute; bottom:2.25rem; left:50%; transform:translateX(-50%); z-index:10; flex-direction:column; align-items:center; gap:.7rem; color:rgba(255,255,255,.55); text-decoration:none; }
         .scroll-cue__label { font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:rgba(255,255,255,.55); }
@@ -102,7 +102,11 @@
         .scroll-cue__dot { position:absolute; left:50%; top:0; width:5px; height:5px; margin-left:-2.5px; border-radius:9999px; background:#EA8512; box-shadow:0 0 8px rgba(234,133,18,.7); animation:scroll-cue-fall 2.6s cubic-bezier(.4,0,.2,1) infinite; }
         @keyframes scroll-cue-fall { 0%{ transform:translateY(-4px); opacity:0 } 15%{ opacity:1 } 75%{ opacity:1 } 100%{ transform:translateY(48px); opacity:0 } }
         /* Bölüm geçişlerinde hafif bal peteği dokusu */
-        .honeycomb-accent { position:absolute; left:0; right:0; top:0; height:230px; z-index:-1; pointer-events:none; opacity:.55; background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='56'%20height='100'%20viewBox='0%200%2056%20100'%3E%3Cpath%20d='M28%2066L0%2050L0%2016L28%200L56%2016L56%2050L28%2066L28%20100%20M28%200L28%2034L0%2050%20M56%2050L28%2034'%20fill='none'%20stroke='%23EA8512'%20stroke-opacity='0.5'%20stroke-width='2'/%3E%3C/svg%3E"); background-size:44px 78px; -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.85), rgba(0,0,0,0)); mask-image:linear-gradient(to bottom, rgba(0,0,0,.85), rgba(0,0,0,0)); }
+        .honeycomb-accent { position:absolute; left:0; right:0; top:0; height:360px; z-index:-1; pointer-events:none; background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='56'%20height='100'%20viewBox='0%200%2056%20100'%3E%3Cpath%20d='M28%2066L0%2050L0%2016L28%200L56%2016L56%2050L28%2066L28%20100%20M28%200L28%2034L0%2050%20M56%2050L28%2034'%20fill='none'%20stroke='%23EA8512'%20stroke-opacity='0.32'%20stroke-width='2'/%3E%3C/svg%3E"), linear-gradient(158deg, rgba(234,133,18,0.12) 0%, rgba(184,38,24,0.06) 40%, rgba(249,239,227,0) 74%); background-size:44px 78px, 100% 100%; background-repeat:repeat, no-repeat; -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.92), rgba(0,0,0,0)); mask-image:linear-gradient(to bottom, rgba(0,0,0,.92), rgba(0,0,0,0)); }
+        /* Hero fotoğrafına imleç üstündeyken hafif hareket */
+        .hero-bg { transform:scale(1.06); transition:transform 7s ease-out; will-change:transform; }
+        #top:hover .hero-bg { transform:scale(1.15); }
+        @media (prefers-reduced-motion: reduce){ .hero-bg{ transition:none } #top:hover .hero-bg{ transform:scale(1.06) } }
         @media (prefers-reduced-motion: reduce){ .scroll-cue__dot{ animation:none; opacity:.9 } }
     </style>
 </head>
@@ -128,10 +132,9 @@
 <main>
 <!-- Hero -->
 <section class="relative min-h-[90vh] flex items-center pt-24 overflow-hidden" id="top">
-<div class="absolute inset-0 z-0"><img alt="Çiçek üzerinde bal arısı" class="w-full h-full object-cover scale-105" src="assets/img/bee-flower.jpg"/><div class="absolute inset-0 bg-gradient-to-r from-espresso/90 via-espresso/50 to-transparent"></div></div>
+<div class="absolute inset-0 z-0"><img alt="Çiçek üzerinde bal arısı" class="w-full h-full object-cover hero-bg" src="assets/img/bee-flower.jpg"/><div class="absolute inset-0 bg-gradient-to-r from-espresso/90 via-espresso/50 to-transparent"></div></div>
 <div class="max-w-[1180px] mx-auto px-7 relative z-10 w-full">
 <div class="max-w-3xl">
-<div class="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full bg-amber/20 border border-amber/30 backdrop-blur-sm"><span class="w-1.5 h-1.5 rounded-full bg-amber animate-pulse"></span><span class="font-label-mono text-[10px] text-white tracking-[0.25em] uppercase font-bold">Apikültür Vakfı · Doğayı Geleceğe Taşır</span></div>
 <h1 class="font-display-hero text-display-hero text-white mb-8">Mesele sadece bal değil. <br/><span class="text-amber">Mesele, yaşamın ta kendisi.</span></h1>
 <p class="font-body-lede text-white/80 mb-12 max-w-2xl">Bir arının çiçekten çiçeğe yolculuğu, koca bir ekosistemi ayakta tutar. Biz bu döngünün güvencesiyiz; bilim, eğitim ve köklü bir kültürle arıcılığın geleceğini bugünden kuruyoruz.</p>
 <div class="flex flex-wrap gap-5"><a class="bg-amber text-espresso px-10 py-5 rounded-full font-bold text-lg hover:shadow-xl hover:-translate-y-1 transition-all" href="#faaliyet">Faaliyet Alanlarımız</a><a class="bg-white/10 border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 backdrop-blur-md transition-all" href="#hakkimizda">Vizyonumuz</a></div>
@@ -149,15 +152,15 @@
 <div class="grid lg:grid-cols-2 gap-20 items-center">
 <div class="reveal-on-scroll">
 
-<h2 class="font-headline-lg text-espresso mb-8">Yaşamın devamlılığı için bilimsel ve kültürel bir köprü.</h2>
+<h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12] mb-8">Yaşamın devamlılığı için bilimsel ve kültürel bir köprü.</h2>
 <div class="space-y-6 text-on-surface-variant text-lg">
 <p>Apikültür Vakfı; arıcılığın bilimsel, çevresel, ekonomik ve kültürel boyutlarını geliştirerek sürdürülebilirliği teşvik eder. Bir arının çiçekten çiçeğe yolculuğu, yalnızca balın değil; yaşamın kendisinin devamıdır.</p>
 <p>Araştırma, eğitim ve inovasyon çalışmalarıyla hem arıcıların hem toplumun bilgi düzeyini yükseltir; biyoçeşitliliği temel amaç sayar.</p>
 </div>
 </div>
 <div class="grid gap-6 reveal-on-scroll" style="transition-delay: 200ms">
-<div class="bg-white p-10 rounded-3xl border border-outline-variant/30 shadow-sm"><h3 class="font-headline-md text-espresso mb-4">Vizyon</h3><p class="text-on-surface-variant text-lg">Arıyı, polinasyonu ve biyoçeşitliliği merkeze alarak; bilim, eğitim, teknoloji ve kültürü buluşturup daha dirençli ekosistemler ve daha güçlü toplumlar oluşturmak.</p></div>
-<div class="bg-white p-10 rounded-3xl border border-outline-variant/30 shadow-sm"><h3 class="font-headline-md text-espresso mb-4">Misyon</h3><p class="text-on-surface-variant text-lg">Arıcılığı eğitim, araştırma, inovasyon ve kültürel mirasın korunması ekseninde destekleyerek yaşamın devamlılığına katkı sağlamak.</p></div>
+<div class="bg-white p-10 rounded-3xl border border-outline-variant/30 shadow-sm"><h3 class="font-headline-md text-xl text-espresso mb-4">Vizyon</h3><p class="text-on-surface-variant text-lg">Arıyı, polinasyonu ve biyoçeşitliliği merkeze alarak; bilim, eğitim, teknoloji ve kültürü buluşturup daha dirençli ekosistemler ve daha güçlü toplumlar oluşturmak.</p></div>
+<div class="bg-white p-10 rounded-3xl border border-outline-variant/30 shadow-sm"><h3 class="font-headline-md text-xl text-espresso mb-4">Misyon</h3><p class="text-on-surface-variant text-lg">Arıcılığı eğitim, araştırma, inovasyon ve kültürel mirasın korunması ekseninde destekleyerek yaşamın devamlılığına katkı sağlamak.</p></div>
 </div>
 </div>
 </div>
@@ -173,9 +176,9 @@
 </div>
 </section>
 <!-- Çalışma Alanları -->
-<section class="py-32 bg-ekru/30" id="faaliyet">
+<section class="relative isolate overflow-hidden py-32 bg-ekru/30" id="faaliyet"><div class="absolute inset-0 -z-10" aria-hidden="true"><img src="assets/img/apiary-smoker.jpg" alt="" class="w-full h-full object-cover opacity-[0.09] blur-[3px] scale-110"/><div class="absolute inset-0 bg-gradient-to-b from-background via-ekru/50 to-background"></div></div>
 <div class="max-w-[1180px] mx-auto px-7">
-<div class="text-center max-w-2xl mx-auto mb-20 reveal-on-scroll"><h2 class="font-headline-lg text-espresso">Dokuz Temel Çalışma Alanı</h2><p class="mt-6 text-on-surface-variant text-lg">Kovanın içinden, hayatın her alanına dokunan çözümler. Sadece konuşmuyor, sahada iz bırakıyoruz.</p></div>
+<div class="text-center max-w-2xl mx-auto mb-20 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12]">Dokuz Temel Çalışma Alanı</h2><p class="mt-6 text-on-surface-variant text-lg">Kovanın içinden, hayatın her alanına dokunan çözümler. Sadece konuşmuyor, sahada iz bırakıyoruz.</p></div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="feat-card p-10 rounded-3xl reveal-on-scroll group relative overflow-hidden"><div class="absolute top-0 right-0 w-28 h-28 bg-terracotta/5 rounded-bl-[3rem] -mr-10 -mt-10 group-hover:bg-terracotta/10 transition-colors"></div><div class="flex items-center justify-between mb-8"><div class="w-16 h-16 rounded-2xl bg-ekru flex items-center justify-center group-hover:bg-terracotta group-hover:-rotate-6 transition-all duration-500"><span class="material-symbols-outlined text-terracotta group-hover:text-white text-3xl">eco</span></div><span class="font-label-mono text-terracotta/30 font-bold text-lg">01</span></div><h3 class="font-headline-md text-xl mb-4 text-espresso group-hover:text-terracotta transition-colors">İyi Arıcılık Uygulamaları</h3><p class="text-on-surface-variant leading-relaxed">Doğayı tüketmeyen, etik ve izlenebilir üretim standartlarıyla sürdürülebilir bir gelecek.</p></div>
 <div class="feat-card p-10 rounded-3xl reveal-on-scroll group relative overflow-hidden md:mt-8" style="transition-delay:100ms"><div class="absolute top-0 right-0 w-28 h-28 bg-amber/5 rounded-bl-[3rem] -mr-10 -mt-10 group-hover:bg-amber/10 transition-colors"></div><div class="flex items-center justify-between mb-8"><div class="w-16 h-16 rounded-2xl bg-ekru flex items-center justify-center group-hover:bg-terracotta group-hover:-rotate-6 transition-all duration-500"><span class="material-symbols-outlined text-terracotta group-hover:text-white text-3xl">science</span></div><span class="font-label-mono text-terracotta/30 font-bold text-lg">02</span></div><h3 class="font-headline-md text-xl mb-4 text-espresso group-hover:text-terracotta transition-colors">Bilimsel Araştırma</h3><p class="text-on-surface-variant leading-relaxed">Üniversite ve laboratuvarlarla arı sağlığı ve ekosistem dayanıklılığı üzerine akademik çalışmalar.</p></div>
@@ -193,19 +196,19 @@
 <section class="relative h-[600px] flex items-center overflow-hidden">
 <img alt="Kovan başında çerçeve inceleyen arıcı" class="absolute inset-0 w-full h-full object-cover object-[72%_center]" src="assets/img/hero-beekeeper.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-r from-espresso/70 via-espresso/25 to-transparent"></div>
-<div class="max-w-[1180px] mx-auto px-7 relative z-10 w-full"><div class="max-w-sm bg-white/90 backdrop-blur-md p-10 rounded-3xl shadow-2xl"><h3 class="font-headline-lg text-3xl text-espresso mb-5 leading-tight">Bilim ve Gelenek <br/>Tek Kovanda.</h3><p class="text-on-surface-variant mb-8">Modern arıcılık tekniklerini, doğanın kadim bilgeliğiyle harmanlıyoruz.</p><a href="#akademi" class="text-terracotta font-bold flex items-center gap-2 group w-max">Akademik Çalışmalarımız <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></a></div></div>
+<div class="w-full px-7 sm:px-10 lg:px-16 relative z-10"><div class="max-w-md bg-white/90 backdrop-blur-md p-12 rounded-3xl shadow-2xl"><h3 class="font-headline-lg text-3xl text-espresso mb-5 leading-tight">Bilim ve Gelenek <br/>Tek Kovanda.</h3><p class="text-on-surface-variant mb-8">Modern arıcılık tekniklerini, doğanın kadim bilgeliğiyle harmanlıyoruz.</p><a href="#akademi" class="text-terracotta font-bold flex items-center gap-2 group w-max">Akademik Çalışmalarımız <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></a></div></div>
 </section>
 <!-- Projeler -->
 <section class="py-32 bg-white" id="projeler">
 <div class="max-w-[1180px] mx-auto px-7">
-<div class="max-w-2xl mb-16 reveal-on-scroll"><h2 class="font-headline-lg text-espresso">Geleceğe İz Bırakan Projeler</h2><p class="mt-6 text-on-surface-variant text-lg">Tamamlanan, yürüyen ve geliştirilen projelerimizden bir seçki.</p></div>
+<div class="max-w-2xl mb-16 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12]">Geleceğe İz Bırakan Projeler</h2><p class="mt-6 text-on-surface-variant text-lg">Tamamlanan, yürüyen ve geliştirilen projelerimizden bir seçki.</p></div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="group reveal-on-scroll"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Petek çerçevesini tutan el" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p1-bee-friend.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Tamamlandı</span></div><span class="font-label-mono text-[10px] text-terracotta font-bold uppercase mb-2 block">Eğitim &amp; Farkındalık</span><h3 class="font-headline-md text-xl mb-3 text-espresso">Arı Dostum Olur Musun?</h3><p class="text-on-surface-variant">Kartal'da 30 okulda 14.895 öğrenciye ulaşan eğitim ve farkındalık iş birliği (2024–2025).</p></div>
-<a href="#genclik" class="group reveal-on-scroll block" style="transition-delay:100ms"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Bal petekli ahşap çerçeveler" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p2-club-frame.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-amber text-espresso">Başvurular açık</span></div><span class="font-label-mono text-[10px] text-terracotta font-bold uppercase mb-2 block">Gençlik · Erasmus+</span><h3 class="font-headline-md text-xl mb-3 text-espresso group-hover:text-terracotta transition-colors">Apikültür Gençlik Kulüpleri</h3><p class="text-on-surface-variant">Okullarda genç arıcı kulüpleri; ICYB iş birliğiyle Türkiye'yi IMYB'de temsil ediyoruz. <span class="text-terracotta font-semibold">İncele →</span></p></a>
-<div class="group reveal-on-scroll" style="transition-delay:200ms"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Mor lavanta tarlası" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p3-corridor-lavender.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Planlama</span></div><span class="font-label-mono text-[10px] text-terracotta font-bold uppercase mb-2 block">Polinasyon &amp; Tarım</span><h3 class="font-headline-md text-xl mb-3 text-espresso">Türkiye Arı Koridoru</h3><p class="text-on-surface-variant">Belediyeler ve kamuyla yol kenarlarını ve boş alanları polinatör dostu koridorlara dönüştürmek.</p></div>
-<div class="group reveal-on-scroll"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Kovan başında arıcı" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p4-women-planting.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Geliştirme</span></div><span class="font-label-mono text-[10px] text-terracotta font-bold uppercase mb-2 block">Sosyal Kalkınma</span><h3 class="font-headline-md text-xl mb-3 text-espresso">Kadın ve Genç Arıcı Programı</h3><p class="text-on-surface-variant">Kadın ve genç arıcılar için eğitim, mentorluk, kovan desteği ve girişimcilik.</p></div>
-<div class="group reveal-on-scroll" style="transition-delay:100ms"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Bal kavanozu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p5-honey-jar.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Geliştirme</span></div><span class="font-label-mono text-[10px] text-terracotta font-bold uppercase mb-2 block">Kalite &amp; Miras</span><h3 class="font-headline-md text-xl mb-3 text-espresso">Coğrafi İşaret ve Yerel Değerler</h3><p class="text-on-surface-variant">Yerel arı ürünlerinin coğrafi işaret tesciliyle korunması ve uluslararası pazarda değer kazanması.</p></div>
-<div class="group reveal-on-scroll" style="transition-delay:200ms"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Altın ışıkta arılar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p6-meadow.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Araştırma</span></div><span class="font-label-mono text-[10px] text-terracotta font-bold uppercase mb-2 block">Bilim &amp; İyi Oluş</span><h3 class="font-headline-md text-xl mb-3 text-espresso">Apiterapi ve Apiturizm Araştırmaları</h3><p class="text-on-surface-variant">Arı ürünlerinin sağlık etkilerine dair bilimsel çalışmalar; doğa temelli iyi oluş ve apiturizm modelleri.</p></div>
+<div class="group reveal-on-scroll"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Petek çerçevesini tutan el" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p1-bee-friend.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Tamamlandı</span></div><h3 class="font-headline-md text-xl mb-3 text-espresso">Arı Dostum Olur Musun?</h3><p class="text-on-surface-variant">Kartal'da 30 okulda 14.895 öğrenciye ulaşan eğitim ve farkındalık iş birliği (2024–2025).</p></div>
+<a href="#genclik" class="group reveal-on-scroll block" style="transition-delay:100ms"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Bal petekli ahşap çerçeveler" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p2-club-frame.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-amber text-espresso">Başvurular açık</span></div><h3 class="font-headline-md text-xl mb-3 text-espresso group-hover:text-terracotta transition-colors">Apikültür Gençlik Kulüpleri</h3><p class="text-on-surface-variant">Okullarda genç arıcı kulüpleri; ICYB iş birliğiyle Türkiye'yi IMYB'de temsil ediyoruz. <span class="text-terracotta font-semibold">İncele →</span></p></a>
+<div class="group reveal-on-scroll" style="transition-delay:200ms"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Mor lavanta tarlası" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p3-corridor-lavender.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Planlama</span></div><h3 class="font-headline-md text-xl mb-3 text-espresso">Türkiye Arı Koridoru</h3><p class="text-on-surface-variant">Belediyeler ve kamuyla yol kenarlarını ve boş alanları polinatör dostu koridorlara dönüştürmek.</p></div>
+<div class="group reveal-on-scroll"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Kovan başında arıcı" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p4-women-planting.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Geliştirme</span></div><h3 class="font-headline-md text-xl mb-3 text-espresso">Kadın ve Genç Arıcı Programı</h3><p class="text-on-surface-variant">Kadın ve genç arıcılar için eğitim, mentorluk, kovan desteği ve girişimcilik.</p></div>
+<div class="group reveal-on-scroll" style="transition-delay:100ms"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Bal kavanozu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p5-honey-jar.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Geliştirme</span></div><h3 class="font-headline-md text-xl mb-3 text-espresso">Coğrafi İşaret ve Yerel Değerler</h3><p class="text-on-surface-variant">Yerel arı ürünlerinin coğrafi işaret tesciliyle korunması ve uluslararası pazarda değer kazanması.</p></div>
+<div class="group reveal-on-scroll" style="transition-delay:200ms"><div class="overflow-hidden rounded-2xl mb-6 h-72 relative"><img alt="Altın ışıkta arılar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/img/p6-meadow.jpg"/><span class="absolute top-4 right-4 text-[11px] font-bold px-3 py-1 rounded-full bg-white/90 text-espresso">Araştırma</span></div><h3 class="font-headline-md text-xl mb-3 text-espresso">Apiterapi ve Apiturizm Araştırmaları</h3><p class="text-on-surface-variant">Arı ürünlerinin sağlık etkilerine dair bilimsel çalışmalar; doğa temelli iyi oluş ve apiturizm modelleri.</p></div>
 </div>
 </div>
 </section>
@@ -245,7 +248,7 @@
 <div class="max-w-[1180px] mx-auto px-7">
 <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 <div class="reveal-on-scroll lg:sticky lg:top-28">
-<h2 class="font-headline-lg text-espresso mb-6">Öğrenmenin ve bilimin merkezi.</h2>
+<h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12] mb-6">Öğrenmenin ve bilimin merkezi.</h2>
 <p class="text-on-surface-variant text-lg leading-relaxed">Yaşam boyu öğrenmeyi, bilime dayalı üretimi ve açık bilgiyi bir arada yürütürüz. Eğitimden araştırmaya, sahadan dijital kütüphaneye uzanan bütüncül bir yaklaşım.</p>
 </div>
 <div class="space-y-12 reveal-on-scroll">
@@ -259,7 +262,7 @@
 <!-- Yönetim -->
 <section class="py-32 bg-ekru/30" id="yonetim">
 <div class="max-w-[1180px] mx-auto px-7">
-<div class="max-w-3xl mb-16 reveal-on-scroll"><h2 class="font-headline-lg text-espresso mb-6">Gücümüzü şeffaflıktan alıyoruz.</h2><p class="text-on-surface-variant text-lg leading-relaxed">Apikültür Vakfı, piyasada rekabet eden ticari bir oyuncu değil; sektörün üzerine basabileceği sağlam, bağımsız ve bilimsel bir zemindir. Yapımız vakıf senedimizde tanımlıdır; tek amacımız kamu yararı üretmek ve standartları belirlemektir.</p></div>
+<div class="max-w-3xl mb-16 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12] mb-6">Gücümüzü şeffaflıktan alıyoruz.</h2><p class="text-on-surface-variant text-lg leading-relaxed">Apikültür Vakfı, piyasada rekabet eden ticari bir oyuncu değil; sektörün üzerine basabileceği sağlam, bağımsız ve bilimsel bir zemindir. Yapımız vakıf senedimizde tanımlıdır; tek amacımız kamu yararı üretmek ve standartları belirlemektir.</p></div>
 <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 reveal-on-scroll">
 <div>
 
@@ -280,19 +283,19 @@
 <p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl mb-14">Vakfın işleyişi, senedimizin yedi ve on ikinci maddeleri arasında tanımlanan dört organ eliyle yürütülür.</p>
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
 <div class="border-t-2 border-terracotta/70 pt-5">
-<h4 class="font-headline-md text-lg text-espresso mb-3">Mütevelli Heyeti</h4>
+<h4 class="font-headline-md text-xl text-espresso mb-3">Mütevelli Heyeti</h4>
 <p class="text-on-surface-variant leading-relaxed">Vakfın en yüksek karar organı. Yönünü, ilkelerini ve bütçesini belirler.</p>
 </div>
 <div class="border-t-2 border-terracotta/70 pt-5">
-<h4 class="font-headline-md text-lg text-espresso mb-3">Yönetim Kurulu</h4>
+<h4 class="font-headline-md text-xl text-espresso mb-3">Yönetim Kurulu</h4>
 <p class="text-on-surface-variant leading-relaxed">İdare ve icradan sorumlu yürütme organı. Alınan kararları hayata geçirir.</p>
 </div>
 <div class="border-t-2 border-terracotta/70 pt-5">
-<h4 class="font-headline-md text-lg text-espresso mb-3">Bilim Kurulu</h4>
+<h4 class="font-headline-md text-xl text-espresso mb-3">Bilim Kurulu</h4>
 <p class="text-on-surface-variant leading-relaxed">Akademisyen ve uzmanlardan oluşur. Çalışmalara bilimsel zemin sağlar.</p>
 </div>
 <div class="border-t-2 border-terracotta/70 pt-5">
-<h4 class="font-headline-md text-lg text-espresso mb-3">Danışma Kurulu</h4>
+<h4 class="font-headline-md text-xl text-espresso mb-3">Danışma Kurulu</h4>
 <p class="text-on-surface-variant leading-relaxed">Sektör ve alan uzmanlarının stratejik görüş sunduğu yardımcı kurul.</p>
 </div>
 </div>
@@ -321,7 +324,7 @@
 <div class="grid lg:grid-cols-2 gap-16 items-center">
 <div class="reveal-on-scroll">
 
-<h2 class="font-headline-lg text-espresso mb-6">Geleceğe bir kovan bırakın.</h2>
+<h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12] mb-6">Geleceği birlikte inşa edelim.</h2>
 <p class="text-on-surface-variant text-lg mb-4">Bir eğitim bursu, bir araştırma fonu ya da bir tohum… Doğaya yapılan hiçbir yatırım karşılıksız kalmaz.</p>
 <p class="text-on-surface-variant text-lg mb-8">Bilim, teknoloji ve omuz omuza çalışmanın gücüyle yaşamı birlikte savunalım.</p>
 <div class="flex flex-wrap gap-4"><a href="#destek" class="bg-terracotta text-white px-9 py-4 rounded-full font-bold hover:shadow-xl transition-all">Bağış Yap</a><a href="#destek" class="bg-ekru text-espresso px-9 py-4 rounded-full font-bold hover:bg-ekru/70 transition-all">Destekçi Ol</a></div>
