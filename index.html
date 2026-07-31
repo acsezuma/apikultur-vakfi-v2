@@ -126,17 +126,30 @@
 <a class="nav-link text-[13px] font-semibold text-espresso uppercase tracking-wider" href="#iletisim">İletişim</a>
 </nav>
 <div class="flex items-center gap-2 sm:gap-3">
-<a href="senet.html" aria-label="Vakıf Senedi" class="inline-flex items-center gap-2 border border-terracotta/35 text-terracotta px-4 sm:px-5 py-3 rounded-full font-bold text-[13px] tracking-wide hover:bg-terracotta hover:text-white transition-all"><span class="material-symbols-outlined text-[18px]">description</span><span class="hidden sm:inline">Vakıf Senedi</span></a>
-<a href="#destek" class="bg-terracotta text-white px-5 sm:px-7 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg shadow-terracotta/20 hover:scale-[1.02] active:scale-95 transition-all">Bağış Yap</a></div>
+<a href="senet.html" aria-label="Vakıf Senedi" class="hidden lg:inline-flex items-center gap-2 border border-terracotta/35 text-terracotta px-5 py-3 rounded-full font-bold text-[13px] tracking-wide hover:bg-terracotta hover:text-white transition-all"><span class="material-symbols-outlined text-[18px]">description</span>Vakıf Senedi</a>
+<a href="#destek" class="bg-terracotta text-white px-5 sm:px-7 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg shadow-terracotta/20 hover:scale-[1.02] active:scale-95 transition-all">Bağış Yap</a>
+<button id="menu-btn" type="button" aria-label="Menüyü aç veya kapat" aria-expanded="false" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full text-espresso hover:bg-ekru transition-colors"><span class="material-symbols-outlined text-[28px]">menu</span></button></div>
 </div>
 </header>
+<div id="mobile-menu" class="lg:hidden fixed inset-x-0 top-24 z-[99] bg-white/98 backdrop-blur-md border-b border-outline-variant/20 shadow-xl origin-top scale-y-0 opacity-0 pointer-events-none transition-all duration-300">
+<nav class="max-w-[1180px] mx-auto px-7 py-5 flex flex-col">
+<a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="#hakkimizda">Vakıf</a>
+<a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="#faaliyet">Çalışma Alanları</a>
+<a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="#projeler">Projeler</a>
+<a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="#genclik">Gençlik</a>
+<a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="#akademi">Akademi</a>
+<a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="#yonetim">Yönetim</a>
+<a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="#iletisim">İletişim</a>
+<a class="py-4 mt-2 inline-flex items-center gap-2 text-terracotta font-bold" href="senet.html"><span class="material-symbols-outlined text-[20px]">description</span>Vakıf Senedi</a>
+</nav>
+</div>
 <main>
 <!-- Hero -->
 <section class="relative min-h-[90vh] flex items-center pt-24 overflow-hidden" id="top">
 <div class="absolute inset-0 z-0"><img alt="Çiçek üzerinde bal arısı" class="w-full h-full object-cover hero-bg" src="assets/img/bee-flower.jpg"/><div class="absolute inset-0 bg-gradient-to-r from-night/90 via-night/50 to-transparent"></div></div>
 <div class="max-w-[1180px] mx-auto px-7 relative z-10 w-full">
 <div class="max-w-3xl">
-<h1 class="font-display-hero text-display-hero text-white mb-8">Mesele sadece bal değil. <br/><span class="text-amber">Mesele, yaşamın ta kendisi.</span></h1>
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-white mb-8">Mesele sadece bal değil. <br/><span class="text-amber">Mesele, yaşamın ta kendisi.</span></h1>
 <p class="font-body-lede text-white/80 mb-12 max-w-2xl">Bir arının çiçekten çiçeğe yolculuğu, koca bir ekosistemi ayakta tutar. Biz bu döngünün güvencesiyiz; bilim, eğitim ve köklü bir kültürle arıcılığın geleceğini bugünden kuruyoruz.</p>
 <div class="flex flex-wrap gap-5"><a class="bg-amber text-espresso px-10 py-5 rounded-full font-bold text-lg hover:shadow-xl hover:-translate-y-1 transition-all" href="#faaliyet">Faaliyet Alanlarımız</a><a class="bg-white/10 border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 backdrop-blur-md transition-all" href="#hakkimizda">Vizyonumuz</a></div>
 </div>
@@ -167,7 +180,7 @@
 </div>
 </section>
 <!-- Manifesto -->
-<section class="py-28 bg-night text-white overflow-hidden" id="manifesto">
+<section class="relative isolate overflow-hidden py-28 text-white" id="manifesto"><div class="absolute inset-0 -z-10" aria-hidden="true"><img src="assets/bee-9712039_1280.jpg" alt="" class="w-full h-full object-cover blur-[6px] scale-110"/><div class="absolute inset-0 bg-gradient-to-br from-night/88 via-night/82 to-[#4a1109]/90"></div></div>
 <div class="max-w-[960px] mx-auto px-7">
 <div class="reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl mb-10">Yaşamı Arılarla Güçlendirmek</h2></div>
 <p class="text-white/75 text-xl leading-relaxed reveal-on-scroll">İklimin değiştiği, toprağın yorulduğu ve biyolojik dengelerin sarsıldığı bir çağdayız. Bu yeni gerçeklikte arıcılık, sadece ne kadar bal ürettiğimizle değil; doğaya ne kadar yaşam sunduğumuzla ölçülmelidir.</p>
@@ -214,7 +227,7 @@
 </div>
 </section>
 <!-- Gençlik -->
-<section class="py-32 bg-night text-white overflow-hidden" id="genclik">
+<section class="py-32 bg-gradient-to-b from-night to-[#57130d] text-white overflow-hidden" id="genclik">
 <div class="max-w-[1180px] mx-auto px-7">
 <div class="max-w-3xl mb-16 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl mb-6">Geleceğin Kraliçe ve İşçi Arıları</h2><p class="text-white/75 text-xl leading-relaxed">Arıcılığın geleceği, toprakla yeniden bağ kuran gençlerin ellerinde şekillenecek. ICYB iş birliğiyle liselerde Apikültür Gençlik Kulüpleri kuruyor, Türkiye'yi her yıl Uluslararası Genç Arıcılar Buluşması'nda temsil edecek takımı bu okullardan seçiyoruz.</p></div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 reveal-on-scroll">
@@ -312,7 +325,7 @@
 </div>
 </section>
 <!-- Destek -->
-<section class="py-32 bg-night text-white overflow-hidden" id="destek">
+<section class="relative isolate overflow-hidden py-32 text-white" id="destek"><div class="absolute inset-0 -z-10" aria-hidden="true"><img src="assets/images.jpg" alt="" class="w-full h-full object-cover blur-[6px] scale-110"/><div class="absolute inset-0 bg-gradient-to-br from-night/92 via-night/88 to-[#4a1109]/93"></div></div>
 <div class="max-w-[1180px] mx-auto px-7">
 <div class="max-w-2xl mb-16 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl mb-6">Geleceğe bir kovan bırakın.</h2><p class="text-white/70 text-xl leading-relaxed">Sürdürülebilir bir gelecek ve sağlıklı bir ekosistem için yanımızda olun. Bağışlarınızla genç arıcıları eğitiyor, arı meraları kuruyoruz.</p></div>
 <div class="grid md:grid-cols-3 gap-12 mb-14 reveal-on-scroll">
@@ -376,5 +389,15 @@
     const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal-on-scroll').forEach(el => revealObserver.observe(el));
     window.addEventListener('scroll', () => { const h = document.querySelector('header'); if (window.scrollY > 50) { h.classList.add('shadow-sm'); } else { h.classList.remove('shadow-sm'); } });
+    const menuBtn = document.getElementById('menu-btn'), mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      const setMenu = (open) => {
+        mobileMenu.classList.toggle('scale-y-100', open); mobileMenu.classList.toggle('opacity-100', open); mobileMenu.classList.toggle('pointer-events-auto', open);
+        mobileMenu.classList.toggle('scale-y-0', !open); mobileMenu.classList.toggle('opacity-0', !open); mobileMenu.classList.toggle('pointer-events-none', !open);
+        menuBtn.setAttribute('aria-expanded', open); menuBtn.querySelector('.material-symbols-outlined').textContent = open ? 'close' : 'menu';
+      };
+      menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    }
 </script>
 </body></html>
