@@ -127,7 +127,15 @@
 <div class="max-w-[1180px] mx-auto flex justify-between items-center px-5 sm:px-7 h-24">
 <a class="flex items-center" href="#top" aria-label="Apikültür Vakfı ana sayfa"><img alt="Apikültür Vakfı" class="h-14 w-auto object-contain" src="assets/logo.png"/></a>
 <nav class="hidden lg:flex items-center gap-3.5 xl:gap-5">
-<a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="vakif.html">Vakıf</a>
+<div class="relative group/vakif flex items-center gap-0.5">
+<a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="vakif.html">Vakıf</a><span class="material-symbols-outlined text-[16px] text-espresso/50 group-hover/vakif:text-terracotta transition-colors" aria-hidden="true">expand_more</span>
+<div class="absolute left-[-1.25rem] top-full pt-3 opacity-0 invisible group-hover/vakif:opacity-100 group-hover/vakif:visible group-focus-within/vakif:opacity-100 group-focus-within/vakif:visible transition-all duration-200">
+<div class="min-w-[210px] bg-white rounded-2xl shadow-xl shadow-espresso/10 border border-outline-variant/30 py-2">
+<a class="flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold text-espresso hover:text-terracotta hover:bg-ekru/60 transition-colors" href="vakif.html">Vakıf Hakkında</a>
+<a class="flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold text-espresso hover:text-terracotta hover:bg-ekru/60 transition-colors" href="senet.html"><span class="material-symbols-outlined text-[18px] text-terracotta">description</span>Vakıf Senedi</a>
+</div>
+</div>
+</div>
 <a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="faaliyet.html">Faaliyet Alanlarımız</a>
 <a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="genclik.html">Gençlik</a>
 <a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="akademi.html">Akademi &amp; Bilim</a>
@@ -137,7 +145,6 @@
 </nav>
 <div class="flex items-center gap-1.5 sm:gap-3">
 <a href="en/index.html" hreflang="en" lang="en" title="English" aria-label="English version" class="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-outline-variant/60 text-espresso text-[12px] font-bold tracking-wider hover:border-terracotta hover:text-terracotta transition-colors">EN</a>
-<a href="senet.html" title="Vakıf Senedi" aria-label="Vakıf Senedi" class="inline-flex items-center justify-center gap-2 w-10 h-10 sm:w-11 sm:h-11 xl:w-auto xl:h-auto xl:px-5 xl:py-3 border border-terracotta/40 text-terracotta rounded-full font-bold text-[13px] tracking-wide hover:bg-terracotta hover:text-white transition-all"><span class="material-symbols-outlined text-[20px]">description</span><span class="hidden xl:inline">Vakıf Senedi</span></a>
 <a href="#destek" class="whitespace-nowrap bg-terracotta text-white px-4 sm:px-7 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg shadow-terracotta/20 hover:scale-[1.02] active:scale-95 transition-all">Bağış Yap</a>
 <button id="menu-btn" type="button" aria-label="Menüyü aç veya kapat" aria-expanded="false" class="lg:hidden inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full text-espresso hover:bg-ekru transition-colors"><span class="material-symbols-outlined text-[28px]">menu</span></button></div>
 </div>
@@ -145,13 +152,13 @@
 <div id="mobile-menu" class="lg:hidden fixed inset-x-0 top-24 z-[99] bg-white backdrop-blur-md border-b border-outline-variant/20 shadow-xl origin-top scale-y-0 opacity-0 pointer-events-none transition-all duration-300">
 <nav class="max-w-[1180px] mx-auto px-7 py-5 flex flex-col">
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="vakif.html">Vakıf</a>
+<a class="py-3 pl-5 border-b border-outline-variant/15 text-espresso/80 font-semibold text-sm inline-flex items-center gap-2" href="senet.html"><span class="material-symbols-outlined text-[18px] text-terracotta">description</span>Vakıf Senedi</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="faaliyet.html">Faaliyet Alanlarımız</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="genclik.html">Gençlik</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="akademi.html">Akademi &amp; Bilim</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="projeler.html">Projeler</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="yonetim.html">Yönetim &amp; Şeffaflık</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="#iletisim">İletişim</a>
-<a class="py-3.5 inline-flex items-center gap-2 text-terracotta font-bold" href="senet.html"><span class="material-symbols-outlined text-[20px]">description</span>Vakıf Senedi</a>
 <a class="mt-4 inline-flex items-center justify-center bg-terracotta text-white px-6 py-3.5 rounded-full font-bold" href="#destek">Bağış Yap</a>
 </nav>
 </div>
@@ -297,18 +304,16 @@
 <h3 class="font-headline-md text-2xl md:text-3xl text-espresso mb-4">Karar ve danışma yapısı</h3>
 <p class="text-on-surface-variant text-lg leading-relaxed max-w-3xl mb-14">Vakıf senedine göre Vakfın organları Mütevelli Heyeti ve Yönetim Kurulu’dur (Md.7); Bilim Kurulu ve Danışma Kurulu ise destek yapılarıdır.</p>
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
-<a href="senet.html" class="group block border-t-2 border-terracotta/70 pt-5">
+<div class="group block border-t-2 border-terracotta/70 pt-5">
 <div class="w-full h-28 rounded-xl overflow-hidden mb-5"><img src="assets/img/hero-beekeeper.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/></div>
-<h4 class="font-headline-md text-xl text-espresso mb-3 group-hover:text-terracotta transition-colors">Mütevelli Heyeti</h4>
+<h4 class="font-headline-md text-xl text-espresso mb-3">Mütevelli Heyeti</h4>
 <p class="text-on-surface-variant leading-relaxed mb-3">Vakfın en yüksek karar organıdır.</p>
-<span class="inline-flex items-center gap-1 text-terracotta text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">Senette incele <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
-</a>
-<a href="senet.html" class="group block border-t-2 border-terracotta/70 pt-5">
+</div>
+<div class="group block border-t-2 border-terracotta/70 pt-5">
 <div class="w-full h-28 rounded-xl overflow-hidden mb-5"><img src="assets/img/apiary-smoker.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/></div>
-<h4 class="font-headline-md text-xl text-espresso mb-3 group-hover:text-terracotta transition-colors">Yönetim Kurulu</h4>
+<h4 class="font-headline-md text-xl text-espresso mb-3">Yönetim Kurulu</h4>
 <p class="text-on-surface-variant leading-relaxed mb-3">Vakfın idare ve icrasından sorumlu organdır.</p>
-<span class="inline-flex items-center gap-1 text-terracotta text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">Senette incele <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
-</a>
+</div>
 <div class="group block border-t-2 border-terracotta/70 pt-5">
 <div class="w-full h-28 rounded-xl overflow-hidden mb-5"><img src="assets/img/bee-flower.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/></div>
 <h4 class="font-headline-md text-xl text-espresso mb-3">Bilim Kurulu</h4>
@@ -335,7 +340,6 @@
 <div class="border-t-2 border-amber/60 pt-5 lg:col-span-2 lg:col-start-2"><h3 class="font-headline-md text-xl mb-3">Gençlik Çalışmaları</h3><p class="text-white/70 leading-relaxed">Gençlerin eğitim, deneyim ve uluslararası bağlantı fırsatlarına erişimini destekleyebilirsiniz.</p></div>
 <div class="border-t-2 border-amber/60 pt-5 lg:col-span-2"><h3 class="font-headline-md text-xl mb-3">Proje Ortaklığı</h3><p class="text-white/70 leading-relaxed">Kurumunuzla birlikte ortak çalışmalar geliştirebilirsiniz.</p></div>
 </div>
-<p class="text-white/80 text-lg max-w-3xl mb-10 reveal-on-scroll">Vakıf senedinin 16. maddesi gereği Vakfın <b class="text-amber">yıllık brüt gelirinin en az üçte ikisi</b> Vakfın amaçlarına tahsis edilir. <a href="senet.html" class="underline hover:text-amber">Senedin tam metnini inceleyin →</a></p>
 <div class="flex flex-wrap gap-4 reveal-on-scroll">
 <a href="mailto:info@apikulturvakfi.org?subject=Ba%C4%9F%C4%B1%C5%9F" class="bg-terracotta text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transition-all">Bağış Yap</a>
 <a href="mailto:info@apikulturvakfi.org?subject=G%C3%B6n%C3%BCll%C3%BCl%C3%BCk" class="bg-white/10 border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all">Gönüllü Ol</a>

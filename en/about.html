@@ -125,7 +125,15 @@
 <div class="max-w-[1180px] mx-auto flex justify-between items-center px-5 sm:px-7 h-24">
 <a class="flex items-center" href="index.html" aria-label="Apiculture Foundation home"><img alt="Apiculture Foundation" class="h-14 w-auto object-contain" src="../assets/logo.png"/></a>
 <nav class="hidden lg:flex items-center gap-3.5 xl:gap-5">
-<a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="about.html" aria-current="page">About</a>
+<div class="relative group/vakif flex items-center gap-0.5">
+<a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="about.html" aria-current="page">About</a><span class="material-symbols-outlined text-[16px] text-espresso/50 group-hover/vakif:text-terracotta transition-colors" aria-hidden="true">expand_more</span>
+<div class="absolute left-[-1.25rem] top-full pt-3 opacity-0 invisible group-hover/vakif:opacity-100 group-hover/vakif:visible group-focus-within/vakif:opacity-100 group-focus-within/vakif:visible transition-all duration-200">
+<div class="min-w-[210px] bg-white rounded-2xl shadow-xl shadow-espresso/10 border border-outline-variant/30 py-2">
+<a class="flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold text-espresso hover:text-terracotta hover:bg-ekru/60 transition-colors" href="about.html">About the Foundation</a>
+<a class="flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold text-espresso hover:text-terracotta hover:bg-ekru/60 transition-colors" href="../senet.html"><span class="material-symbols-outlined text-[18px] text-terracotta">description</span>Foundation Charter</a>
+</div>
+</div>
+</div>
 <a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="areas-of-work.html">Our Work</a>
 <a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="youth.html">Youth</a>
 <a class="nav-link text-[12px] font-semibold text-espresso uppercase tracking-wide" href="academy.html">Academy</a>
@@ -135,7 +143,6 @@
 </nav>
 <div class="flex items-center gap-1.5 sm:gap-3">
 <a href="../vakif.html" hreflang="tr" lang="tr" title="Türkçe" aria-label="Türkçe sürüm" class="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-outline-variant/60 text-espresso text-[12px] font-bold tracking-wider hover:border-terracotta hover:text-terracotta transition-colors">TR</a>
-<a href="../senet.html" title="Foundation Charter" aria-label="Foundation Charter" class="inline-flex items-center justify-center gap-2 w-10 h-10 sm:w-11 sm:h-11 xl:w-auto xl:h-auto xl:px-5 xl:py-3 border border-terracotta/40 text-terracotta rounded-full font-bold text-[13px] tracking-wide hover:bg-terracotta hover:text-white transition-all"><span class="material-symbols-outlined text-[20px]">description</span><span class="hidden xl:inline">Charter</span></a>
 <a href="index.html#destek" class="whitespace-nowrap bg-terracotta text-white px-4 sm:px-7 py-3.5 rounded-full font-bold text-sm tracking-wide shadow-lg shadow-terracotta/20 hover:scale-[1.02] active:scale-95 transition-all">Donate</a>
 <button id="menu-btn" type="button" aria-label="Open or close the menu" aria-expanded="false" class="lg:hidden inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full text-espresso hover:bg-ekru transition-colors"><span class="material-symbols-outlined text-[28px]">menu</span></button></div>
 </div>
@@ -143,13 +150,13 @@
 <div id="mobile-menu" class="lg:hidden fixed inset-x-0 top-24 z-[99] bg-white backdrop-blur-md border-b border-outline-variant/20 shadow-xl origin-top scale-y-0 opacity-0 pointer-events-none transition-all duration-300">
 <nav class="max-w-[1180px] mx-auto px-7 py-5 flex flex-col">
 <a class="py-3.5 border-b border-outline-variant/15 text-terracotta font-semibold uppercase tracking-wider text-sm" href="about.html" aria-current="page">About</a>
+<a class="py-3 pl-5 border-b border-outline-variant/15 text-espresso/80 font-semibold text-sm inline-flex items-center gap-2" href="../senet.html"><span class="material-symbols-outlined text-[18px] text-terracotta">description</span>Foundation Charter</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="areas-of-work.html">Our Areas of Work</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="youth.html">Youth</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="academy.html">Academy &amp; Science</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="projects.html">Projects</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="governance.html">Governance &amp; Transparency</a>
 <a class="py-3.5 border-b border-outline-variant/15 text-espresso font-semibold uppercase tracking-wider text-sm" href="index.html#iletisim">Contact</a>
-<a class="py-3.5 inline-flex items-center gap-2 text-terracotta font-bold" href="../senet.html"><span class="material-symbols-outlined text-[20px]">description</span>Foundation Charter</a>
 <a class="mt-4 inline-flex items-center justify-center bg-terracotta text-white px-6 py-3.5 rounded-full font-bold" href="index.html#destek">Donate</a>
 </nav>
 </div>
