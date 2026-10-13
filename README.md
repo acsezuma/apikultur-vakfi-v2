@@ -9,16 +9,19 @@ Yayın hedefi: **https://acsezuma.github.io/apikultur-vakfi-v2/**
 
 ## Yapı
 
-Tek dosyalık statik bir site — derleme adımı ya da bağımlılık yok. Stil, Tailwind CDN + `tailwind.config` üzerinden marka token'larıyla (renkler, tipografi, spacing) tanımlıdır.
+Çok sayfalı statik bir site (Türkçe + İngilizce). Stil, Tailwind CDN + `tailwind.config` üzerinden marka token'larıyla tanımlıdır. Sayfalar `_gelistirme/` klasöründeki Python betikleriyle üretilir; ayrıntılar **[`_gelistirme/NOTLAR.md`](_gelistirme/NOTLAR.md)** dosyasında.
 
 | Dosya | İçerik |
 |---|---|
-| `index.html` | Sitenin tamamı: içerik, Tailwind yapılandırması, davranış (vanilla JS) |
-| `senet.html` | Vakıf senedinin tam metni (yazdırılabilir; PDF: `assets/vakif-senedi.pdf`) |
-| `assets/logo-mark.svg` | Marka rozeti (bee "A"), terracotta `#B82618` — kendi sunucumuzda barınır |
-| `assets/` | favicon, apple-touch-icon, og-image, senet PDF'i |
+| `index.html` | Ana sayfa |
+| `vakif.html`, `faaliyet.html`, `genclik.html`, `akademi.html`, `gelecek.html`, `projeler.html`, `yonetim.html` | İç sayfalar |
+| `en/` | İngilizce sayfalar (`index`, `about`, `areas-of-work`, `youth`, `academy`, `future`, `projects`, `governance`) |
+| `senet.html` | Vakıf senedinin tam metni (yazdırılabilir; PDF: `assets/vakif-senedi.pdf`), elle düzenlenir |
+| `assets/programlar.json` | Apikültür Gelecek açık programları (elle düzenlenir) |
+| `assets/` | logo, favicon, paylaşım görselleri (`og-image.png`, `og-image-en.png`), senet PDF'i |
 | `assets/img/` | Bölüm ve proje fotoğrafları (self-hosted) |
 | `robots.txt`, `sitemap.xml` | Arama motoru dosyaları |
+| `_gelistirme/` | Üretici betikler ve geliştirme notları (yayımlanmaz) |
 
 ## Kurumsal kimlik (tasarım token'ları)
 
@@ -30,11 +33,14 @@ Tek dosyalık statik bir site — derleme adımı ya da bağımlılık yok. Stil
 
 ## Güncelleme
 
-1. `index.html` içindeki metni/görseli düzenleyin.
-2. İlgili dala commit + push yapın. GitHub Pages (Actions) otomatik yeniden yayınlar (1-2 dk).
+1. Metni `_gelistirme/` içindeki betiklerde değiştirin (üretilen `.html` dosyalarını elle düzenlemeyin, bir sonraki üretimde ezilir).
+2. `python3 _gelistirme/build_pages.py && python3 _gelistirme/build_en.py`
+3. `main` dalına commit + push yapın. GitHub Pages otomatik yeniden yayınlar (1-2 dk).
+
+Apikültür Gelecek'e açık program eklemek için yalnızca `assets/programlar.json` düzenlenir (biçim: `_gelistirme/NOTLAR.md`).
 
 ## Alan adı bağlanacağı zaman
 
 1. Repo → Settings → Pages → Custom domain
 2. DNS `A`/`CNAME` kayıtlarını GitHub Pages'e yönlendirin
-3. `index.html` içindeki canonical / `og:url` / `og:image` + `robots.txt` + `sitemap.xml` adreslerini güncelleyin (head'de `NOT:` yorumuyla işaretli).
+3. `_gelistirme/build_pages.py` (`BASE_URL`), `_gelistirme/build_en.py` (`BASE`) ve `_gelistirme/index_base.html` içindeki canonical / `og:url` / `og:image` / JSON-LD adreslerini ve `robots.txt`'yi güncelleyip sayfaları yeniden üretin.
