@@ -350,16 +350,16 @@ T = {
   "Protecting pollinators and raising agricultural productivity through pollination.",
 "Gençlik ve Sürdürülebilir Modern Arıcılık":
   "Youth and Sustainable Modern Beekeeping",
-"Gençleri odağa alan, verimliliği ve geliri artıran modern arıcılık.":
-  "Modern beekeeping that focuses on young people and raises productivity and income.",
+"Gençlere öncelik veren, verimliliği ve geliri artıran modern arıcılık.":
+  "Modern beekeeping that gives priority to young people and raises productivity and income.",
 "Etik Arıcılık ve Arı Ürünlerine Güven":
   "Ethical Beekeeping and Trust in Bee Products",
 "Kaynağından izlenebilir, güvenilir üretim ve bilinçli tüketici.":
   "Reliable production traceable to its source, and informed consumers.",
 "Ulusal ve Uluslararası İş Birliği":
   "National and International Cooperation",
-"Bu alanlarda güvenilir bir referans merkezi olma hedefi.":
-  "Our aim: to be a trusted centre of reference in these areas.",
+"Arı ve arıcılıkta başvurulan güvenilir bir kaynak olma hedefi.":
+  "Our aim: to be a trusted source on bees and beekeeping.",
 "Gençlerin arıcılıkta eğitim, deneyim ve uluslararası bağlantı kazanmasını destekliyoruz. Okul temelli Apikültür Gençlik Kulüpleri ile Türkiye’nin ICYB ve IMYB süreçlerine katılımı bu çalışmaların merkezinde yer alır.":
   "We help young people gain education, experience and international connections in beekeeping. School-based Apiculture Youth Clubs and Türkiye’s participation in ICYB and IMYB are at the heart of this work.",
 "Eğitim, araştırma ve bilgi paylaşımı çalışmalarımız üç başlıkta toplanır.":
@@ -386,28 +386,28 @@ T = {
   "Our guiding principle is a sustainable ecosystem.",
 "Çalışmalarımız bu ilke etrafında birbiriyle bağlantılı beş eksende şekillenir. Belirli süresi ve kapsamı olan çalışmalar Projeler sayfasında anlatılır.":
   "Our work is organised around this principle in five interconnected areas. Work with a defined duration and scope is described on the Projects page.",
-"Başta koloni kayıpları olmak üzere arı popülasyonlarını tehdit eden iklimsel, çevresel ve tarımsal etkenlerin araştırılmasını ve önlenmesine yönelik çalışmaları destekleriz.":
-  "We support research into the climatic, environmental and agricultural factors that threaten bee populations, colony losses above all, and work to prevent them.",
+"Arı popülasyonlarını tehdit eden iklimsel, çevresel ve tarımsal etkenleri, özellikle koloni kayıplarının nedenlerini araştıran ve bu kayıpları önlemeye yönelik çalışmaları destekleriz.":
+  "We support work that researches the climatic, environmental and agricultural factors threatening bee populations, especially the causes of colony losses, and that aims to prevent these losses.",
 "Arı sağlığı ve koloni kayıplarıyla ilgili bilimsel araştırmaları desteklemek; yenilikçi ve geleneksel yöntemlerin birlikte kullanılmasına katkı sağlamak.":
   "Supporting scientific research on bee health and colony losses, and helping innovative and traditional methods work together.",
-"Bal arıları ve diğer tozlayıcıların korunmasını, biyoçeşitliliği artıran projeleri ve arıcılar ile çiftçiler arasındaki iş birliğini destekleyerek polinasyon yoluyla tarımsal verimliliğin artmasına katkı sağlarız.":
-  "We support the protection of honey bees and other pollinators, projects that enhance biodiversity and cooperation between beekeepers and farmers, helping to raise agricultural productivity through pollination.",
-"Gençleri odağa alarak verimliliği, ürün çeşitliliğini ve arıcının gelirini artıracak sürdürülebilir ve modern arıcılık çalışmalarını destekleriz; polen, arı sütü ve propolis gibi ürünlerin çeşitlendirilmesine yönelik yeni projeler geliştiririz.":
-  "With a focus on young people, we support sustainable, modern beekeeping that raises productivity, product diversity and beekeepers’ income, and we develop new projects to diversify products such as pollen, royal jelly and propolis.",
+"Bal arılarının ve diğer tozlayıcıların korunmasını, biyoçeşitliliği zenginleştiren projeleri ve arıcılarla çiftçiler arasındaki iş birliğini destekleriz. Bu çalışmalar, polinasyon yoluyla tarımsal verimliliğin artmasına katkı sağlar.":
+  "We support the protection of honey bees and other pollinators, projects that enrich biodiversity, and cooperation between beekeepers and farmers. This work helps raise agricultural productivity through pollination.",
+"Gençlere öncelik vererek verimliliği ve arıcının gelirini artıracak sürdürülebilir, modern arıcılık çalışmalarını destekleriz. Polen, arı sütü ve propolis gibi ürünlerde üretimi çeşitlendirecek yeni projeler geliştiririz.":
+  "Giving priority to young people, we support sustainable, modern beekeeping that raises productivity and beekeepers’ income. We develop new projects to diversify production of pollen, royal jelly, propolis and similar products.",
 "Arıcı Eğitimi":
   "Beekeeper Training",
 "Arıcılıkla ilgilenen bireylerin güncel ve bilimsel bilgiye erişimine, ilgili kurum ve birliklerle iş birliği içinde katkı sunmak.":
   "Helping people interested in beekeeping access up-to-date, science-based knowledge, in cooperation with the relevant institutions and associations.",
-"Arı ürünlerinin tüketiciyle doğru biçimde buluşmasının temeli bilinçli üreticidir. Kaynağından itibaren izlenebilir ve güvenilir üretimi esas alan etik arıcılığı ve etik arıcıları destekler; arı ve arı ürünlerinin toplumsal değerini yükseltmek için bilimsel araştırmaları, projeleri ve toplumun bilinç ve farkındalığını artıran eğitim ve bilgilendirme faaliyetlerini destekleriz.":
-  "Informed producers are the foundation for bee products reaching consumers in the right way. We support ethical beekeeping and ethical beekeepers, based on reliable production traceable to its source; and to raise the social value of bees and bee products, we support scientific research, projects, and education and information activities that build public awareness.",
+"Arı ürününün tüketiciye doğru biçimde ulaşması bilinçli üreticiyle başlar. Kaynağından izlenebilen, güvenilir üretimi esas alan etik arıcılığı ve etik arıcıları destekleriz. Arı ve arı ürünlerinin toplumdaki değerini yükseltmek için bilimsel araştırmalara, projelere ve tüketiciyi bilgilendiren eğitim çalışmalarına katkı sunarız.":
+  "Bee products reach consumers in the right way only when producers are well informed. We support ethical beekeeping and ethical beekeepers, based on reliable production that can be traced to its source. To raise the value of bees and bee products in society, we contribute to scientific research, projects and education that keeps consumers informed.",
 "Çevre dostu ve etik arıcılık yöntemlerinin bilimsel temelinin güçlenmesine katkı sunmak.":
   "Helping to strengthen the scientific basis of environmentally friendly and ethical beekeeping methods.",
 "Toplumsal Farkındalık":
   "Public Awareness",
 "Çocuklara, gençlere ve tüketicilere arıların ve arı ürünlerinin değerini anlatan eğitim ve bilgilendirme çalışmaları yürütmek.":
   "Running education and information activities that explain the value of bees and bee products to children, young people and consumers.",
-"Bu alanlarda ulusal ve uluslararası kurumlarla iş birliği yaparak arı ve arıcılık konusunda güvenilir bir referans merkezi olmayı hedefleriz.":
-  "By cooperating with national and international institutions in these areas, we aim to become a trusted centre of reference on bees and beekeeping.",
+"Bu alanlarda ulusal ve uluslararası kurumlarla iş birliği yaparak arı ve arıcılık konusunda başvurulan güvenilir bir kaynak olmayı hedefleriz.":
+  "By cooperating with national and international institutions in these areas, we aim to become a trusted source on bees and beekeeping.",
 "Kurumlar, üniversiteler, uzmanlar ve gönüllülerle iş birliğine açığız.":
   "We welcome cooperation with institutions, universities, experts and volunteers.",
 "Arılıkta körükle çalışan arıcı":

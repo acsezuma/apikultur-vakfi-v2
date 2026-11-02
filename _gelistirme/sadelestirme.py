@@ -17,9 +17,9 @@ MISYON = "Arı ve arı ürünlerinin biyoyararlılığı ile arıların koloni k
 EKSENLER_KISA = [
     ("koloni-sagligi", "health_and_safety", "Koloni Sağlığı ve Kayıpların Önlenmesi", "Koloni kayıplarına yol açan etkenlerin araştırılması ve önlenmesi."),
     ("biyocesitlilik-verimlilik", "eco", "Biyoçeşitlilik ve Tarımsal Verimlilik", "Tozlayıcıların korunması ve polinasyon yoluyla tarımsal verimlilik."),
-    ("genclik-modern-aricilik", "diversity_3", "Gençlik ve Sürdürülebilir Modern Arıcılık", "Gençleri odağa alan, verimliliği ve geliri artıran modern arıcılık."),
+    ("genclik-modern-aricilik", "diversity_3", "Gençlik ve Sürdürülebilir Modern Arıcılık", "Gençlere öncelik veren, verimliliği ve geliri artıran modern arıcılık."),
     ("etik-aricilik", "verified", "Etik Arıcılık ve Arı Ürünlerine Güven", "Kaynağından izlenebilir, güvenilir üretim ve bilinçli tüketici."),
-    ("is-birligi", "public", "Ulusal ve Uluslararası İş Birliği", "Bu alanlarda güvenilir bir referans merkezi olma hedefi."),
+    ("is-birligi", "public", "Ulusal ve Uluslararası İş Birliği", "Arı ve arıcılıkta başvurulan güvenilir bir kaynak olma hedefi."),
 ]
 
 # 1) Hero: tek paragraf (eski iki paragraf ve üç satırlık slogan kaldırıldı)
