@@ -290,7 +290,7 @@ AXES = [
 ]
 main = hero("assets/img/youth-frame.jpg", "Faaliyet Alanlarımız", "Faaliyet Alanlarımız",
             "Çatı ilkemiz ekosistemin sürdürülebilirliğidir.",
-            "Çalışmalarımız bu ilke etrafında birbiriyle bağlantılı beş eksende şekillenir. Belirli süresi ve kapsamı olan çalışmalar Projeler sayfasında anlatılır.",
+            "Beş eksen bu ilkeyi farklı yönlerden ele alır. Süresi ve kapsamı belli çalışmalar Projeler sayfasında yer alır.",
             [(a[0], a[5]) for a in AXES])
 for k, a in enumerate(AXES):
     blocks = ''.join(block(t, p, proj_link(*pr) if pr else '') for t, p, pr in a[7])
@@ -311,8 +311,7 @@ main += '''<section class="relative isolate overflow-hidden py-24 md:py-32 bg-ba
 <div class="max-w-[1180px] mx-auto px-7 grid lg:grid-cols-12 gap-10 lg:gap-16">
 <div class="lg:col-span-5 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12]">Biz kimiz?</h2></div>
 <div class="lg:col-span-7 space-y-6 text-on-surface-variant text-lg md:text-xl leading-relaxed reveal-on-scroll">
-<p>Arıcılığın yalnızca üretimden ibaret olmadığına; bilim, eğitim, çevre, tarım, biyoçeşitlilik, kültür ve insan kaynağıyla birlikte ele alınması gerektiğine inanıyoruz.</p>
-<p>Vakfımız, bilgi üretmeyi, bilgiyi paylaşmayı, gençleri desteklemeyi ve farklı paydaşlar arasında iş birliği geliştirmeyi temel faaliyet araçları olarak görür.</p>
+<p>Bilgi üretir ve paylaşırız; gençleri destekler, üreticiden tüketiciye farklı tarafları bir araya getiririz.</p>
 <a href="faaliyet.html" class="inline-flex items-center gap-2 text-terracotta font-bold group">Faaliyet Alanlarımız ''' + ARROW + '''</a>
 </div>
 </div>
@@ -331,7 +330,6 @@ main += feature(0, "hikaye", "assets/img/p4-women-planting.jpg", "Kovan başınd
                 "Birikimden kurumsal faydaya.",
                 "Apikültür Vakfı’nın kuruluş hikâyesi, arıcılık alanında yıllar içinde oluşan bilgi, deneyim ve birikimin daha geniş bir toplumsal faydaya dönüştürülmesi fikrine dayanır.",
                 block("Kuruluş", "Vakfın kurucusu Muzaffer Yıldırım’dır. Kuruluş fikri, Yıldırım Plastik’ten doğan aile girişimi Apimaye’nin arıcılık ekipmanları alanında yıllar içinde edindiği deneyime uzanır. Polimer işleme bilgisiyle tasarlanan bir petek çerçevesi, bu birikimin ilk adımlarından biri oldu.")
-                + block("Bugün", "Vakfın kuruluş sürecinde oluşan deneyim; bugün bilim, eğitim, gençlik, sürdürülebilirlik ve uluslararası iş birlikleri alanlarında geliştirilen çalışmalar için bir başlangıç noktasıdır.")
                 + block("Bağımsız bir yapı", "Vakfın kurumsal kimliği, herhangi bir ticari markanın devamı veya uzantısı değildir; kendi amaçları ve organlarıyla faaliyet gösteren bağımsız bir yapıdır."),
                 [("Yönetim &amp; Şeffaflık", "yonetim.html")])
 main += '''<section class="relative isolate overflow-hidden py-28 md:py-36 text-white" id="manifesto">
@@ -360,17 +358,16 @@ main = hero("assets/img/apiary-smoker.jpg", "Gençlik", "Gençlik ve Uluslararas
             [("odak", "Odak alanları"), ("temsil", "ICYB ve IMYB"), ("kulupler", "Gençlik Kulüpleri"), ("takvim", "Takvim ve duyurular")])
 main += f'''<section class="py-24 md:py-32 bg-background" id="odak">
 <div class="max-w-[1180px] mx-auto px-7">
-{head2("Gençlik çalışmalarımızın odağı", ["Apikültür Vakfı, gençlik çalışmalarında aşağıdaki alanlara odaklanır."])}
+{head2("Gençlik çalışmalarımızın odağı", [])}
 <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-8 reveal-on-scroll">{focus_html}</ol>
-<p class="mt-16 text-on-surface-variant text-lg leading-relaxed max-w-3xl reveal-on-scroll">Gençlik çalışmalarımızı tek bir proje olarak değil, Vakfın gelecek nesillerin gelişimine katkı sağlama sorumluluğunun bir parçası olarak görüyoruz.</p>
 </div>
 </section>
 <section class="py-24 md:py-32 bg-gradient-to-b from-night to-[#57130d] text-white" id="temsil">
 <div class="max-w-[1180px] mx-auto px-7">
-<div class="max-w-3xl mb-16 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl leading-[1.12] mb-6">Türkiye’nin genç arıcılarının uluslararası temsilini destekliyoruz.</h2><p class="text-white/75 text-lg leading-relaxed">Vakfımız, International Confederation of Young Beekeepers (ICYB) ile ilişkili çalışmalar kapsamında Türkiye’nin genç arıcılarının uluslararası genç arıcılar ağıyla bağlantısını ve Türkiye’nin International Meeting of Young Beekeepers (IMYB) sürecindeki katılımını destekler.</p></div>
+<div class="max-w-3xl mb-16 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl leading-[1.12]">Türkiye’nin genç arıcılarının uluslararası temsilini destekliyoruz.</h2></div>
 <div class="grid md:grid-cols-2 gap-12 md:gap-16 reveal-on-scroll">
-<div id="icyb" class="border-t-2 border-amber/70 pt-6"><h3 class="font-headline-md text-3xl mb-1">ICYB</h3><p class="text-sm text-white/55 mb-5" lang="en">International Confederation of Young Beekeepers</p><p class="text-white/75 text-lg leading-relaxed mb-4">ICYB, genç arıcılar arasındaki uluslararası iletişim, deneyim paylaşımı ve iş birliğinin gelişmesine yönelik bir uluslararası ağdır.</p><p class="text-white/75 text-lg leading-relaxed">Apikültür Vakfı, Türkiye’deki genç arıcıların bu uluslararası ekosistemle bağlantısını geliştirmeyi ve Türkiye’nin uluslararası genç arıcılar platformundaki temsilini desteklemeyi amaçlar.</p></div>
-<div id="imyb" class="border-t-2 border-amber/70 pt-6"><h3 class="font-headline-md text-3xl mb-1">IMYB</h3><p class="text-sm text-white/55 mb-5" lang="en">International Meeting of Young Beekeepers</p><p class="text-white/75 text-lg leading-relaxed mb-4">International Meeting of Young Beekeepers, farklı ülkelerden genç arıcıların bir araya gelerek bilgi, deneyim ve kültür paylaşımında bulunduğu uluslararası bir buluşmadır.</p><p class="text-white/75 text-lg leading-relaxed">Türkiye’nin bu uluslararası platformdaki katılımının geliştirilmesi, gençlerin yalnızca arıcılık bilgilerini değil; iletişim, takım çalışması ve kültürlerarası deneyimlerini de geliştirmelerine olanak sağlar.</p></div>
+<div id="icyb" class="border-t-2 border-amber/70 pt-6"><h3 class="font-headline-md text-3xl mb-1">ICYB</h3><p class="text-sm text-white/55 mb-5" lang="en">International Confederation of Young Beekeepers</p><p class="text-white/75 text-lg leading-relaxed">Genç arıcıları farklı ülkelerden akranlarıyla buluşturan uluslararası ağ. Türkiye’deki genç arıcıların bu ağla bağlantı kurmasını destekliyoruz.</p></div>
+<div id="imyb" class="border-t-2 border-amber/70 pt-6"><h3 class="font-headline-md text-3xl mb-1">IMYB</h3><p class="text-sm text-white/55 mb-5" lang="en">International Meeting of Young Beekeepers</p><p class="text-white/75 text-lg leading-relaxed mb-4">International Meeting of Young Beekeepers, farklı ülkelerden genç arıcıların bir araya gelerek bilgi, deneyim ve kültür paylaşımında bulunduğu uluslararası bir buluşmadır.</p><p class="text-white/75 text-lg leading-relaxed">Buluşma, gençlere arıcılık bilgisinin yanında iletişim, takım çalışması ve kültürlerarası deneyim kazandırır.</p></div>
 </div>
 <p class="mt-14 text-sm text-white/55 max-w-3xl reveal-on-scroll">Uluslararası organizasyonlara ilişkin katılım bilgileri, ilgili dönem ve kaynak belirtilerek paylaşılır.</p>
 </div>
@@ -382,7 +379,7 @@ MODEL = [("Arı Dostluk Kovanı", "Her kulüp, okulda tahsis edilen bir Arı Dos
          ("Destekçiler", "Firmalar ve kişiler yıllık katkılarıyla kulüplere destek olabilir.")]
 main += feature(0, "kulupler", "assets/img/p2-club-frame.jpg", "Kovandan çıkarılan petekli çerçeve", "groups", None,
                 "Apikültür Gençlik Kulüpleri",
-                "Okullarda ve gençlik ortamlarında arıcılık, doğa, polinasyon ve sürdürülebilirlik konularında öğrenme ve deneyim paylaşımını destekleyen bir model geliştirmeyi hedefliyoruz. Kulüpler; gençlerin arıcılıkla tanışmasına, doğayı gözlemlemesine ve ekip çalışması içinde öğrenmesine olanak sağlayan faaliyetler etrafında şekillenir.",
+                "Okullarda arıcılık, doğa ve polinasyon üzerine öğrenmeyi destekleyen bir kulüp modeli. Gençler arıcılıkla tanışır, doğayı gözlemler ve ekip içinde öğrenir.",
                 ''.join(block(t, p) for t, p in MODEL),
                 [("Gençlik Kulübü Kurmak İstiyorum", MAILTO + "Gen%C3%A7lik%20Kul%C3%BCb%C3%BC"), ("Kulüplere Destek Olun", MAILTO + "Gen%C3%A7lik%20Kul%C3%BCb%C3%BC%20Deste%C4%9Fi")],
                 extra_top='<h3 class="font-headline-md text-2xl text-espresso mb-2">Kulüp modelinin ana hatları</h3>')
@@ -401,7 +398,7 @@ main += f'''<section class="py-24 md:py-32 bg-ekru/30" id="takvim">
 main += ('<section class="py-20 md:py-24 bg-background" id="gelecek-yonlendirme"><div class="max-w-[1180px] mx-auto px-7">'
          + promo("Eğitim ve gelişim desteği mi arıyorsunuz?", "Apikültür Gelecek kapsamında öğrenciler ve gençler için dönemsel burs, bilimsel gelişim ve hareketlilik destekleri açılabilir.", "Apikültür Gelecek’i Keşfet", "gelecek.html")
          + '</div></section>\n')
-main += cta("Gençlik çalışmalarına destek olun.", "Gençlerin eğitim, deneyim ve uluslararası bağlantı fırsatlarına erişimini destekleyebilirsiniz.",
+main += cta("Gençlik çalışmalarına destek olun.", "Kulüplere, eğitim programlarına ve uluslararası buluşmalara katılıma katkı sunabilirsiniz.",
             [("Destek Olun", MAILTO + "Gen%C3%A7lik"), ("Bize Ulaşın", "index.html#iletisim")])
 shell("genclik.html", "Gençlik ve Uluslararası Temsil | Apikültür Vakfı",
       "Gençlerin arıcılıkta eğitim, deneyim ve uluslararası bağlantılar kazanmasını; Türkiye’nin ICYB ve IMYB süreçlerindeki katılımını destekliyoruz.",
@@ -411,8 +408,8 @@ shell("genclik.html", "Gençlik ve Uluslararası Temsil | Apikültür Vakfı",
 # 6) AKADEMİ & BİLİM
 # =====================================================================
 main = hero("assets/img/bee-flower.jpg", "Akademi &amp; Bilim", "Akademi &amp; Bilim",
-            "Bilginin üretildiği ve paylaşıldığı merkez.",
-            "Arıcılığın geleceği, doğru bilgiye ve bu bilginin paylaşılmasına bağlıdır. Apikültür Vakfı; eğitim, araştırma, bilimsel iletişim ve bilgi paylaşımını faaliyetlerinin temel unsurlarından biri olarak görür.",
+            "Arıcılığın geleceği doğru bilgiye bağlıdır.",
+            "Eğitim, araştırma ve yayın çalışmalarımızı bu sayfada bulabilirsiniz.",
             [("akademi-egitim", "Apikültür Akademi"), ("arastirma", "Araştırma &amp; Bilim"), ("bilgi-merkezi", "Bilgi Merkezi")])
 main += feature(0, "akademi-egitim", "assets/img/youth-frame.jpg", "Petekli çerçeveyi inceleyen arıcı", "school", None, "Apikültür Akademi",
                 "Arıcılığa ilişkin temel ve ileri düzey bilgi, uygulama ve kapasite geliştirme çalışmalarını destekleyen eğitim yapısı.",
@@ -420,14 +417,13 @@ main += feature(0, "akademi-egitim", "assets/img/youth-frame.jpg", "Petekli çer
                 + block("Kimler için", "Arıcılar, arıcılığa yeni başlayanlar, gençler, öğrenciler, çiftçiler ve girişimciler."),
                 [("Gençlik ve Sürdürülebilir Modern Arıcılık", "faaliyet.html#genclik-modern-aricilik")])
 main += feature(1, "arastirma", "assets/bee-9712039_1280.jpg", "Mavi bir çiçekte polen toplayan arı", "science", None, "Araştırma &amp; Bilim",
-                "Üniversiteler, araştırmacılar, uzmanlar ve farklı kurumlarla arı sağlığı, polinasyon, sürdürülebilirlik, çevre ve arıcılığın geleceğine ilişkin bilimsel çalışmalar geliştirilmesini destekleriz.",
-                block("Çalışma konuları", "Arı sağlığı, polinasyon, biyoçeşitlilik, iklim, çevre ve sürdürülebilir arıcılık.")
-                + block("Araştırma iş birlikleri", "Üniversiteler, araştırma merkezleri ve alan uzmanlarıyla bilgi ve deneyim paylaşımı."),
+                "Üniversiteler, araştırma merkezleri ve alan uzmanlarıyla birlikte bilimsel çalışmalar geliştirilmesini destekleriz.",
+                block("Çalışma konuları", "Arı sağlığı ve koloni kayıpları, polinasyon, biyoçeşitlilik, iklim ve arı ürünleri."),
                 [("Koloni Sağlığı ve Kayıpların Önlenmesi", "faaliyet.html#koloni-sagligi")],
                 tail='<div class="mt-10">' + promo("Araştırmanız için destek mi arıyorsunuz?", "Apikültür Gelecek kapsamında genç araştırmacılar, lisansüstü çalışmalar, bilimsel araştırmalar ve uluslararası bilimsel gelişim için dönemsel destek programları açılabilir.", "Bilim &amp; Araştırma Desteklerini Gör", "gelecek.html#programlar") + '</div>')
 main += feature(2, "bilgi-merkezi", "assets/img/p4-women-planting.jpg", "Kovan başında çalışan arıcı", "menu_book", None, "Bilgi Merkezi",
                 "Bilimsel yayınlar, teknik dokümanlar, rehberler, raporlar ve arıcılıkla ilgili güvenilir bilgi kaynaklarını erişilebilir hale getirmeyi amaçlarız.",
-                block("İçerik türleri", "Bilimsel yayınlar, teknik dokümanlar, rehberler ve raporlar. Yayınlar hazır oldukça dönem ve kaynak bilgileriyle birlikte bu bölüme eklenir."))
+                block("Yayınlar", "Yayınlar hazır oldukça dönem ve kaynak bilgileriyle birlikte bu bölüme eklenir."))
 main += cta("Bilgiyi birlikte büyütelim.", "Eğitim, araştırma ve yayın çalışmalarına katkı sunmak isteyen kurumlar ve uzmanlarla iletişim kurmaktan memnuniyet duyarız.",
             [("Akademik İş Birliği Öner", MAILTO + "Akademi%20%26%20Bilim"), ("Bize Ulaşın", "index.html#iletisim")])
 shell("akademi.html", "Akademi &amp; Bilim | Apikültür Vakfı",
@@ -454,17 +450,17 @@ PROJECTS = [
   "Polinatörlerin yaşam alanlarının desteklenmesi, biyoçeşitliliğin korunması ve farklı paydaşların bir araya gelmesi amacıyla geliştirilen proje yaklaşımı.",
   '', ("Biyoçeşitlilik ve Tarımsal Verimlilik", "biyocesitlilik-verimlilik")),
  ("kadin-genc-arici", "assets/img/p4-women-planting.jpg", "Kovan başında arıcı", "diversity_3", "Geliştirme", "Kadın ve Genç Arıcı Programı",
-  "Kadınların ve gençlerin arıcılık alanında bilgi, beceri, mentorluk ve girişimcilik fırsatlarına erişimini desteklemeye yönelik çalışmalar.",
+  "Kadınların ve gençlerin arıcılıkta bilgi, beceri, mentorluk ve girişimcilik fırsatlarına erişmesini destekleyen program.",
   '', ("Gençlik ve Sürdürülebilir Modern Arıcılık", "genclik-modern-aricilik")),
  ("cografi-isaret", "assets/img/p5-honey-jar.jpg", "Bal kavanozu", "location_on", "Geliştirme", "Coğrafi İşaret &amp; Yerel Değerler",
   "Arıcılığın yerel bilgi, ürün ve kültürel değerlerinin korunması, görünür hale getirilmesi ve sürdürülebilir şekilde değerlendirilmesine yönelik çalışmalar.",
   '', ("Etik Arıcılık ve Arı Ürünlerine Güven", "etik-aricilik")),
  ("apiterapi-apiturizm", "assets/img/p6-meadow.jpg", "Altın ışıkta arılar", "spa", "Araştırma", "Apiterapi &amp; Apiturizm Araştırmaları",
-  "Arı ürünleri, arıcılık kültürü, doğa ve turizm arasındaki ilişkilerin bilimsel ve kültürel perspektiflerle ele alınmasına yönelik çalışmalar.",
+  "Arı ürünleri, arıcılık kültürü, doğa ve turizm arasındaki ilişkiyi bilimsel ve kültürel açıdan inceleyen araştırmalar.",
   '', ("Etik Arıcılık ve Arı Ürünlerine Güven", "etik-aricilik")),
 ]
-main = hero("assets/img/hero-beekeeper.jpg", "Projeler", "Projeler", "Amaçlarımızı sahada hayata geçiriyoruz.",
-            "Apikültür Vakfı, faaliyet alanları doğrultusunda farklı kurumlar, uzmanlar, eğitim kuruluşları, kamu kurumları ve diğer paydaşlarla çeşitli projeler geliştirir ve destekler. Projelerimiz; eğitimden gençliğe, biyoçeşitlilikten yerel değerlere kadar farklı alanlara odaklanabilir.",
+main = hero("assets/img/hero-beekeeper.jpg", "Projeler", "Projeler", "Eksenlerimizi sahaya taşıyan çalışmalar.",
+            "Kurumlar, uzmanlar, okullar ve kamu kurumlarıyla birlikte projeler geliştirir ve destekleriz.",
             [(p[0], p[5]) for p in PROJECTS])
 main += '''<div class="bg-ekru/40 border-b border-outline-variant/30"><div class="max-w-[1180px] mx-auto px-7 py-6 flex gap-4 items-start text-on-surface-variant"><span class="material-symbols-outlined text-terracotta shrink-0">info</span><p>Her projenin süresi, ortakları ve çıktıları yalnızca o projeye ait bilgiler olarak paylaşılır. Bu rakamlar Apikültür Vakfı’nın toplam performansı veya kurumsal etki göstergesi olarak sunulmaz.</p></div></div>
 '''
