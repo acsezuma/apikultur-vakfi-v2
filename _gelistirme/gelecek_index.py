@@ -14,38 +14,28 @@ idx = once(idx, f'<li><a {FTC} href="akademi.html">Akademi &amp; Bilim</a></li>'
            f'<li><a {FTC} href="akademi.html">Akademi &amp; Bilim</a></li><li><a {FTC} href="gelecek.html">Apikültür Gelecek</a></li>', "footer-gelecek")
 
 GELECEK_PROGS = [
-    ("gelecek-burslari", "Gelecek Bursları", "Öğrencilerin eğitim yolculuğunu destekleyen burs programları."),
-    ("genc-bilim", "Genç Bilim", "Yüksek lisans, doktora ve genç araştırmacılara yönelik bilimsel gelişim destekleri."),
-    ("arastir", "Araştır", "Tez, araştırma, saha çalışması ve bilimsel proje destekleri."),
-    ("dunyaya-acil", "Dünyaya Açıl", "Kongre, bilimsel toplantı, araştırma ziyareti ve uluslararası hareketlilik destekleri."),
-    ("sahada-gelecek", "Sahada Gelecek", "Arıcılar, çiftçiler ve saha uygulayıcılarına yönelik eğitim ve kapasite geliştirme destekleri."),
+    ("gelecek-burslari", "Gelecek Bursları"), ("genc-bilim", "Genç Bilim"), ("arastir", "Araştır"),
+    ("dunyaya-acil", "Dünyaya Açıl"), ("sahada-gelecek", "Sahada Gelecek"),
 ]
 _items = ''.join(
-    f'<a href="gelecek.html#{pid}" class="group block border-t-2 border-amber/60 pt-5 hover:border-amber transition-colors">'
-    f'<h3 class="font-headline-md text-xl mb-3 group-hover:text-amber transition-colors">{name}</h3>'
-    f'<p class="text-white/70 leading-relaxed">{desc}</p></a>' for pid, name, desc in GELECEK_PROGS)
+    f'<li><a href="gelecek.html#{pid}" class="group flex items-center justify-between gap-4 border-t border-white/15 py-5">'
+    f'<span class="font-headline-md text-xl group-hover:text-amber transition-colors">{name}</span>'
+    f'<span class="material-symbols-outlined text-[20px] text-amber/70 group-hover:text-amber group-hover:translate-x-1 transition-all">arrow_forward</span></a></li>' for pid, name in GELECEK_PROGS)
 GELECEK_HOME = f'''<!-- Apikültür Gelecek -->
 <section class="relative isolate overflow-hidden py-32 text-white" id="gelecek"><div class="absolute inset-0 -z-10" aria-hidden="true"><img src="assets/img/youth-frame.jpg" alt="" class="w-full h-full object-cover" loading="lazy" style="filter:blur(6px);transform:scale(1.1)"/><div class="absolute inset-0" style="background:linear-gradient(160deg, rgba(51,38,27,0.94), rgba(40,29,20,0.91) 55%, rgba(28,20,13,0.95))"></div></div>
-<div class="max-w-[1180px] mx-auto px-7">
-<div class="max-w-3xl mb-16 reveal-on-scroll">
+<div class="max-w-[1180px] mx-auto px-7 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<div class="lg:col-span-6 reveal-on-scroll">
 <h2 class="font-headline-lg text-4xl md:text-5xl leading-[1.12] mb-6">Apikültür Gelecek</h2>
-<p class="text-2xl md:text-[1.7rem] text-white/90 leading-snug mb-8">Bilgiyi destekliyoruz. Bilimi büyütüyoruz. Geleceğe yatırım yapıyoruz.</p>
-<p class="text-white/75 text-lg leading-relaxed mb-4">Apikültür Gelecek; arılar, arıcılık, polinasyon, biyolojik çeşitlilik, tarım, gıda, çevre ve kırsal kalkınmanın geleceğine katkı sağlayacak öğrencileri, genç araştırmacıları ve nitelikli çalışmaları desteklemek amacıyla oluşturulan eğitim, bilim ve gelecek destek programıdır.</p>
-<p class="text-white/75 text-lg leading-relaxed">Eğitim burslarından genç araştırmacı desteklerine, bilimsel araştırmalardan uluslararası hareketliliğe kadar farklı destek yollarını tek bir yapı altında buluşturuyoruz.</p>
-</div>
-<div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-10 mb-16 reveal-on-scroll">{_items}</div>
-<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 pt-10 border-t border-white/10 reveal-on-scroll">
-<div class="max-w-xl"><h3 class="font-headline-md text-2xl mb-3">Hangi destek size uygun?</h3><p class="text-white/70 text-lg leading-relaxed">Açık programları inceleyin, başvuru koşullarını öğrenin ve size uygun destek yolunu keşfedin.</p></div>
+<p class="text-white/75 text-lg leading-relaxed mb-10">Öğrencileri, genç araştırmacıları ve nitelikli bilimsel çalışmaları burs, araştırma ve uluslararası gelişim destekleriyle buluşturan destek programımız.</p>
 <div class="flex flex-wrap gap-4"><a href="gelecek.html" class="inline-flex items-center gap-2 bg-amber text-espresso px-8 py-4 rounded-full font-bold hover:-translate-y-0.5 transition-all group">Apikültür Gelecek’i Keşfet {ARROW}</a><a href="gelecek.html#programlar" class="bg-white/10 border border-white/25 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all">Açık Programlar</a></div>
 </div>
+<ul class="lg:col-span-6 border-b border-white/15 reveal-on-scroll">{_items}</ul>
 </div>
 </section>
 '''
 idx = once(idx, '<!-- Projeler -->\n', GELECEK_HOME + '<!-- Projeler -->\n', "home-gelecek")
 
-# Destek bölümü: Gelecek'e küçük bağlantı (butonların hemen üstünde)
-idx = once(idx, '<div class="flex flex-wrap gap-4 reveal-on-scroll">\n<a href="mailto:info@apikulturvakfi.org?subject=Ba%C4%9F%C4%B1%C5%9F"',
-           '<div class="mb-12 max-w-3xl border-l-2 border-amber pl-5 reveal-on-scroll"><h3 class="font-headline-md text-xl mb-2">Eğitim ve Bilimi Destekleyin</h3>'
-           '<p class="text-white/75 leading-relaxed mb-3">Apikültür Gelecek kapsamında öğrencilerin, genç araştırmacıların ve nitelikli bilimsel çalışmaların desteklenmesine katkıda bulunun.</p>'
-           f'<a class="inline-flex items-center gap-2 text-amber font-bold group" href="gelecek.html#destekle">Apikültür Gelecek’i Destekle {ARROW}</a></div>\n'
-           '<div class="flex flex-wrap gap-4 reveal-on-scroll">\n<a href="mailto:info@apikulturvakfi.org?subject=Ba%C4%9F%C4%B1%C5%9F"', "destek-gelecek")
+# Destek bölümü: "Eğitim ve Araştırma Desteği" maddesinin altına Apikültür Gelecek bağlantısı
+idx = once(idx, '<h3 class="font-headline-md text-xl mb-3">Eğitim ve Araştırma Desteği</h3><p class="text-white/70 leading-relaxed">Bilimsel ve eğitim faaliyetlerinin gelişmesine destek olabilirsiniz.</p>',
+           '<h3 class="font-headline-md text-xl mb-3">Eğitim ve Araştırma Desteği</h3><p class="text-white/70 leading-relaxed">Bilimsel ve eğitim faaliyetlerinin gelişmesine destek olabilirsiniz.</p>'
+           '<a class="mt-3 inline-flex items-center gap-1.5 text-amber font-bold text-sm group" href="gelecek.html#destekle">Apikültür Gelecek’i Destekle <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>', "destek-gelecek")

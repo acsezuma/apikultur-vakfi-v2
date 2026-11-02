@@ -77,8 +77,8 @@ def build(fname):
     s = re.sub(r'(<a class="nav-link[^"]*" href="[^"]*"(?: aria-current="page")?>)([^<]+)</a>', lambda m: m.group(1) + SHORT.get(m.group(2), m.group(2)) + '</a>', s)
     s = s.replace('<span class="hidden xl:inline">Foundation Charter</span>', '<span class="hidden xl:inline">Charter</span>')
     s = s.replace('>14.895<', '>14,895<')  # İngilizce binlik ayracı
-    assert s.count('assets/og-image.png?v=3') == 2
-    s = s.replace('assets/og-image.png?v=3', 'assets/og-image-en.png?v=1')
+    assert s.count('assets/og-image.png?v=4') == 2
+    s = s.replace('assets/og-image.png?v=4', 'assets/og-image-en.png?v=2')
     # e-posta konuları
     def subj(m):
         v = unquote(m.group(1))

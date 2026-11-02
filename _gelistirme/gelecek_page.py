@@ -98,7 +98,7 @@ PROGRAMS_SEC = f'''<section class="py-24 md:py-32 bg-background" id="programlar"
 
 STEPS = [("Programını bul", "Açık programları incele ve sana uygun destek programını seç."),
          ("Koşulları incele", "Başvuru şartlarını, takvimi, destek kapsamını ve değerlendirme kriterlerini incele."),
-         ("Başvurunu tamamla", "Başvurunu çevrim içi olarak tamamla. Başvuru ücretsizdir."),
+         ("Başvurunu tamamla", "Başvurunu çevrim içi olarak tamamla."),
          ("Değerlendirme", "Başvurun, ilgili program için önceden belirlenmiş kriterler doğrultusunda değerlendirilir."),
          ("Tahsis", "Destekler; değerlendirme sonuçları, program bütçesi ve kontenjan çerçevesinde Vakfın yetkili karar süreciyle tahsis edilir. Sonuç, program ilanında belirtilen kanal üzerinden bildirilir."),
          ("Destek ve izleme", "Destek tahsis edilen adaylar gerekli doğrulama işlemlerinin ardından programa dahil edilir; süreç programın niteliğine göre izlenir.")]
@@ -107,7 +107,7 @@ steps_html = ''.join(f'<li class="border-t-2 border-terracotta/60 pt-5"><span cl
                      for k, (t, p) in enumerate(STEPS, 1))
 BASVURU = f'''<section class="py-24 md:py-32 bg-ekru/30" id="basvuru">
 <div class="max-w-[1180px] mx-auto px-7">
-{head2("Nasıl başvurulur?", ["Başvurular ücretsizdir. Değerlendirme kriterleri program açılmadan önce belirlenir. Programın niteliğine göre değerlendirme dosyaları kimlik bilgilerinden ayrıştırılabilir ve birden fazla değerlendirici kullanılabilir."], "mb-14")}
+{head2("Nasıl başvurulur?", [], "mb-14")}
 <ol class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 reveal-on-scroll">{steps_html}</ol>
 <div class="mt-16 grid lg:grid-cols-12 gap-8 lg:gap-16 pt-12 border-t border-outline-variant/40 reveal-on-scroll">
 <h3 class="lg:col-span-4 font-headline-md text-2xl text-espresso">Başvuruda neler istiyoruz?</h3>

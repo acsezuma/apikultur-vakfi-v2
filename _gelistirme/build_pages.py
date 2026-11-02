@@ -52,7 +52,7 @@ if n != 2: print("!! icyb etiket", n); sys.exit(1)
 idx = once(idx, '<p class="font-label-mono text-[12px] tracking-widest uppercase text-amber">Yaş grubu: 12–18</p>', '<p class="text-white/60">Yaş grubu: 12–18</p>', "yas-grubu")
 idx, n = re.subn(r'<div class="font-label-mono text-\[11px\] tracking-widest uppercase text-terracotta mb-4">([^<]+)</div>', r'<h3 class="font-headline-md text-lg text-espresso mb-4">\1</h3>', idx)
 if n != 3: print("!! isbirligi etiket", n); sys.exit(1)
-idx = once(idx, 'og-image.png?v=2', 'og-image.png?v=3', 'og-surum', 2)
+idx = once(idx, 'og-image.png?v=2', 'og-image.png?v=4', 'og-surum', 2)
 # Mobil menü: bg-white/98 Tailwind ölçeğinde yok -> saydam kalıyordu
 idx = once(idx, 'bg-white/98', 'bg-white', "menu-bg")
 # Footer başlıkları h4 -> h2 (başlık hiyerarşisi)
@@ -119,22 +119,11 @@ idx = once(idx, '<p class="mt-8 text-sm text-on-surface-variant/70 reveal-on-scr
 idx = once(idx, '<p class="text-on-surface-variant leading-relaxed mb-3">Alan uzmanlarının ve paydaşların görüş ve deneyimleriyle Vakfın çalışmalarına katkı sunar.</p>\n</div>\n</div>\n',
            '<p class="text-on-surface-variant leading-relaxed mb-3">Alan uzmanlarının ve paydaşların görüş ve deneyimleriyle Vakfın çalışmalarına katkı sunar.</p>\n</div>\n</div>\n'
            f'<a href="yonetim.html" class="mt-14 inline-flex items-center gap-2 border border-terracotta text-terracotta px-8 py-4 rounded-full font-bold hover:bg-terracotta hover:text-white transition-all group">Yönetim &amp; Şeffaflık {ARROW}</a>\n', "yonetim-btn")
-# ---- Vakıf Senedi: header butonu yerine menüde "Vakıf" altında; ana sayfa içeriğinde tek yer (Yönetim butonu) ----
+# ---- Vakıf Senedi: yalnızca Yönetim & Şeffaflık sayfasındaki Şeffaflık Merkezi'nde (menü, header, footer ve ana sayfada yok) ----
 idx, n = re.subn(r'<a href="senet.html" title="Vakıf Senedi"[^>]*>.*?</a>\n', '', idx, count=1, flags=re.S)
 if n != 1: print("!! header senet", n); sys.exit(1)
-DD_A = 'class="flex items-center gap-2 px-5 py-2.5 text-[13px] font-semibold text-espresso hover:text-terracotta hover:bg-ekru/60 transition-colors"'
-idx = once(idx, f'<a {NAVC} href="vakif.html">Vakıf</a>\n',
-           '<div class="relative group/vakif flex items-center gap-0.5">\n'
-           f'<a {NAVC} href="vakif.html">Vakıf</a><span class="material-symbols-outlined text-[16px] text-espresso/50 group-hover/vakif:text-terracotta transition-colors" aria-hidden="true">expand_more</span>\n'
-           '<div class="absolute left-[-1.25rem] top-full pt-3 opacity-0 invisible group-hover/vakif:opacity-100 group-hover/vakif:visible group-focus-within/vakif:opacity-100 group-focus-within/vakif:visible transition-all duration-200">\n'
-           '<div class="min-w-[210px] bg-white rounded-2xl shadow-xl shadow-espresso/10 border border-outline-variant/30 py-2">\n'
-           f'<a {DD_A} href="vakif.html">Vakıf Hakkında</a>\n'
-           f'<a {DD_A} href="senet.html"><span class="material-symbols-outlined text-[18px] text-terracotta">description</span>Vakıf Senedi</a>\n'
-           '</div>\n</div>\n</div>\n', "nav-dropdown")
 idx = once(idx, '<a class="py-3.5 inline-flex items-center gap-2 text-terracotta font-bold" href="senet.html"><span class="material-symbols-outlined text-[20px]">description</span>Vakıf Senedi</a>\n', '', "mob-senet-eski")
-idx = once(idx, f'<a {MOBC} href="vakif.html">Vakıf</a>\n',
-           f'<a {MOBC} href="vakif.html">Vakıf</a>\n'
-           '<a class="py-3 pl-5 border-b border-outline-variant/15 text-espresso/80 font-semibold text-sm inline-flex items-center gap-2" href="senet.html"><span class="material-symbols-outlined text-[18px] text-terracotta">description</span>Vakıf Senedi</a>\n', "mob-senet-alt")
+idx = once(idx, f'<li><a {FTC} href="senet.html">Vakıf Senedi</a></li>', '', "footer-senet")
 # Kurul kartları: senet bağlantısı ve "Senette incele" kaldırıldı (Yönetim butonu yeterli)
 idx, n = re.subn(r'<a href="senet.html" class="group block border-t-2 border-terracotta/70 pt-5">(.*?)<span class="inline-flex items-center gap-1 text-terracotta text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">Senette incele <span class="material-symbols-outlined text-\[16px\]">arrow_forward</span></span>\n</a>',
                  lambda m: '<div class="group block border-t-2 border-terracotta/70 pt-5">' + m.group(1).replace(' group-hover:text-terracotta transition-colors', '') + '</div>', idx, flags=re.S)
@@ -145,6 +134,7 @@ if n != 1: print("!! destek md16", n); sys.exit(1)
 idx = once(idx, '<li>ICYB</li><li>FAO</li><li>Apimondia</li></ul>', '<li>ICYB</li><li>FAO</li><li>Apimondia</li><li>COLOSS</li></ul>', 'coloss')
 idx = once(idx, 'text-espresso">Tamamlandı</span>', 'text-espresso">Devam ediyor</span>', 'aridostum-durum')
 exec(open(f'{SCR}/gelecek_index.py', encoding='utf-8').read())
+exec(open(f'{SCR}/sadelestirme.py', encoding='utf-8').read())
 open(f"{REPO}/index.html", "w", encoding="utf-8").write(fill_lang(idx, "index.html"))
 print("OK  index.html")
 
@@ -191,7 +181,7 @@ def shell(fname, title, desc, crumb, main):
 def hero(img, crumb, h1, lead, sub, toc, actions=''):
     toc_html = ''
     if toc:
-        cols = {3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4', 5: 'lg:grid-cols-5'}[len(toc)]
+        cols = {2: 'lg:grid-cols-2', 3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4', 5: 'lg:grid-cols-5'}[len(toc)]
         toc_html = (f'<ol class="mt-14 md:mt-16 grid gap-x-8 gap-y-5 sm:grid-cols-2 {cols}">' + ''.join(
             f'<li><a href="#{i}" class="group flex items-baseline gap-3 border-t border-white/20 pt-4 hover:border-amber transition-colors">'
             f'<span class="font-headline-md text-white/90 group-hover:text-white leading-snug">{t}</span></a></li>'
@@ -270,58 +260,59 @@ def proj_link(name, pid):
 # =====================================================================
 # 3) FAALİYET ALANLARIMIZ
 # =====================================================================
+# Beş eksen (kurul onaylı 3. taslak, Kasım 2026). Çatı ilke: ekosistemin sürdürülebilirliği.
 AXES = [
- ("bilim-arastirma", "assets/bee-9712039_1280.jpg", "Mavi bir çiçekte polen toplayan arı", "science", "01", "Bilim &amp; Araştırma",
-  "Arı sağlığı, polinasyon, biyoçeşitlilik, iklim, çevre ve arıcılığın geleceğine ilişkin bilimsel çalışmaların desteklenmesine ve yaygınlaştırılmasına katkı sağlarız.",
-  [("Bilimsel Araştırma", "Arıcılık ve bal üretimiyle ilgili bilimsel araştırmaları destekleyerek inovatif ve geleneksel yöntemlerin entegrasyonunu sağlamak.", None),
-   ("Apiterapi &amp; Apiturizm", "Arı ürünlerinin insan sağlığı üzerindeki faydalarını araştıran çalışmaları desteklemek; apiturizm modelleriyle kırsal kalkınmaya katkı sağlamak.", ("Apiterapi &amp; Apiturizm Araştırmaları", "apiterapi-apiturizm")),
+ ("koloni-sagligi", "assets/bee-9712039_1280.jpg", "Mavi bir çiçekte polen toplayan arı", "health_and_safety", "01", "Koloni Sağlığı ve Kayıpların Önlenmesi",
+  "Başta koloni kayıpları olmak üzere arı popülasyonlarını tehdit eden iklimsel, çevresel ve tarımsal etkenlerin araştırılmasını ve önlenmesine yönelik çalışmaları destekleriz.",
+  [("Bilimsel Araştırma", "Arı sağlığı ve koloni kayıplarıyla ilgili bilimsel araştırmaları desteklemek; yenilikçi ve geleneksel yöntemlerin birlikte kullanılmasına katkı sağlamak.", None),
    ("Dijital Dönüşüm &amp; Veri", "Arıcılıkta yeni teknolojilerin ve yenilikçi ürünlerin geliştirilmesini teşvik etmek.", None)],
   [("Araştırma &amp; Bilim", "akademi.html#arastirma")]),
- ("egitim-bilgi", "assets/img/p2-club-frame.jpg", "Kovandan çıkarılan petekli çerçeve", "school", "02", "Eğitim &amp; Bilgi",
-  "Arıcıların, gençlerin, öğrencilerin ve toplumun doğru ve güncel bilgiye erişimini destekleyen eğitim ve kapasite geliştirme çalışmalarını yürütürüz.",
-  [("Eğitim Programları", "Arıcılıkla ilgilenen bireyler, çiftçiler ve girişimciler için sürekli eğitim programları düzenlemek.", ("Arı Dostum Olur Musun?", "ari-dostum"))],
-  [("Apikültür Akademi", "akademi.html#akademi-egitim")]),
- ("surdurulebilir-aricilik", "assets/img/p3-corridor-lavender.jpg", "Çiçek açmış lavanta tarlası", "eco", "03", "Sürdürülebilir Arıcılık",
-  "Arıcılığın doğal kaynaklarla uyum içinde gelişmesini, iyi uygulamaların yaygınlaşmasını ve arıcılığın çevresel sürdürülebilirliğinin güçlendirilmesini destekleriz.",
-  [("İyi Arıcılık Uygulamaları", "Çevre dostu, sürdürülebilir ve etik arıcılık yöntemlerinin yaygınlaştırılması için arıcılara rehberlik etmek.", None),
-   ("Polinasyon &amp; Tarım", "Arıcılar ile çiftçiler arasındaki iş birliğini teşvik ederek polinasyonun tarım üzerindeki olumlu etkilerini artıracak projeler geliştirmek.", ("Türkiye Arı Koridoru", "ari-koridoru"))],
+ ("biyocesitlilik-verimlilik", "assets/img/p3-corridor-lavender.jpg", "Çiçek açmış lavanta tarlası", "eco", "02", "Biyoçeşitlilik ve Tarımsal Verimlilik",
+  "Bal arıları ve diğer tozlayıcıların korunmasını, biyoçeşitliliği artıran projeleri ve arıcılar ile çiftçiler arasındaki iş birliğini destekleyerek polinasyon yoluyla tarımsal verimliliğin artmasına katkı sağlarız.",
+  [("Polinasyon &amp; Tarım", "Arıcılar ile çiftçiler arasındaki iş birliğini teşvik ederek polinasyonun tarım üzerindeki olumlu etkilerini artıracak projeler geliştirmek.", ("Türkiye Arı Koridoru", "ari-koridoru"))],
   None),
- ("genclik-gelecek", "assets/img/p1-bee-friend.jpg", "Petekli çerçeveyi inceleyen genç arıcı", "diversity_3", "04", "Gençlik &amp; Gelecek",
-  "Gençlerin arıcılık alanında bilgi, deneyim ve uluslararası bağlantılar kazanmasını destekler; Türkiye’nin genç arıcılarının uluslararası platformlarda temsil edilmesine katkı sağlarız.",
-  [("Gençlik &amp; Kadın Programları", "Kadın ve genç girişimciler için eğitim programları ve mentorluk hizmetleri sunmak.", ("Kadın ve Genç Arıcı Programı", "kadin-genc-arici"))],
-  [("Gençlik ve Uluslararası Temsil", "genclik.html")]),
- ("kultur-uluslararasi", "assets/img/p5-honey-jar.jpg", "Kavanozdaki bal ve bal kaşığı", "public", "05", "Kültür &amp; Uluslararası İş Birliği",
-  "Arıcılığın kültürel mirasını korumaya, yerel değerleri görünür kılmaya ve ulusal ve uluslararası kurumlarla bilgi ve deneyim paylaşımını geliştirmeye çalışırız.",
-  [("Coğrafi İşaret &amp; Yerel Değerler", "Coğrafi işaret tescili ile yerel arı ürünlerinin tanınırlığını artırmak ve geleneksel üretim yöntemlerini korumak.", ("Coğrafi İşaret &amp; Yerel Değerler", "cografi-isaret")),
-   ("Uluslararası İş Birlikleri", "Arıcılık vakıfları, enstitüler ve kurumlarla iş birliği yaparak küresel ölçekte arıcılığın gelişimine katkıda bulunmak.", None)],
+ ("genclik-modern-aricilik", "assets/img/p1-bee-friend.jpg", "Petekli çerçeveyi inceleyen genç arıcı", "diversity_3", "03", "Gençlik ve Sürdürülebilir Modern Arıcılık",
+  "Gençleri odağa alarak verimliliği, ürün çeşitliliğini ve arıcının gelirini artıracak sürdürülebilir ve modern arıcılık çalışmalarını destekleriz; polen, arı sütü ve propolis gibi ürünlerin çeşitlendirilmesine yönelik yeni projeler geliştiririz.",
+  [("Gençlik &amp; Kadın Programları", "Kadın ve genç girişimciler için eğitim programları ve mentorluk hizmetleri sunmak.", ("Kadın ve Genç Arıcı Programı", "kadin-genc-arici")),
+   ("Arıcı Eğitimi", "Arıcılıkla ilgilenen bireylerin güncel ve bilimsel bilgiye erişimine, ilgili kurum ve birliklerle iş birliği içinde katkı sunmak.", None)],
+  [("Gençlik", "genclik.html"), ("Apikültür Gelecek", "gelecek.html")]),
+ ("etik-aricilik", "assets/img/p5-honey-jar.jpg", "Kavanozdaki bal ve bal kaşığı", "verified", "04", "Etik Arıcılık ve Arı Ürünlerine Güven",
+  "Arı ürünlerinin tüketiciyle doğru biçimde buluşmasının temeli bilinçli üreticidir. Kaynağından itibaren izlenebilir ve güvenilir üretimi esas alan etik arıcılığı ve etik arıcıları destekler; arı ve arı ürünlerinin toplumsal değerini yükseltmek için bilimsel araştırmaları, projeleri ve toplumun bilinç ve farkındalığını artıran eğitim ve bilgilendirme faaliyetlerini destekleriz.",
+  [("İyi Arıcılık Uygulamaları", "Çevre dostu ve etik arıcılık yöntemlerinin bilimsel temelinin güçlenmesine katkı sunmak.", None),
+   ("Coğrafi İşaret &amp; Yerel Değerler", "Coğrafi işaret tescili ile yerel arı ürünlerinin tanınırlığını artırmak ve geleneksel üretim yöntemlerini korumak.", ("Coğrafi İşaret &amp; Yerel Değerler", "cografi-isaret")),
+   ("Apiterapi &amp; Apiturizm", "Arı ürünlerinin insan sağlığı üzerindeki faydalarını araştıran çalışmaları desteklemek; apiturizm modelleriyle kırsal kalkınmaya katkı sağlamak.", ("Apiterapi &amp; Apiturizm Araştırmaları", "apiterapi-apiturizm")),
+   ("Toplumsal Farkındalık", "Çocuklara, gençlere ve tüketicilere arıların ve arı ürünlerinin değerini anlatan eğitim ve bilgilendirme çalışmaları yürütmek.", ("Arı Dostum Olur Musun?", "ari-dostum"))],
+  None),
+ ("is-birligi", "assets/img/apiary-smoker.jpg", "Arılıkta körükle çalışan arıcı", "public", "05", "Ulusal ve Uluslararası İş Birliği",
+  "Bu alanlarda ulusal ve uluslararası kurumlarla iş birliği yaparak arı ve arıcılık konusunda güvenilir bir referans merkezi olmayı hedefleriz.",
+  [("Uluslararası İş Birlikleri", "Arıcılık vakıfları, enstitüler ve kurumlarla iş birliği yaparak küresel ölçekte arıcılığın gelişimine katkıda bulunmak.", None)],
   [("İş birliklerimiz", "index.html#isbirligi")]),
 ]
 main = hero("assets/img/youth-frame.jpg", "Faaliyet Alanlarımız", "Faaliyet Alanlarımız",
-            "Vakfımızın çalışmaları birbiriyle bağlantılı beş temel alanda şekillenir.",
-            "Her alanın altında sürekli yürüttüğümüz çalışma başlıkları yer alır. Belirli süresi ve kapsamı olan çalışmalar ise Projeler sayfasında ayrıca anlatılır.",
+            "Çatı ilkemiz ekosistemin sürdürülebilirliğidir.",
+            "Çalışmalarımız bu ilke etrafında birbiriyle bağlantılı beş eksende şekillenir. Belirli süresi ve kapsamı olan çalışmalar Projeler sayfasında anlatılır.",
             [(a[0], a[5]) for a in AXES])
 for k, a in enumerate(AXES):
     blocks = ''.join(block(t, p, proj_link(*pr) if pr else '') for t, p, pr in a[7])
     main += feature(k, a[0], a[1], a[2], a[3], a[4], a[5], a[6], blocks, a[8])
-main += cta("Bu alanlarda birlikte çalışalım.", "Araştırma, eğitim, gençlik ve kültür çalışmalarında kurumlar, uzmanlar ve gönüllülerle iş birliğine açığız.",
+main += cta("Bu alanlarda birlikte çalışalım.", "Kurumlar, üniversiteler, uzmanlar ve gönüllülerle iş birliğine açığız.",
             [("İş Birliği Öner", MAILTO + "%C4%B0%C5%9F%20Birli%C4%9Fi"), ("Projelerimiz", "projeler.html")])
 shell("faaliyet.html", "Faaliyet Alanlarımız | Apikültür Vakfı",
-      "Apikültür Vakfı’nın beş faaliyet alanı: bilim ve araştırma, eğitim ve bilgi, sürdürülebilir arıcılık, gençlik ve gelecek, kültür ve uluslararası iş birliği.",
+      "Apikültür Vakfı’nın beş faaliyet ekseni: koloni sağlığı, biyoçeşitlilik ve tarımsal verimlilik, gençlik ve modern arıcılık, etik arıcılık, ulusal ve uluslararası iş birliği.",
       "Faaliyet Alanlarımız", main)
 
 # =====================================================================
 # 4) VAKIF HAKKINDA
 # =====================================================================
 main = hero("assets/img/hero-beekeeper.jpg", "Vakıf Hakkında", "Apikültür Vakfı",
-            "Apikültür Vakfı; arıcılığın bilimsel, çevresel, ekonomik ve kültürel boyutlarının geliştirilmesine katkı sağlamak amacıyla faaliyet gösteren bir vakıftır.",
-            None, [("biz-kimiz", "Biz kimiz?"), ("vizyon-misyon", "Vizyon ve misyon"), ("hikaye", "Vakfın hikâyesi"), ("yapi", "Kurumsal yapı")])
+            "Arı, arıcılık ve arı ürünleri için bilimle çalışan bağımsız bir vakıf.",
+            None, [("biz-kimiz", "Biz kimiz?"), ("vizyon-misyon", "Vizyon ve misyon"), ("hikaye", "Vakfın hikâyesi")])
 main += '''<section class="relative isolate overflow-hidden py-24 md:py-32 bg-background" id="biz-kimiz"><div class="honeycomb-accent" aria-hidden="true"></div>
 <div class="max-w-[1180px] mx-auto px-7 grid lg:grid-cols-12 gap-10 lg:gap-16">
 <div class="lg:col-span-5 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12]">Biz kimiz?</h2></div>
 <div class="lg:col-span-7 space-y-6 text-on-surface-variant text-lg md:text-xl leading-relaxed reveal-on-scroll">
 <p>Arıcılığın yalnızca üretimden ibaret olmadığına; bilim, eğitim, çevre, tarım, biyoçeşitlilik, kültür ve insan kaynağıyla birlikte ele alınması gerektiğine inanıyoruz.</p>
 <p>Vakfımız, bilgi üretmeyi, bilgiyi paylaşmayı, gençleri desteklemeyi ve farklı paydaşlar arasında iş birliği geliştirmeyi temel faaliyet araçları olarak görür.</p>
-<p>Bu çalışmalar birbiriyle bağlantılı beş faaliyet alanında şekillenir: bilim ve araştırma, eğitim ve bilgi, sürdürülebilir arıcılık, gençlik ve gelecek, kültür ve uluslararası iş birliği.</p>
 <a href="faaliyet.html" class="inline-flex items-center gap-2 text-terracotta font-bold group">Faaliyet Alanlarımız ''' + ARROW + '''</a>
 </div>
 </div>
@@ -330,8 +321,8 @@ main += '''<section class="relative isolate overflow-hidden py-24 md:py-32 bg-ba
 <div class="max-w-[1180px] mx-auto px-7">
 <h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12] mb-14 reveal-on-scroll">Vizyon ve misyon</h2>
 <div class="grid md:grid-cols-2 gap-12 md:gap-16 reveal-on-scroll">
-<div class="border-t-2 border-terracotta/70 pt-7"><h3 class="font-headline-md text-xl text-terracotta mb-5">Vizyonumuz</h3><p class="font-headline-md text-2xl md:text-[1.7rem] text-espresso leading-snug">Arıyı, polinasyonu ve biyoçeşitliliği merkeze alarak bilim, eğitim, teknoloji ve kültürü buluşturan; arıcılığın geleceğine kalıcı katkı sağlayan bir vakıf olmak.</p></div>
-<div class="border-t-2 border-terracotta/70 pt-7"><h3 class="font-headline-md text-xl text-terracotta mb-5">Misyonumuz</h3><p class="font-headline-md text-2xl md:text-[1.7rem] text-espresso leading-snug">Arıcılığı eğitim, araştırma, sürdürülebilirlik, gençlik, inovasyon ve kültürel mirasın korunması eksenlerinde destekleyerek yaşamın devamlılığına katkı sağlamak.</p></div>
+<div class="border-t-2 border-terracotta/70 pt-7"><h3 class="font-headline-md text-xl text-terracotta mb-5">Vizyonumuz</h3><p class="font-headline-md text-xl md:text-2xl text-espresso leading-snug">''' + VIZYON + '''</p></div>
+<div class="border-t-2 border-terracotta/70 pt-7"><h3 class="font-headline-md text-xl text-terracotta mb-5">Misyonumuz</h3><p class="font-headline-md text-xl md:text-2xl text-espresso leading-snug">''' + MISYON + '''</p></div>
 </div>
 </div>
 </section>
@@ -341,7 +332,8 @@ main += feature(0, "hikaye", "assets/img/p4-women-planting.jpg", "Kovan başınd
                 "Apikültür Vakfı’nın kuruluş hikâyesi, arıcılık alanında yıllar içinde oluşan bilgi, deneyim ve birikimin daha geniş bir toplumsal faydaya dönüştürülmesi fikrine dayanır.",
                 block("Kuruluş", "Vakfın kurucusu Muzaffer Yıldırım’dır. Kuruluş fikri, Yıldırım Plastik’ten doğan aile girişimi Apimaye’nin arıcılık ekipmanları alanında yıllar içinde edindiği deneyime uzanır. Polimer işleme bilgisiyle tasarlanan bir petek çerçevesi, bu birikimin ilk adımlarından biri oldu.")
                 + block("Bugün", "Vakfın kuruluş sürecinde oluşan deneyim; bugün bilim, eğitim, gençlik, sürdürülebilirlik ve uluslararası iş birlikleri alanlarında geliştirilen çalışmalar için bir başlangıç noktasıdır.")
-                + block("Bağımsız bir yapı", "Vakfın kurumsal kimliği, herhangi bir ticari markanın devamı veya uzantısı değil; kendi amaçları, organları ve vakıf senedi doğrultusunda faaliyet gösteren bağımsız bir yapıdır."))
+                + block("Bağımsız bir yapı", "Vakfın kurumsal kimliği, herhangi bir ticari markanın devamı veya uzantısı değildir; kendi amaçları ve organlarıyla faaliyet gösteren bağımsız bir yapıdır."),
+                [("Yönetim &amp; Şeffaflık", "yonetim.html")])
 main += '''<section class="relative isolate overflow-hidden py-28 md:py-36 text-white" id="manifesto">
 <div class="absolute inset-0 -z-10" aria-hidden="true"><img src="assets/img/p6-meadow.jpg" alt="" class="w-full h-full object-cover" loading="lazy"/><div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(51,38,27,0.86), rgba(51,38,27,0.92))"></div></div>
 <div class="max-w-[960px] mx-auto px-7 text-center reveal-on-scroll">
@@ -349,25 +341,12 @@ main += '''<section class="relative isolate overflow-hidden py-28 md:py-36 text-
 <p class="mt-8 text-white/75 text-lg leading-relaxed max-w-2xl mx-auto">Bir arının çiçekten çiçeğe yolculuğu, koca bir ekosistemi ayakta tutar. Arıcılığı bu bütünün parçası olarak görüyoruz.</p>
 </div>
 </section>
-<section class="py-24 md:py-32 bg-background" id="yapi">
-<div class="max-w-[1180px] mx-auto px-7 grid lg:grid-cols-12 gap-10 lg:gap-16">
-<div class="lg:col-span-5 reveal-on-scroll"><h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12]">Kurumsal yapı</h2></div>
-<div class="lg:col-span-7 reveal-on-scroll">
-<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed mb-5">Apikültür Vakfı’nın yönetim ve faaliyet yapısı vakıf senedi ve ilgili mevzuat çerçevesinde yürütülür.</p>
-<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed mb-10">Vakıf senedine göre Vakfın organları Mütevelli Heyeti ve Yönetim Kurulu’dur (Md.7); Bilim Kurulu ve Danışma Kurulu ise destek yapılarıdır.</p>
-<div class="flex flex-wrap gap-4">
-<a href="yonetim.html" class="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-bold hover:shadow-lg transition-all group">Yönetim &amp; Şeffaflık ''' + ARROW + '''</a>
-<a href="senet.html" class="inline-flex items-center gap-2 border border-terracotta text-terracotta px-7 py-3.5 rounded-full font-bold hover:bg-terracotta hover:text-white transition-all"><span class="material-symbols-outlined text-[20px]">description</span>Vakıf Senedi</a>
-</div>
-</div>
-</div>
-</section>
 '''
-main += cta("Arıcılığın geleceğine katkıda bulunun.",
-            "Apikültür Vakfı’nın amaçları doğrultusundaki çalışmalarını bağışınız, gönüllülüğünüz, uzmanlığınız veya kurumsal iş birliklerinizle destekleyebilirsiniz.",
+main += cta("Çalışmalarımıza katkıda bulunun.",
+            "Bağış, gönüllülük, uzmanlık veya kurumsal iş birliğiyle yanımızda olabilirsiniz.",
             [("Destek Olun", "index.html#destek"), ("Bize Ulaşın", "index.html#iletisim")])
-shell("vakif.html", "Apikültür Vakfı Hakkında | Vizyon, Misyon ve Yönetim",
-      "Apikültür Vakfı, arıcılığın bilimsel, çevresel, ekonomik ve kültürel gelişimine katkı sağlayan bağımsız bir vakıftır. Vizyonumuz, misyonumuz ve hikâyemiz.",
+shell("vakif.html", "Apikültür Vakfı Hakkında | Vizyon, Misyon ve Hikâye",
+      "Apikültür Vakfı; arı, arıcılık ve arı ürünleri için bilimle çalışan bağımsız bir vakıftır. Vizyonumuz, misyonumuz ve hikâyemiz.",
       "Vakıf Hakkında", main)
 
 # =====================================================================
@@ -439,12 +418,12 @@ main += feature(0, "akademi-egitim", "assets/img/youth-frame.jpg", "Petekli çer
                 "Arıcılığa ilişkin temel ve ileri düzey bilgi, uygulama ve kapasite geliştirme çalışmalarını destekleyen eğitim yapısı.",
                 block("Kapsam", "Temel arıcılıktan ana arı yetiştiriciliğine, arı ürünlerinden apiterapiye kadar arıcılığın farklı konuları.")
                 + block("Kimler için", "Arıcılar, arıcılığa yeni başlayanlar, gençler, öğrenciler, çiftçiler ve girişimciler."),
-                [("Eğitim &amp; Bilgi faaliyet alanı", "faaliyet.html#egitim-bilgi")])
+                [("Gençlik ve Sürdürülebilir Modern Arıcılık", "faaliyet.html#genclik-modern-aricilik")])
 main += feature(1, "arastirma", "assets/bee-9712039_1280.jpg", "Mavi bir çiçekte polen toplayan arı", "science", None, "Araştırma &amp; Bilim",
                 "Üniversiteler, araştırmacılar, uzmanlar ve farklı kurumlarla arı sağlığı, polinasyon, sürdürülebilirlik, çevre ve arıcılığın geleceğine ilişkin bilimsel çalışmalar geliştirilmesini destekleriz.",
                 block("Çalışma konuları", "Arı sağlığı, polinasyon, biyoçeşitlilik, iklim, çevre ve sürdürülebilir arıcılık.")
                 + block("Araştırma iş birlikleri", "Üniversiteler, araştırma merkezleri ve alan uzmanlarıyla bilgi ve deneyim paylaşımı."),
-                [("Bilim &amp; Araştırma faaliyet alanı", "faaliyet.html#bilim-arastirma")],
+                [("Koloni Sağlığı ve Kayıpların Önlenmesi", "faaliyet.html#koloni-sagligi")],
                 tail='<div class="mt-10">' + promo("Araştırmanız için destek mi arıyorsunuz?", "Apikültür Gelecek kapsamında genç araştırmacılar, lisansüstü çalışmalar, bilimsel araştırmalar ve uluslararası bilimsel gelişim için dönemsel destek programları açılabilir.", "Bilim &amp; Araştırma Desteklerini Gör", "gelecek.html#programlar") + '</div>')
 main += feature(2, "bilgi-merkezi", "assets/img/p4-women-planting.jpg", "Kovan başında çalışan arıcı", "menu_book", None, "Bilgi Merkezi",
                 "Bilimsel yayınlar, teknik dokümanlar, rehberler, raporlar ve arıcılıkla ilgili güvenilir bilgi kaynaklarını erişilebilir hale getirmeyi amaçlarız.",
@@ -470,19 +449,19 @@ STATS = '''<div class="mb-10 rounded-3xl border border-outline-variant/40 bg-whi
 PROJECTS = [
  ("ari-dostum", "assets/img/p1-bee-friend.jpg", "Petek çerçevesini tutan genç", "emoji_nature", "Devam ediyor", "Arı Dostum Olur Musun?",
   "Çocuklar ve gençlerle arılar, polinasyon, biyoçeşitlilik ve doğa arasındaki ilişkiyi anlatmayı amaçlayan eğitim ve farkındalık çalışması.",
-  STATS, ("Eğitim &amp; Bilgi", "egitim-bilgi")),
+  STATS, ("Etik Arıcılık ve Arı Ürünlerine Güven", "etik-aricilik")),
  ("ari-koridoru", "assets/img/p3-corridor-lavender.jpg", "Mor lavanta tarlası", "route", "Planlama", "Türkiye Arı Koridoru",
   "Polinatörlerin yaşam alanlarının desteklenmesi, biyoçeşitliliğin korunması ve farklı paydaşların bir araya gelmesi amacıyla geliştirilen proje yaklaşımı.",
-  '', ("Sürdürülebilir Arıcılık", "surdurulebilir-aricilik")),
+  '', ("Biyoçeşitlilik ve Tarımsal Verimlilik", "biyocesitlilik-verimlilik")),
  ("kadin-genc-arici", "assets/img/p4-women-planting.jpg", "Kovan başında arıcı", "diversity_3", "Geliştirme", "Kadın ve Genç Arıcı Programı",
   "Kadınların ve gençlerin arıcılık alanında bilgi, beceri, mentorluk ve girişimcilik fırsatlarına erişimini desteklemeye yönelik çalışmalar.",
-  '', ("Gençlik &amp; Gelecek", "genclik-gelecek")),
+  '', ("Gençlik ve Sürdürülebilir Modern Arıcılık", "genclik-modern-aricilik")),
  ("cografi-isaret", "assets/img/p5-honey-jar.jpg", "Bal kavanozu", "location_on", "Geliştirme", "Coğrafi İşaret &amp; Yerel Değerler",
   "Arıcılığın yerel bilgi, ürün ve kültürel değerlerinin korunması, görünür hale getirilmesi ve sürdürülebilir şekilde değerlendirilmesine yönelik çalışmalar.",
-  '', ("Kültür &amp; Uluslararası İş Birliği", "kultur-uluslararasi")),
+  '', ("Etik Arıcılık ve Arı Ürünlerine Güven", "etik-aricilik")),
  ("apiterapi-apiturizm", "assets/img/p6-meadow.jpg", "Altın ışıkta arılar", "spa", "Araştırma", "Apiterapi &amp; Apiturizm Araştırmaları",
   "Arı ürünleri, arıcılık kültürü, doğa ve turizm arasındaki ilişkilerin bilimsel ve kültürel perspektiflerle ele alınmasına yönelik çalışmalar.",
-  '', ("Bilim &amp; Araştırma", "bilim-arastirma")),
+  '', ("Etik Arıcılık ve Arı Ürünlerine Güven", "etik-aricilik")),
 ]
 main = hero("assets/img/hero-beekeeper.jpg", "Projeler", "Projeler", "Amaçlarımızı sahada hayata geçiriyoruz.",
             "Apikültür Vakfı, faaliyet alanları doğrultusunda farklı kurumlar, uzmanlar, eğitim kuruluşları, kamu kurumları ve diğer paydaşlarla çeşitli projeler geliştirir ve destekler. Projelerimiz; eğitimden gençliğe, biyoçeşitlilikten yerel değerlere kadar farklı alanlara odaklanabilir.",
@@ -490,7 +469,7 @@ main = hero("assets/img/hero-beekeeper.jpg", "Projeler", "Projeler", "Amaçları
 main += '''<div class="bg-ekru/40 border-b border-outline-variant/30"><div class="max-w-[1180px] mx-auto px-7 py-6 flex gap-4 items-start text-on-surface-variant"><span class="material-symbols-outlined text-terracotta shrink-0">info</span><p>Her projenin süresi, ortakları ve çıktıları yalnızca o projeye ait bilgiler olarak paylaşılır. Bu rakamlar Apikültür Vakfı’nın toplam performansı veya kurumsal etki göstergesi olarak sunulmaz.</p></div></div>
 '''
 for k, p in enumerate(PROJECTS):
-    info = block("İlgili faaliyet alanı", f'<a class="text-terracotta font-semibold hover:underline underline-offset-4" href="faaliyet.html#{p[8][1]}">{p[8][0]}</a>')
+    info = block("İlgili faaliyet ekseni", f'<a class="text-terracotta font-semibold hover:underline underline-offset-4" href="faaliyet.html#{p[8][1]}">{p[8][0]}</a>')
     from urllib.parse import quote
     subj = quote("Proje: " + p[5].replace("&amp;", "&"))
     main += feature(k + 1, p[0], p[1], p[2], p[3], None, p[5], p[6], info,
@@ -504,45 +483,40 @@ shell("projeler.html", "Projeler | Apikültür Vakfı",
 # =====================================================================
 # 8) YÖNETİM & ŞEFFAFLIK
 # =====================================================================
-def organ(title, text, kind, senet):
-    link = (f'<a href="senet.html" class="mt-5 inline-flex items-center gap-1.5 text-terracotta text-sm font-bold group">Senette incele <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>' if senet else '')
+def organ(title, text, kind):
     return (f'<div class="border-t-2 border-terracotta/70 pt-6"><p class="text-sm text-on-surface-variant mb-3">{kind}</p>'
-            f'<h3 class="font-headline-md text-2xl text-espresso mb-3">{title}</h3><p class="text-on-surface-variant text-lg leading-relaxed">{text}</p>{link}</div>')
+            f'<h3 class="font-headline-md text-2xl text-espresso mb-3">{title}</h3><p class="text-on-surface-variant text-lg leading-relaxed">{text}</p></div>')
 main = hero("assets/bee-9712039_1280.jpg", "Yönetim &amp; Şeffaflık", "Yönetim &amp; Şeffaflık",
-            "Gücümüzü güvenilirlik ve şeffaflıktan alıyoruz.",
-            "Apikültür Vakfı’nın yönetim ve faaliyet yapısı vakıf senedi ve ilgili mevzuat çerçevesinde yürütülür.",
+            "Vakfın nasıl yönetildiğini ve kurumsal belgelerini bu sayfada bulabilirsiniz.", None,
             [("yapi", "Kurumsal yapı"), ("kurullar", "Karar ve danışma yapısı"), ("seffaflik", "Şeffaflık Merkezi")])
 main += '''<section class="relative isolate overflow-hidden py-24 md:py-32 bg-background" id="yapi"><div class="honeycomb-accent" aria-hidden="true"></div>
 <div class="max-w-[1180px] mx-auto px-7 grid lg:grid-cols-2 gap-14 lg:gap-24">
 <div class="reveal-on-scroll">
-<h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12] mb-8">Bağımsız bir vakıf.</h2>
-<p class="text-on-surface-variant text-lg leading-relaxed mb-5">Apikültür Vakfı, kendi amaçları, vakıf senedi ve yönetim organları doğrultusunda faaliyet gösteren bağımsız bir vakıftır. Vakfın kurumsal kimliği, herhangi bir ticari markanın devamı veya uzantısı değildir.</p>
-<p class="text-on-surface-variant text-lg leading-relaxed mb-5">Vakfın karar, yönetim, bilimsel danışmanlık ve diğer destek mekanizmaları açık ve anlaşılır bir kurumsal yapı içerisinde ele alınır.</p>
-<p class="text-on-surface-variant text-lg leading-relaxed">Vakıf; bilgi üretir, modeller geliştirir, eğitim ve iş birliklerini destekler.</p>
+<h2 class="font-headline-lg text-4xl md:text-5xl text-espresso leading-[1.12] mb-8">Kurumsal yapı</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Vakfın karar, yönetim, bilimsel danışmanlık ve diğer destek mekanizmaları açık ve anlaşılır bir kurumsal yapı içerisinde ele alınır.</p>
 </div>
 <div class="reveal-on-scroll lg:pt-3">
 <div class="bg-white rounded-3xl border border-outline-variant/30 shadow-sm p-8 md:p-10">
 <h3 class="font-headline-md text-2xl text-espresso mb-4">Gelirlerin kullanımı</h3>
-<p class="text-on-surface-variant text-lg leading-relaxed mb-6">Vakıf senedinin 16. maddesi gereği Vakfın yıllık brüt gelirinin en az üçte ikisi Vakfın amaçlarına tahsis edilir.</p>
-<a href="senet.html" class="inline-flex items-center gap-2 text-terracotta font-bold group">Vakıf Senedini İncele ''' + ARROW + '''</a>
+<p class="text-on-surface-variant text-lg leading-relaxed">Vakfın yıllık brüt gelirinin en az üçte ikisi Vakfın amaçlarına tahsis edilir.</p>
 </div>
 </div>
 </div>
 </section>
 <section class="py-24 md:py-32 bg-ekru/30" id="kurullar">
 <div class="max-w-[1180px] mx-auto px-7">
-''' + head2("Karar ve danışma yapısı", ["Vakıf senedine göre Vakfın organları Mütevelli Heyeti ve Yönetim Kurulu’dur (Md.7); Bilim Kurulu ve Danışma Kurulu ise destek yapılarıdır."]) + '''
+''' + head2("Karar ve danışma yapısı", []) + '''
 <div class="grid md:grid-cols-2 gap-x-16 gap-y-14 reveal-on-scroll">
-''' + organ("Mütevelli Heyeti", "Vakfın en yüksek karar organıdır.", "Vakıf organı · Senet Md.7", True) \
-    + organ("Yönetim Kurulu", "Vakfın idare ve icrasından sorumlu organdır.", "Vakıf organı · Senet Md.7", True) \
-    + organ("Bilim Kurulu", "Bilimsel çalışmaların ve ilgili faaliyetlerin akademik açıdan değerlendirilmesine katkı sağlar.", "Destek yapısı", False) \
-    + organ("Danışma Kurulu", "Alan uzmanlarının ve paydaşların görüş ve deneyimleriyle Vakfın çalışmalarına katkı sunar.", "Destek yapısı", False) + '''
+''' + organ("Mütevelli Heyeti", "Vakfın en yüksek karar organıdır.", "Vakıf organı") \
+    + organ("Yönetim Kurulu", "Vakfın idare ve icrasından sorumlu organdır.", "Vakıf organı") \
+    + organ("Bilim Kurulu", "Bilimsel çalışmaların ve ilgili faaliyetlerin akademik açıdan değerlendirilmesine katkı sağlar.", "Destek yapısı") \
+    + organ("Danışma Kurulu", "Alan uzmanlarının ve paydaşların görüş ve deneyimleriyle Vakfın çalışmalarına katkı sunar.", "Destek yapısı") + '''
 </div>
 </div>
 </section>
 <section class="py-24 md:py-32 bg-background" id="seffaflik">
 <div class="max-w-[1180px] mx-auto px-7">
-''' + head2("Şeffaflık Merkezi", ["Vakıf hakkında bilmek istediğiniz her şey.", "Kurumsal güvenin açık bilgi ve hesap verebilirlikle güçlendiğine inanıyoruz."]) + '''
+''' + head2("Şeffaflık Merkezi", ["Kurumsal güvenin açık bilgi ve hesap verebilirlikle güçlendiğine inanıyoruz."]) + '''
 <div class="reveal-on-scroll border-y border-outline-variant/40">
 <div class="grid md:grid-cols-12 gap-5 md:gap-8 items-center py-8">
 <div class="md:col-span-1"><span class="w-12 h-12 rounded-2xl bg-ekru flex items-center justify-center"><span class="material-symbols-outlined text-terracotta text-2xl">description</span></span></div>
@@ -558,7 +532,7 @@ main += '''<section class="relative isolate overflow-hidden py-24 md:py-32 bg-ba
 </section>
 '''
 main += cta("Sorularınız için bize ulaşın.", "Vakfın yönetimi ve kurumsal belgeleri hakkındaki sorularınızı bize iletebilirsiniz.",
-            [("Bize Yazın", MAILTO + "Genel%20Bilgi"), ("Vakıf Senedi", "senet.html")])
+            [("Bize Yazın", MAILTO + "Genel%20Bilgi")])
 shell("yonetim.html", "Yönetim &amp; Şeffaflık | Apikültür Vakfı",
       "Apikültür Vakfı’nın yönetim yapısı, karar ve danışma organları, vakıf senedi ve kurumsal belgeleri.",
       "Yönetim &amp; Şeffaflık", main)

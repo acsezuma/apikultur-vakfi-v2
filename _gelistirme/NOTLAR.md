@@ -8,6 +8,7 @@ Bu klasör sitenin **kaynağıdır**. Alt çizgiyle başladığı için GitHub P
 _gelistirme/index_base.html   ─┐
 _gelistirme/build_pages.py     ├─▶ index.html + vakif, faaliyet, genclik, akademi, gelecek, projeler, yonetim (.html) + sitemap.xml
 _gelistirme/gelecek_index.py   │   (Apikültür Gelecek'in ana sayfa/menü/footer eklemeleri)
+_gelistirme/sadelestirme.py    │   (ana sayfanın özet hâli; vizyon, misyon ve beş eksenin kısa metinleri)
 _gelistirme/gelecek_page.py   ─┘   (gelecek.html sayfası)
 
 _gelistirme/build_en.py  + en_text.py  ─▶  en/ altındaki İngilizce sayfalar
@@ -44,7 +45,7 @@ Kontrol: `build_en.py` çıktısında **`kullanılmayan sözlük anahtarı: 0`**
 | projeler.html | en/projects.html |
 | yonetim.html | en/governance.html |
 
-Senet yalnızca Türkçedir (`senet.html`); İngilizce sayfalar ona "(in Turkish)" notuyla bağlanır.
+Senet yalnızca Türkçedir (`senet.html`) ve yalnızca Yönetim & Şeffaflık sayfasından bağlanır.
 
 ## 2. Apikültür Gelecek: açık program ekleme
 
@@ -67,7 +68,8 @@ Betik çalıştırmaya gerek yoktur. `assets/programlar.json` dosyası (GitHub w
 ## 3. Önizleme ve paylaşım görselleri (isteğe bağlı)
 
 - `onizleme/build_preview2.py`: Tailwind CDN'e erişmeden birebir önizleme üretir. `onizleme/calisma/tw` altında `npm i tailwindcss@3.4.17 @tailwindcss/forms @tailwindcss/container-queries playwright-core material-symbols`, `onizleme/calisma/fonts` altında fontsource paketleri (outfit, hanken-grotesk, ibm-plex-mono) gerekir.
-- `onizleme/og.html`, `og_en.html`: paylaşım görsellerinin kaynağı. `node onizleme/og.js <og.html yolu> assets/og-image.png` (EN için `assets/og-image-en.png`). Görsel değişince sayfalardaki `?v=` sürümünü artırın (`build_pages.py` → `og-surum`, `build_en.py`).
+- `onizleme/og.html`, `og_en.html`: paylaşım görsellerinin kaynağı. `node onizleme/og.js <og.html yolu> assets/og-image.png` (EN için `assets/og-image-en.png`). Görsel değişince sayfalardaki `?v=` sürümünü artırın (`build_pages.py` → `og-surum`, şu an `?v=4`; `build_en.py` → `og-image-en.png?v=2`).
+- Favicon, apple-touch-icon, senet sayfası başlığı ve paylaşım görsellerindeki işaret, resmî logodan (`assets/logo.png`) kırpılan `assets/logo-mark.png`'dir. Eski çizim (yeniden çizilmiş SVG arı) artık hiçbir yerde kullanılmıyor.
 
 ## 4. Tasarım ve editoryal kurallar
 
@@ -80,11 +82,13 @@ Betik çalıştırmaya gerek yoktur. `assets/programlar.json` dosyası (GitHub w
 
 ## 5. Alınan kararlar (özet)
 
-- Menü: Vakıf (açılır: Vakıf Hakkında, Vakıf Senedi) · Faaliyet Alanlarımız · Gençlik · Akademi & Bilim · Apikültür Gelecek · Projeler · Yönetim & Şeffaflık · İletişim · Bağış Yap. 9 öğe olduğu için masaüstü menü 1280px'ten itibaren, altında hamburger.
-- Header'da ayrı Vakıf Senedi butonu yok; ana sayfa içeriğinde senet yalnızca Yönetim bölümündeki butonda.
+- Menü: Vakıf · Faaliyet Alanlarımız · Gençlik · Akademi & Bilim · Apikültür Gelecek · Projeler · Yönetim & Şeffaflık · İletişim · Bağış Yap (açılır alt menü yok). Masaüstü menü 1280px'ten itibaren, altında hamburger.
+- **Vakıf senedi tek yerde:** Yönetim & Şeffaflık → Şeffaflık Merkezi satırı (Oku / PDF). Senedi yayımlama zorunluluğu olmadığı için menüde, header'da, footer'da, ana sayfada ve diğer sayfalarda senet bağlantısı ya da "senede göre / Md." atfı yok.
+- **Ana sayfa özettir (Kasım 2026):** her bölüm tek kısa paragraf + ilgili sayfaya bağlantı. ICYB/IMYB ayrıntısı, kulüp modeli, kurul kartları, Gelecek programlarının açıklamaları, proje açıklamaları yalnızca iç sayfalarda. Aynı cümle iki yerde geçmesin; yeni metin eklerken önce iç sayfada olup olmadığına bakın.
+- **Vizyon, misyon ve beş eksen** kurul onaylı metinlerdir (Kasım 2026; vizyonda "ekosistemde", misyonda "amacı ile" çıkarıldı). Kaynak: `sadelestirme.py` (`VIZYON`, `MISYON`, `EKSENLER_KISA`) ve `build_pages.py` (`AXES`). Çatı ilke: ekosistemin sürdürülebilirliği. Eksenler ve sayfa çapaları: 01 `koloni-sagligi`, 02 `biyocesitlilik-verimlilik`, 03 `genclik-modern-aricilik`, 04 `etik-aricilik`, 05 `is-birligi`.
 - Header'da EN/TR dil butonu; varsayılan Türkçe, otomatik yönlendirme yok.
 - Apikültür Gelecek: 5 program (Gelecek Bursları, Genç Bilim, Araştır, Dünyaya Açıl, Sahada Gelecek). AKG dokümanları hazır; değerlendirme ve SSS taahhütleri bunlara dayanır. Ayrı "Etki" bölümü yok.
-- Beş faaliyet alanının 01–05 numaraları korunur; diğer süs numaraları kaldırıldı.
+- Beş eksenin 01–05 numaraları korunur; diğer süs numaraları kaldırıldı. Arıcı eğitimi eksen değil, 03 altında bir çalışma başlığıdır ("ilgili kurum ve birliklerle iş birliği içinde katkı").
 - Arı Dostum Olur Musun? durumu: Devam ediyor. COLOSS uluslararası ağlar listesinde.
 
 ## 6. Vakıftan beklenenler

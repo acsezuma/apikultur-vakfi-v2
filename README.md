@@ -16,7 +16,7 @@ Yayın hedefi: **https://acsezuma.github.io/apikultur-vakfi-v2/**
 | `index.html` | Ana sayfa |
 | `vakif.html`, `faaliyet.html`, `genclik.html`, `akademi.html`, `gelecek.html`, `projeler.html`, `yonetim.html` | İç sayfalar |
 | `en/` | İngilizce sayfalar (`index`, `about`, `areas-of-work`, `youth`, `academy`, `future`, `projects`, `governance`) |
-| `senet.html` | Vakıf senedinin tam metni (yazdırılabilir; PDF: `assets/vakif-senedi.pdf`), elle düzenlenir |
+| `senet.html` | Vakıf senedinin tam metni (yazdırılabilir; PDF: `assets/vakif-senedi.pdf`), elle düzenlenir. Yalnızca Yönetim & Şeffaflık sayfasından bağlanır |
 | `assets/programlar.json` | Apikültür Gelecek açık programları (elle düzenlenir) |
 | `assets/` | logo, favicon, paylaşım görselleri (`og-image.png`, `og-image-en.png`), senet PDF'i |
 | `assets/img/` | Bölüm ve proje fotoğrafları (self-hosted) |
@@ -27,7 +27,7 @@ Yayın hedefi: **https://acsezuma.github.io/apikultur-vakfi-v2/**
 
 - **Renkler:** terracotta `#B82618`, amber `#EA8512`, espresso `#33261B`, ekru `#F9EFE3`, background `#fff8f5`, primary `#950602`
 - **Tipografi:** Başlık/Display → **Outfit**; Gövde → **Hanken Grotesk**; Etiket/mono → **IBM Plex Mono**
-- **Logo:** bee "A" rozeti + "APİKÜLTÜR / VAKFI" kelime markası (`assets/logo-mark.svg`)
+- **Logo:** resmî logo `assets/logo.png`; favicon ve küçük işaret bundan kırpılan `assets/logo-mark.png`
 
 > Not: Orijinal tasarımdaki geçici görsel adresleri (`lh3.googleusercontent.com/aida…`) kalıcı değildi; hepsi `assets/img/` altındaki kendi dosyalarımızla değiştirildi. Vakfın nihai saha fotoğrafları geldiğinde aynı adlarla değiştirilebilir.
 

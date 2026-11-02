@@ -22,77 +22,29 @@ T = {
 # ---- ana sayfa: hero ----
 "Arıcılığın geleceğini": "Building the future of beekeeping,",
 "birlikte inşa ediyoruz.": "together.",
-"Apikültür Vakfı; arıcılığın bilimsel, çevresel, ekonomik ve kültürel değerini geliştirmek, bilgi ve eğitimi yaygınlaştırmak ve gelecek nesilleri arıcılığın geleceğine hazırlamak amacıyla çalışan bir vakıftır.":
-  "The Apiculture Foundation works to advance the scientific, environmental, economic and cultural value of beekeeping, expand access to knowledge and education, and help prepare future generations for the challenges and opportunities of beekeeping.",
-"Arı sağlığından polinasyona, bilimsel araştırmadan eğitime, sürdürülebilir arıcılıktan gençlik çalışmalarına kadar farklı alanlarda bilim, bilgi, kültür ve uygulamayı bir araya getiriyoruz.":
-  "From bee health and pollination to scientific research, education, sustainable beekeeping and youth development, we bring knowledge, science, culture and practice together.",
-"Bilgi üretiriz.": "We create knowledge.",
-"Gençleri güçlendiririz.": "We empower young people.",
-"Arıcılığın geleceğine katkı sağlarız.": "We contribute to the future of beekeeping.",
 "Vakfı Tanıyın": "About the Foundation",
 "Çiçek üzerinde bal arısı": "Honeybee on a flower",
 
 # ---- ana sayfa: biz kimiz / vakıf ----
 "Arıcılığın ötesine bakıyoruz.": "Beekeeping is part of a much larger ecosystem.",
-"Arıcılık; gıda üretiminden biyoçeşitliliğe, kırsal yaşamdan kültürel mirasa kadar birçok alanla bağlantılıdır.":
-  "Beekeeping is connected to food production, biodiversity, rural life, agriculture, environmental sustainability and cultural heritage.",
-"Apikültür Vakfı, arıcılığın bu çok boyutlu yapısını bilim, eğitim, sürdürülebilirlik, gençlik ve kültür perspektifleriyle ele alır.":
-  "The Apiculture Foundation approaches these connections through science, education, sustainability, youth development and culture.",
-"Amacımız yalnızca bugünün ihtiyaçlarına cevap vermek değil; arıcılığın geleceği için bilgi, insan kaynağı ve iş birliği kapasitesi oluşturmaktır.":
-  "Our goal is not simply to respond to today’s needs, but to help build knowledge, human capacity and lasting cooperation for the future of beekeeping.",
 "Vakıf Hakkında": "About the Foundation",
-"Çiçek çayırında arılar": "Bees in a flower meadow",
-"Apikültür Vakfı; arıcılığın bilimsel, çevresel, ekonomik ve kültürel boyutlarının geliştirilmesine katkı sağlamak amacıyla faaliyet gösteren bir vakıftır.":
-  "The Apiculture Foundation works to contribute to the scientific, environmental, economic and cultural development of beekeeping.",
 "Arıcılığın yalnızca üretimden ibaret olmadığına; bilim, eğitim, çevre, tarım, biyoçeşitlilik, kültür ve insan kaynağıyla birlikte ele alınması gerektiğine inanıyoruz.":
   "We believe that beekeeping should not be viewed solely as a form of production, but as an activity connected to science, education, agriculture, biodiversity, environmental sustainability, culture and people.",
 "Vakfımız, bilgi üretmeyi, bilgiyi paylaşmayı, gençleri desteklemeyi ve farklı paydaşlar arasında iş birliği geliştirmeyi temel faaliyet araçları olarak görür.":
   "We seek to create knowledge, share knowledge, support young people and develop meaningful cooperation between stakeholders.",
-"Vakfın Hikâyesi": "Our Story",
 "Vizyon": "Vision",
-"Arıyı, polinasyonu ve biyoçeşitliliği merkeze alarak bilim, eğitim, teknoloji ve kültürü buluşturup arıcılığın geleceğine kalıcı katkı sağlamak.":
-  "To contribute to the future of beekeeping by bringing together science, education, technology and culture, with bees, pollination and biodiversity at the centre.",
 "Misyon": "Mission",
-"Arıcılığı eğitim, araştırma, sürdürülebilirlik, gençlik, inovasyon ve kültürel mirasın korunması eksenlerinde desteklemek.":
-  "To support beekeeping through education, research, sustainability, youth development, innovation and the preservation of cultural heritage.",
 
 # ---- faaliyet alanları ----
-"Beş ana eksen, tek ortak amaç.": "Five areas, one shared purpose.",
-"Vakfımızın çalışmaları birbiriyle bağlantılı beş temel alanda şekillenir.": "The Foundation’s activities are developed around five interconnected areas.",
-"Bilim &amp; Araştırma": "Science &amp; Research",
-"Arı sağlığı, polinasyon, biyoçeşitlilik, iklim, çevre ve arıcılığın geleceğine ilişkin bilimsel çalışmaların desteklenmesine ve yaygınlaştırılmasına katkı sağlarız.":
-  "Supporting and promoting scientific work related to bee health, pollination, biodiversity, climate, the environment and the future of beekeeping.",
-"Eğitim &amp; Bilgi": "Education &amp; Knowledge",
-"Arıcıların, gençlerin, öğrencilerin ve toplumun doğru ve güncel bilgiye erişimini destekleyen eğitim ve kapasite geliştirme çalışmalarını yürütürüz.":
-  "Supporting education, training and capacity-building initiatives that improve access to reliable and up-to-date knowledge for beekeepers, young people, students and the wider public.",
-"Sürdürülebilir Arıcılık": "Sustainable Beekeeping",
-"Arıcılığın doğal kaynaklarla uyum içinde gelişmesini, iyi uygulamaların yaygınlaşmasını ve arıcılığın çevresel sürdürülebilirliğinin güçlendirilmesini destekleriz.":
-  "Promoting good practices and approaches that support the environmental sustainability and long-term development of beekeeping in harmony with natural resources.",
-"Gençlik &amp; Gelecek": "Youth &amp; the Future",
-"Gençlerin arıcılık alanında bilgi, deneyim ve uluslararası bağlantılar kazanmasını destekler; Türkiye’nin genç arıcılarının uluslararası platformlarda temsil edilmesine katkı sağlarız.":
-  "Supporting young people’s knowledge, experience and international connections in beekeeping, including Türkiye’s participation and representation in international youth beekeeping platforms.",
-"Kültür &amp; Uluslararası İş Birliği": "Culture &amp; International Cooperation",
-"Arıcılığın kültürel mirasını korumaya, yerel değerleri görünür kılmaya ve ulusal ve uluslararası kurumlarla bilgi ve deneyim paylaşımını geliştirmeye çalışırız.":
-  "Preserving the cultural heritage of beekeeping, highlighting local values and developing national and international cooperation.",
-"Tüm Faaliyet Alanlarını İncele": "Explore Our Areas of Work",
 "Faaliyet Alanlarımız | Apikültür Vakfı": "Our Areas of Work | Apiculture Foundation",
-"Her alanın altında sürekli yürüttüğümüz çalışma başlıkları yer alır. Belirli süresi ve kapsamı olan çalışmalar ise Projeler sayfasında ayrıca anlatılır.":
-  "Each area brings together the ongoing work streams of the Foundation. Initiatives with a defined duration and scope are presented separately on the Projects page.",
 "Bilimsel Araştırma": "Scientific Research",
-"Arıcılık ve bal üretimiyle ilgili bilimsel araştırmaları destekleyerek inovatif ve geleneksel yöntemlerin entegrasyonunu sağlamak.":
-  "Supporting scientific research on beekeeping and honey production to bring innovative and traditional methods together.",
 "Apiterapi &amp; Apiturizm": "Apitherapy &amp; Apitourism",
 "Arı ürünlerinin insan sağlığı üzerindeki faydalarını araştıran çalışmaları desteklemek; apiturizm modelleriyle kırsal kalkınmaya katkı sağlamak.":
   "Supporting research into the health benefits of bee products and contributing to rural development through apitourism models.",
 "İlgili proje:": "Related project:",
 "Dijital Dönüşüm &amp; Veri": "Digital Transformation &amp; Data",
 "Arıcılıkta yeni teknolojilerin ve yenilikçi ürünlerin geliştirilmesini teşvik etmek.": "Encouraging the development of new technologies and innovative products in beekeeping.",
-"Eğitim Programları": "Education Programmes",
-"Arıcılıkla ilgilenen bireyler, çiftçiler ve girişimciler için sürekli eğitim programları düzenlemek.":
-  "Organising continuing education programmes for individuals, farmers and entrepreneurs interested in beekeeping.",
 "İyi Arıcılık Uygulamaları": "Good Beekeeping Practices",
-"Çevre dostu, sürdürülebilir ve etik arıcılık yöntemlerinin yaygınlaştırılması için arıcılara rehberlik etmek.":
-  "Guiding beekeepers in adopting environmentally friendly, sustainable and ethical beekeeping methods.",
 "Polinasyon &amp; Tarım": "Pollination &amp; Agriculture",
 "Arıcılar ile çiftçiler arasındaki iş birliğini teşvik ederek polinasyonun tarım üzerindeki olumlu etkilerini artıracak projeler geliştirmek.":
   "Encouraging cooperation between beekeepers and farmers and developing projects that strengthen the positive effects of pollination on agriculture.",
@@ -106,39 +58,24 @@ T = {
   "Contributing to the development of beekeeping worldwide through cooperation with beekeeping foundations, institutes and organisations.",
 "İş birliklerimiz": "Our cooperation",
 "Bu alanlarda birlikte çalışalım.": "Let’s work together in these areas.",
-"Araştırma, eğitim, gençlik ve kültür çalışmalarında kurumlar, uzmanlar ve gönüllülerle iş birliğine açığız.":
-  "We welcome cooperation with institutions, experts and volunteers in research, education, youth and culture.",
 "Projelerimiz": "Our Projects",
 "Mavi bir çiçekte polen toplayan arı": "Bee collecting pollen on a blue flower",
 "Kovandan çıkarılan petekli çerçeve": "Honeycomb frame lifted from a hive",
 "Çiçek açmış lavanta tarlası": "Lavender field in bloom",
 "Petekli çerçeveyi inceleyen genç arıcı": "Young beekeeper inspecting a honeycomb frame",
 "Kavanozdaki bal ve bal kaşığı": "Honey jar and honey dipper",
-"Apikültür Vakfı’nın beş faaliyet alanı: bilim ve araştırma, eğitim ve bilgi, sürdürülebilir arıcılık, gençlik ve gelecek, kültür ve uluslararası iş birliği.":
-  "Five areas of work: science and research, education and knowledge, sustainable beekeeping, youth and the future, culture and international cooperation.",
 
 # ---- gençlik ----
 "Gençlik &amp; Uluslararası Temsil": "Youth &amp; International Representation",
-"Gençlerin geleceği şekillendirmesine alan açıyoruz.": "Creating opportunities for the next generation.",
-"Arıcılığın yarını, yalnızca bugünün deneyiminin aktarılmasına değil; gençlerin bilgi, deneyim, sorumluluk ve uluslararası bağlantılar kazanmasına da bağlıdır.":
-  "The future of beekeeping depends not only on transferring today’s knowledge, but also on giving young people opportunities to develop knowledge, experience, responsibility and international connections.",
-"Apikültür Vakfı, gençlerin arıcılık ve apikültür alanında eğitim almalarını, birbirleriyle ve alanın farklı paydaşlarıyla bağlantı kurmalarını ve ulusal ve uluslararası platformlarda deneyim kazanmalarını destekler.":
-  "The Apiculture Foundation supports young people in learning about beekeeping and apiculture, connecting with peers and stakeholders, and gaining experience through national and international activities.",
 "Türkiye’nin genç arıcılarının uluslararası temsilini destekliyoruz.": "Supporting the international representation of young beekeepers from Türkiye.",
 "Vakfımız, International Confederation of Young Beekeepers (ICYB) ile ilişkili çalışmalar kapsamında Türkiye’nin genç arıcılarının uluslararası genç arıcılar ağıyla bağlantısını ve Türkiye’nin International Meeting of Young Beekeepers (IMYB) sürecindeki katılımını destekler.":
   "The Foundation supports the connection of young beekeepers in Türkiye with the International Confederation of Young Beekeepers (ICYB) and supports Türkiye’s participation in the International Meeting of Young Beekeepers (IMYB) process.",
 "ICYB, genç arıcılar arasındaki uluslararası iletişim, deneyim paylaşımı ve iş birliğinin gelişmesine yönelik bir uluslararası ağdır.":
   "ICYB is an international network that fosters communication, experience sharing and cooperation among young beekeepers.",
-"Farklı ülkelerden genç arıcıların bir araya gelerek bilgi, deneyim ve kültür paylaşımında bulunduğu uluslararası bir buluşmadır. Türkiye’nin bu platformdaki katılımının geliştirilmesi, gençlerin yalnızca arıcılık bilgilerini değil; iletişim, takım çalışması ve kültürlerarası deneyimlerini de geliştirmelerine olanak sağlar.":
-  "An international meeting where young beekeepers from different countries come together to share knowledge, experience and culture. Strengthening Türkiye’s participation helps young people develop not only their beekeeping knowledge but also their communication, teamwork and intercultural skills.",
 "Gençlik çalışmalarımızı tek bir proje olarak değil, Vakfın gelecek nesillerin gelişimine katkı sağlama sorumluluğunun bir parçası olarak görüyoruz.":
   "We see youth development not as a single project, but as part of the Foundation’s broader responsibility to contribute to the development of future generations.",
 "Gençlik Çalışmalarımız": "Explore Youth Activities",
 "Apikültür Gençlik Kulüpleri": "Apiculture Youth Clubs",
-"Gençlerin arıcılık, doğa, polinasyon ve sürdürülebilirlik konularında öğrenmesini ve deneyim kazanmasını destekleyen okul temelli gençlik modeli.":
-  "A school-based youth model that helps young people learn about and gain experience in beekeeping, nature, pollination and sustainability.",
-"Yaş grubu: 12–18": "Age group: 12–18",
-"Gençlik Kulüplerini İncele": "Explore Youth Clubs",
 "Gençlik Kulübü Kurmak İstiyorum": "I Want to Start a Youth Club",
 "Gençlik ve Uluslararası Temsil | Apikültür Vakfı": "Youth and International Representation | Apiculture Foundation",
 "Gençler yalnızca geleceğin değil, bugünün de paydaşıdır.": "Young people are stakeholders not only of the future, but of today.",
@@ -193,15 +130,7 @@ T = {
 "Gençlerin arıcılıkta eğitim, deneyim ve uluslararası bağlantılar kazanmasını; Türkiye’nin ICYB ve IMYB süreçlerindeki katılımını destekliyoruz.": "We support young people in gaining education, experience and international connections in beekeeping, and Türkiye’s participation in ICYB and IMYB.",
 
 # ---- akademi ----
-"Bilim ve gelenek": "Science and tradition,",
-"bir arada.": "together.",
-"Arıcılığın kuşaktan kuşağa aktarılan deneyimini bilimsel bilgi, eğitim ve çağdaş uygulamalarla buluşturuyoruz.":
-  "We bring the experience of beekeeping, passed down through generations, together with scientific knowledge, education and contemporary practice.",
-"Kovan başında çerçeve inceleyen arıcı": "Beekeeper inspecting a frame at the hive",
 "Bilginin üretildiği ve paylaşıldığı merkez.": "Where knowledge is created and shared.",
-"Güçlü bir arıcılık, doğru bilgiye ve bu bilginin paylaşılmasına bağlıdır.": "Strong beekeeping depends on reliable knowledge and the ability to share it.",
-"Apikültür Vakfı; eğitim, araştırma, bilimsel iletişim ve bilgi paylaşımını faaliyetlerinin temel unsurlarından biri olarak görür.":
-  "The Apiculture Foundation supports education, research, scientific communication and knowledge sharing as core elements of its work.",
 "Apikültür Akademi": "Apiculture Academy",
 "Eğitim ve kapasite geliştirme.": "Education and capacity building.",
 "Araştırma &amp; Bilim": "Research &amp; Science",
@@ -218,14 +147,12 @@ T = {
   "A wide range of beekeeping topics, from basic beekeeping and queen rearing to bee products and apitherapy.",
 "Kimler için": "Who it is for",
 "Arıcılar, arıcılığa yeni başlayanlar, gençler, öğrenciler, çiftçiler ve girişimciler.": "Beekeepers, newcomers to beekeeping, young people, students, farmers and entrepreneurs.",
-"Eğitim &amp; Bilgi faaliyet alanı": "Education &amp; Knowledge area",
 "Üniversiteler, araştırmacılar, uzmanlar ve farklı kurumlarla arı sağlığı, polinasyon, sürdürülebilirlik, çevre ve arıcılığın geleceğine ilişkin bilimsel çalışmalar geliştirilmesini destekleriz.":
   "Supporting scientific work with universities, researchers, experts and other institutions in areas including bee health, pollination, sustainability, environment and the future of beekeeping.",
 "Çalışma konuları": "Research topics",
 "Arı sağlığı, polinasyon, biyoçeşitlilik, iklim, çevre ve sürdürülebilir arıcılık.": "Bee health, pollination, biodiversity, climate, environment and sustainable beekeeping.",
 "Araştırma iş birlikleri": "Research cooperation",
 "Üniversiteler, araştırma merkezleri ve alan uzmanlarıyla bilgi ve deneyim paylaşımı.": "Sharing knowledge and experience with universities, research centres and field experts.",
-"Bilim &amp; Araştırma faaliyet alanı": "Science &amp; Research area",
 "Bilimsel yayınlar, teknik dokümanlar, rehberler, raporlar ve arıcılıkla ilgili güvenilir bilgi kaynaklarını erişilebilir hale getirmeyi amaçlarız.":
   "Making scientific publications, technical resources, guides, reports and reliable information on beekeeping more accessible.",
 "İçerik türleri": "Content",
@@ -240,10 +167,6 @@ T = {
 
 # ---- projeler ----
 "Amaçlarımızı sahada hayata geçiriyoruz.": "Turning our purpose into action.",
-"Apikültür Vakfı, faaliyet alanları doğrultusunda farklı kurumlar, uzmanlar, eğitim kuruluşları, kamu kurumları ve diğer paydaşlarla çeşitli projeler geliştirir ve destekler.":
-  "The Apiculture Foundation develops and supports projects in line with its objectives, working with institutions, experts, educational organisations, public bodies and other partners.",
-"Projelerimiz; eğitimden gençliğe, biyoçeşitlilikten yerel değerlere kadar farklı alanlara odaklanabilir.":
-  "Our projects may address education, youth, biodiversity, local values, sustainability and other areas related to our mission.",
 "Devam ediyor": "Ongoing",
 "Arı Dostum Olur Musun?": "Would You Be My Bee Friend?",
 "Çocuklar ve gençlerle arılar, polinasyon, biyoçeşitlilik ve doğa arasındaki ilişkiyi anlatmayı amaçlayan eğitim ve farkındalık çalışması.":
@@ -264,8 +187,6 @@ T = {
 "Apiterapi &amp; Apiturizm Araştırmaları": "Apitherapy &amp; Apitourism Research",
 "Arı ürünleri, arıcılık kültürü, doğa ve turizm arasındaki ilişkilerin bilimsel ve kültürel perspektiflerle ele alınmasına yönelik çalışmalar.":
   "Research and development activities exploring the relationships between bee products, beekeeping culture, nature and tourism from scientific and cultural perspectives.",
-"Projelere ait katılımcı, okul ve etkinlik sayıları yalnızca ilgili projenin kendi kapsamında paylaşılır.":
-  "Participant, school and activity figures are presented only within the context of the relevant project.",
 "Tüm Projeler": "All Projects",
 "Petek çerçevesini tutan el": "Hand holding a honeycomb frame",
 "Mor lavanta tarlası": "Purple lavender field",
@@ -282,7 +203,6 @@ T = {
 "öğrenci": "students",
 "Bu veriler yalnızca Arı Dostum Olur Musun? projesinin Kartal’da yürütülen 2024–2025 dönemi kapsamındaki çıktıları ifade eder.":
   "These figures refer only to the outcomes of the Would You Be My Bee Friend? project during its 2024–2025 period in Kartal, Istanbul.",
-"İlgili faaliyet alanı": "Related area of work",
 "Proje hakkında bilgi alın": "Ask about this project",
 "Proje ortağımız olun.": "Partner with us.",
 "Kurumunuzla birlikte ortak çalışmalar geliştirebilir, mevcut projelerimize katkı sunabilirsiniz.":
@@ -293,7 +213,6 @@ T = {
 
 # ---- iş birlikleri ----
 "Birlikte daha fazla öğreniyoruz.": "Learning and working together.",
-"Arıcılığın karşı karşıya olduğu sorunlar sınırlarla sınırlı değildir.": "The challenges facing beekeeping do not stop at national borders.",
 "Apikültür Vakfı; ulusal ve uluslararası kurumlar, üniversiteler, araştırma kuruluşları, arıcı örgütleri, gençlik ağları, kamu kurumları ve diğer paydaşlarla bilgi ve deneyim paylaşımını destekler.":
   "The Apiculture Foundation supports knowledge and experience sharing with national and international institutions, universities, research organisations, beekeeping organisations, youth networks, public institutions and other stakeholders.",
 "Uluslararası ağlar ve kuruluşlar": "International networks and organisations",
@@ -308,21 +227,9 @@ T = {
 "Gücümüzü güvenilirlik ve şeffaflıktan alıyoruz.": "Building trust through transparency.",
 "Vakfın karar, yönetim, bilimsel danışmanlık ve diğer destek mekanizmaları açık ve anlaşılır bir kurumsal yapı içerisinde ele alınır.":
   "Its decision-making, governance, scientific advisory and supporting mechanisms are structured to provide clear institutional accountability.",
-"Bağımsız bir vakıf.": "An independent foundation.",
-"Apikültür Vakfı, kendi amaçları, vakıf senedi ve yönetim organları doğrultusunda faaliyet gösteren bağımsız bir vakıftır. Vakfın kurumsal kimliği, herhangi bir ticari markanın devamı veya uzantısı değildir.":
-  "The Apiculture Foundation is an independent foundation that operates in accordance with its own objectives, charter and governing bodies. Its institutional identity is not a continuation or extension of any commercial brand.",
-"Vakfın kurucusu Muzaffer Yıldırım’dır. Kuruluş hikâyesi, arıcılık alanında yıllar içinde oluşan bilgi, deneyim ve birikimin daha geniş bir toplumsal faydaya dönüştürülmesi fikrine dayanır.":
-  "The Foundation was established by Muzaffer Yıldırım. It grew from the idea that knowledge, experience and accumulated expertise in beekeeping could be turned into a wider benefit for society.",
-"Kurumsal belgeler.": "Institutional documents.",
-"Vakfın gayesi, faaliyetleri, organları ve gelirlerinin tahsisine ilişkin hükümler vakıf senedinde yer alır.":
-  "The Foundation’s purpose, activities, governing bodies and allocation of income are set out in its charter (available in Turkish).",
-"Vakıf Senedini İncele": "Read the Foundation Charter",
 "Karar ve danışma yapısı": "Decision-making and advisory structure",
-"Vakıf senedine göre Vakfın organları Mütevelli Heyeti ve Yönetim Kurulu’dur (Md.7); Bilim Kurulu ve Danışma Kurulu ise destek yapılarıdır.":
-  "Under the charter, the Foundation’s governing bodies are the Board of Trustees and the Board of Directors (Art. 7); the Scientific Board and the Advisory Board are supporting structures.",
 "Mütevelli Heyeti": "Board of Trustees",
 "Vakfın en yüksek karar organıdır.": "The Foundation’s highest decision-making body.",
-"Senette incele": "See the charter",
 "Yönetim Kurulu": "Board of Directors",
 "Vakfın idare ve icrasından sorumlu organdır.": "Responsible for the administration and execution of the Foundation’s activities.",
 "Bilim Kurulu": "Scientific Board",
@@ -331,13 +238,8 @@ T = {
 "Alan uzmanlarının ve paydaşların görüş ve deneyimleriyle Vakfın çalışmalarına katkı sunar.": "Provides strategic perspectives and expertise from relevant fields and stakeholders.",
 "Yönetim &amp; Şeffaflık | Apikültür Vakfı": "Governance &amp; Transparency | Apiculture Foundation",
 "Şeffaflık Merkezi": "Transparency Centre",
-"Vakıf; bilgi üretir, modeller geliştirir, eğitim ve iş birliklerini destekler.": "The Foundation creates knowledge, develops models, and supports education and cooperation.",
 "Gelirlerin kullanımı": "Use of income",
-"Vakıf senedinin 16. maddesi gereği Vakfın yıllık brüt gelirinin en az üçte ikisi Vakfın amaçlarına tahsis edilir.":
-  "Under Article 16 of the charter, at least two-thirds of the Foundation’s annual gross income is allocated to its objectives.",
-"Vakıf organı · Senet Md.7": "Governing body · Charter Art. 7",
 "Destek yapısı": "Supporting structure",
-"Vakıf hakkında bilmek istediğiniz her şey.": "Open information. Clear accountability.",
 "Kurumsal güvenin açık bilgi ve hesap verebilirlikle güçlendiğine inanıyoruz.": "We believe that institutional trust is strengthened through transparency, accountability and access to reliable information.",
 "Vakfın gayesi, faaliyetleri, organları ve gelirlerinin tahsisine ilişkin hükümler.": "Provisions on the Foundation’s purpose, activities, governing bodies and allocation of income. Official text in Turkish.",
 "Oku": "Read",
@@ -404,19 +306,12 @@ T = {
 "Arıcılık, bilim, eğitim, sürdürülebilirlik ve gençlik alanlarında çalışan bağımsız bir vakıf.": "An independent foundation working in beekeeping, science, education, sustainability and youth.",
 
 # ---- vakıf hakkında ----
-"Apikültür Vakfı Hakkında | Vizyon, Misyon ve Yönetim": "About the Apiculture Foundation | Vision, Mission and Governance",
 "Biz kimiz?": "Who we are",
 "Vizyon ve misyon": "Vision and mission",
 "Vakfın hikâyesi": "Our story",
 "Kurumsal yapı": "Institutional structure",
-"Bu çalışmalar birbiriyle bağlantılı beş faaliyet alanında şekillenir: bilim ve araştırma, eğitim ve bilgi, sürdürülebilir arıcılık, gençlik ve gelecek, kültür ve uluslararası iş birliği.":
-  "Our work is organised around five interconnected areas: science and research, education and knowledge, sustainable beekeeping, youth and the future, culture and international cooperation.",
 "Vizyonumuz": "Our Vision",
-"Arıyı, polinasyonu ve biyoçeşitliliği merkeze alarak bilim, eğitim, teknoloji ve kültürü buluşturan; arıcılığın geleceğine kalıcı katkı sağlayan bir vakıf olmak.":
-  "To contribute to the future of beekeeping by bringing together science, education, technology and culture, with bees, pollination and biodiversity at the centre.",
 "Misyonumuz": "Our Mission",
-"Arıcılığı eğitim, araştırma, sürdürülebilirlik, gençlik, inovasyon ve kültürel mirasın korunması eksenlerinde destekleyerek yaşamın devamlılığına katkı sağlamak.":
-  "To support beekeeping through education, research, sustainability, youth development, innovation and the preservation of cultural heritage, contributing to the continuity of life and healthy ecosystems.",
 "Birikimden kurumsal faydaya.": "From experience to shared value.",
 "Apikültür Vakfı’nın kuruluş hikâyesi, arıcılık alanında yıllar içinde oluşan bilgi, deneyim ve birikimin daha geniş bir toplumsal faydaya dönüştürülmesi fikrine dayanır.":
   "The Apiculture Foundation grew from the idea that knowledge, experience and accumulated expertise in beekeeping could be turned into a wider benefit for society through a dedicated institutional structure.",
@@ -427,16 +322,106 @@ T = {
 "Vakfın kuruluş sürecinde oluşan deneyim; bugün bilim, eğitim, gençlik, sürdürülebilirlik ve uluslararası iş birlikleri alanlarında geliştirilen çalışmalar için bir başlangıç noktasıdır.":
   "This experience is the starting point for the Foundation’s work in science, education, youth development, sustainability and international cooperation.",
 "Bağımsız bir yapı": "An independent institution",
-"Vakfın kurumsal kimliği, herhangi bir ticari markanın devamı veya uzantısı değil; kendi amaçları, organları ve vakıf senedi doğrultusunda faaliyet gösteren bağımsız bir yapıdır.":
-  "The Foundation has its own institutional identity, objectives, governing bodies and legal framework and operates independently in accordance with its charter. It is not a continuation or extension of any commercial brand.",
 "Mesele sadece bal değil.": "It is not just about honey.",
 "Mesele, yaşamın ta kendisi.": "It is about life itself.",
 "Bir arının çiçekten çiçeğe yolculuğu, koca bir ekosistemi ayakta tutar. Arıcılığı bu bütünün parçası olarak görüyoruz.":
   "A bee’s journey from flower to flower sustains an entire ecosystem. We see beekeeping as part of that whole.",
-"Apikültür Vakfı’nın yönetim ve faaliyet yapısı vakıf senedi ve ilgili mevzuat çerçevesinde yürütülür.":
-  "The Apiculture Foundation operates within the framework of its charter and applicable legislation.",
 "Kovan başında çalışan arıcı": "Beekeeper working at the hive",
-"Apikültür Vakfı, arıcılığın bilimsel, çevresel, ekonomik ve kültürel gelişimine katkı sağlayan bağımsız bir vakıftır. Vizyonumuz, misyonumuz ve hikâyemiz.": "An independent foundation contributing to the scientific, environmental, economic and cultural development of beekeeping. Our vision, mission and story.",
+# ---- Sadeleştirme, yeni vizyon / misyon / beş eksen (Kasım 2026) ----
+"Apikültür Vakfı; arıların ve arı ürünlerinin değerini bilimle ortaya koymak, koloni kayıplarına karşı toplumsal bilinç oluşturmak ve arıcılığın geleceğine katkı sağlamak için çalışır.":
+  "The Apiculture Foundation works to reveal the value of bees and bee products through science, to build public awareness of colony losses and to contribute to the future of beekeeping.",
+"Arıcılık; gıda üretiminden biyoçeşitliliğe, kırsal yaşamdan kültürel mirasa kadar birçok alanla bağlantılıdır. Vakfımız bu bütünü bilimsel araştırma, toplumsal bilinç ve iş birliğiyle ele alır.":
+  "Beekeeping is connected to many areas, from food production and biodiversity to rural life and cultural heritage. Our Foundation approaches this whole through scientific research, public awareness and cooperation.",
+"Arının, arıcılığın ve arı ürünlerinin insana ve ekosistemde kattığı değeri bilimle görünür kılan; tüketiciden üreticiye tüm tarafların başvurduğu küresel bir referans ve denge merkezi olmak.":
+  "To be a global centre of reference and balance, consulted by everyone from consumers to producers, that uses science to make visible the value bees, beekeeping and bee products bring to people and to the ecosystem.",
+"Arı ve arı ürünlerinin biyoyararlılığı ile arıların koloni kayıplarına yol açan ve sürdürülebilirliğini tehdit eden faktörleri bilimsel araştırmalarla ortaya koymak, bu hususlarda toplumsal bilinç ve farkındalık yaratmak, arı ürünlerinin değerini yükseltmek.":
+  "To use scientific research to reveal the bioavailability of bees and bee products and the factors that cause colony losses and threaten the sustainability of bees; to build public awareness of these issues; and to raise the value of bee products.",
+"Çatı ilkemiz: ekosistemin sürdürülebilirliği.":
+  "Our guiding principle: a sustainable ecosystem.",
+"Çalışmalarımız bu ilke etrafında birbiriyle bağlantılı beş eksende şekillenir.":
+  "Our work is organised around this principle in five interconnected areas.",
+"Koloni Sağlığı ve Kayıpların Önlenmesi":
+  "Colony Health and Loss Prevention",
+"Koloni kayıplarına yol açan etkenlerin araştırılması ve önlenmesi.":
+  "Researching and preventing the factors behind colony losses.",
+"Biyoçeşitlilik ve Tarımsal Verimlilik":
+  "Biodiversity and Agricultural Productivity",
+"Tozlayıcıların korunması ve polinasyon yoluyla tarımsal verimlilik.":
+  "Protecting pollinators and raising agricultural productivity through pollination.",
+"Gençlik ve Sürdürülebilir Modern Arıcılık":
+  "Youth and Sustainable Modern Beekeeping",
+"Gençleri odağa alan, verimliliği ve geliri artıran modern arıcılık.":
+  "Modern beekeeping that focuses on young people and raises productivity and income.",
+"Etik Arıcılık ve Arı Ürünlerine Güven":
+  "Ethical Beekeeping and Trust in Bee Products",
+"Kaynağından izlenebilir, güvenilir üretim ve bilinçli tüketici.":
+  "Reliable production traceable to its source, and informed consumers.",
+"Ulusal ve Uluslararası İş Birliği":
+  "National and International Cooperation",
+"Bu alanlarda güvenilir bir referans merkezi olma hedefi.":
+  "Our aim: to be a trusted centre of reference in these areas.",
+"Gençlerin arıcılıkta eğitim, deneyim ve uluslararası bağlantı kazanmasını destekliyoruz. Okul temelli Apikültür Gençlik Kulüpleri ile Türkiye’nin ICYB ve IMYB süreçlerine katılımı bu çalışmaların merkezinde yer alır.":
+  "We help young people gain education, experience and international connections in beekeeping. School-based Apiculture Youth Clubs and Türkiye’s participation in ICYB and IMYB are at the heart of this work.",
+"Eğitim, araştırma ve bilgi paylaşımı çalışmalarımız üç başlıkta toplanır.":
+  "Our education, research and knowledge-sharing work is organised under three headings.",
+"Öğrencileri, genç araştırmacıları ve nitelikli bilimsel çalışmaları burs, araştırma ve uluslararası gelişim destekleriyle buluşturan destek programımız.":
+  "Our support programme connecting students, early-career researchers and high-quality scientific work with scholarships, research grants and international development opportunities.",
+"Vakfın organları Mütevelli Heyeti ve Yönetim Kurulu’dur; Bilim Kurulu ve Danışma Kurulu çalışmalarımıza katkı sunar. Kurumsal belgeler Şeffaflık Merkezi’nde yer alır.":
+  "The Foundation’s governing bodies are the Board of Trustees and the Board of Directors; the Scientific Board and the Advisory Board contribute to our work. Institutional documents are available in the Transparency Centre.",
+"Apikültür Vakfı; arı, arıcılık ve arı ürünleri için bilimle çalışan bağımsız bir vakıftır. Vizyonumuz, misyonumuz ve hikâyemiz.":
+  "The Apiculture Foundation is an independent foundation working through science for bees, beekeeping and bee products. Our vision, mission and story.",
+"Apikültür Vakfı Hakkında | Vizyon, Misyon ve Hikâye":
+  "About the Apiculture Foundation | Vision, Mission and Story",
+"Arı, arıcılık ve arı ürünleri için bilimle çalışan bağımsız bir vakıf.":
+  "An independent foundation working through science for bees, beekeeping and bee products.",
+"Vakfın kurumsal kimliği, herhangi bir ticari markanın devamı veya uzantısı değildir; kendi amaçları ve organlarıyla faaliyet gösteren bağımsız bir yapıdır.":
+  "The Foundation is not a continuation or extension of any commercial brand; it is an independent organisation with its own aims and governing bodies.",
+"Çalışmalarımıza katkıda bulunun.":
+  "Contribute to our work.",
+"Bağış, gönüllülük, uzmanlık veya kurumsal iş birliğiyle yanımızda olabilirsiniz.":
+  "You can support us through donations, volunteering, expertise or institutional cooperation.",
+"Apikültür Vakfı’nın beş faaliyet ekseni: koloni sağlığı, biyoçeşitlilik ve tarımsal verimlilik, gençlik ve modern arıcılık, etik arıcılık, ulusal ve uluslararası iş birliği.":
+  "The Apiculture Foundation’s five areas of work: colony health, biodiversity and agricultural productivity, youth and modern beekeeping, ethical beekeeping, and national and international cooperation.",
+"Çatı ilkemiz ekosistemin sürdürülebilirliğidir.":
+  "Our guiding principle is a sustainable ecosystem.",
+"Çalışmalarımız bu ilke etrafında birbiriyle bağlantılı beş eksende şekillenir. Belirli süresi ve kapsamı olan çalışmalar Projeler sayfasında anlatılır.":
+  "Our work is organised around this principle in five interconnected areas. Work with a defined duration and scope is described on the Projects page.",
+"Başta koloni kayıpları olmak üzere arı popülasyonlarını tehdit eden iklimsel, çevresel ve tarımsal etkenlerin araştırılmasını ve önlenmesine yönelik çalışmaları destekleriz.":
+  "We support research into the climatic, environmental and agricultural factors that threaten bee populations, colony losses above all, and work to prevent them.",
+"Arı sağlığı ve koloni kayıplarıyla ilgili bilimsel araştırmaları desteklemek; yenilikçi ve geleneksel yöntemlerin birlikte kullanılmasına katkı sağlamak.":
+  "Supporting scientific research on bee health and colony losses, and helping innovative and traditional methods work together.",
+"Bal arıları ve diğer tozlayıcıların korunmasını, biyoçeşitliliği artıran projeleri ve arıcılar ile çiftçiler arasındaki iş birliğini destekleyerek polinasyon yoluyla tarımsal verimliliğin artmasına katkı sağlarız.":
+  "We support the protection of honey bees and other pollinators, projects that enhance biodiversity and cooperation between beekeepers and farmers, helping to raise agricultural productivity through pollination.",
+"Gençleri odağa alarak verimliliği, ürün çeşitliliğini ve arıcının gelirini artıracak sürdürülebilir ve modern arıcılık çalışmalarını destekleriz; polen, arı sütü ve propolis gibi ürünlerin çeşitlendirilmesine yönelik yeni projeler geliştiririz.":
+  "With a focus on young people, we support sustainable, modern beekeeping that raises productivity, product diversity and beekeepers’ income, and we develop new projects to diversify products such as pollen, royal jelly and propolis.",
+"Arıcı Eğitimi":
+  "Beekeeper Training",
+"Arıcılıkla ilgilenen bireylerin güncel ve bilimsel bilgiye erişimine, ilgili kurum ve birliklerle iş birliği içinde katkı sunmak.":
+  "Helping people interested in beekeeping access up-to-date, science-based knowledge, in cooperation with the relevant institutions and associations.",
+"Arı ürünlerinin tüketiciyle doğru biçimde buluşmasının temeli bilinçli üreticidir. Kaynağından itibaren izlenebilir ve güvenilir üretimi esas alan etik arıcılığı ve etik arıcıları destekler; arı ve arı ürünlerinin toplumsal değerini yükseltmek için bilimsel araştırmaları, projeleri ve toplumun bilinç ve farkındalığını artıran eğitim ve bilgilendirme faaliyetlerini destekleriz.":
+  "Informed producers are the foundation for bee products reaching consumers in the right way. We support ethical beekeeping and ethical beekeepers, based on reliable production traceable to its source; and to raise the social value of bees and bee products, we support scientific research, projects, and education and information activities that build public awareness.",
+"Çevre dostu ve etik arıcılık yöntemlerinin bilimsel temelinin güçlenmesine katkı sunmak.":
+  "Helping to strengthen the scientific basis of environmentally friendly and ethical beekeeping methods.",
+"Toplumsal Farkındalık":
+  "Public Awareness",
+"Çocuklara, gençlere ve tüketicilere arıların ve arı ürünlerinin değerini anlatan eğitim ve bilgilendirme çalışmaları yürütmek.":
+  "Running education and information activities that explain the value of bees and bee products to children, young people and consumers.",
+"Bu alanlarda ulusal ve uluslararası kurumlarla iş birliği yaparak arı ve arıcılık konusunda güvenilir bir referans merkezi olmayı hedefleriz.":
+  "By cooperating with national and international institutions in these areas, we aim to become a trusted centre of reference on bees and beekeeping.",
+"Kurumlar, üniversiteler, uzmanlar ve gönüllülerle iş birliğine açığız.":
+  "We welcome cooperation with institutions, universities, experts and volunteers.",
+"Arılıkta körükle çalışan arıcı":
+  "Beekeeper using a smoker in the apiary",
+"İlgili faaliyet ekseni":
+  "Related area of work",
+"Vakfın nasıl yönetildiğini ve kurumsal belgelerini bu sayfada bulabilirsiniz.":
+  "How the Foundation is governed, and its institutional documents.",
+"Vakfın yıllık brüt gelirinin en az üçte ikisi Vakfın amaçlarına tahsis edilir.":
+  "At least two thirds of the Foundation’s annual gross income is allocated to its aims.",
+"Vakıf organı":
+  "Governing body",
+"Başvurunu çevrim içi olarak tamamla.":
+  "Complete your application online.",
 }
 
 # e-posta konu satırları
@@ -454,25 +439,13 @@ SUBJ = {
 # ---- Apikültür Gelecek (gelecek.html ve bağlantılı eklemeler) ----
 T.update({
   "Apikültür Gelecek": "Apiculture Future",
-  "Bilgiyi destekliyoruz. Bilimi büyütüyoruz. Geleceğe yatırım yapıyoruz.": "We support knowledge. We grow science. We invest in the future.",
-  "Apikültür Gelecek; arılar, arıcılık, polinasyon, biyolojik çeşitlilik, tarım, gıda, çevre ve kırsal kalkınmanın geleceğine katkı sağlayacak öğrencileri, genç araştırmacıları ve nitelikli çalışmaları desteklemek amacıyla oluşturulan eğitim, bilim ve gelecek destek programıdır.": "Apiculture Future is an education, science and future support programme created to support students, young researchers and high-quality work that will contribute to the future of bees, beekeeping, pollination, biodiversity, agriculture, food, the environment and rural development.",
-  "Eğitim burslarından genç araştırmacı desteklerine, bilimsel araştırmalardan uluslararası hareketliliğe kadar farklı destek yollarını tek bir yapı altında buluşturuyoruz.": "From education scholarships to young researcher grants, and from scientific research to international mobility, we bring different paths of support together under one structure.",
   "Gelecek Bursları": "Future Scholarships",
-  "Öğrencilerin eğitim yolculuğunu destekleyen burs programları.": "Scholarship programmes supporting students on their educational journey.",
   "Genç Bilim": "Young Science",
-  "Yüksek lisans, doktora ve genç araştırmacılara yönelik bilimsel gelişim destekleri.": "Scientific development support for master’s and doctoral students and early-career researchers.",
   "Araştır": "Research Grants",
-  "Tez, araştırma, saha çalışması ve bilimsel proje destekleri.": "Support for theses, research, fieldwork and scientific projects.",
   "Dünyaya Açıl": "Go Global",
-  "Kongre, bilimsel toplantı, araştırma ziyareti ve uluslararası hareketlilik destekleri.": "Support for congresses, scientific meetings, research visits and international mobility.",
   "Sahada Gelecek": "Future in the Field",
-  "Arıcılar, çiftçiler ve saha uygulayıcılarına yönelik eğitim ve kapasite geliştirme destekleri.": "Training and capacity-building support for beekeepers, farmers and field practitioners.",
-  "Hangi destek size uygun?": "Which support is right for you?",
-  "Açık programları inceleyin, başvuru koşullarını öğrenin ve size uygun destek yolunu keşfedin.": "Explore open programmes, learn about the eligibility requirements and find the support path that suits you.",
   "Apikültür Gelecek’i Keşfet": "Explore Apiculture Future",
   "Açık Programlar": "Open Programmes",
-  "Eğitim ve Bilimi Destekleyin": "Support Education and Science",
-  "Apikültür Gelecek kapsamında öğrencilerin, genç araştırmacıların ve nitelikli bilimsel çalışmaların desteklenmesine katkıda bulunun.": "Contribute to supporting students, young researchers and high-quality scientific work through Apiculture Future.",
   "Apikültür Gelecek’i Destekle": "Support Apiculture Future",
   "Eğitim ve gelişim desteği mi arıyorsunuz?": "Looking for education or development support?",
   "Apikültür Gelecek kapsamında öğrenciler ve gençler için dönemsel burs, bilimsel gelişim ve hareketlilik destekleri açılabilir.": "Through Apiculture Future, periodic scholarships, scientific development and mobility support may be offered for students and young people.",
@@ -561,13 +534,11 @@ T.update({
   "E-posta taslağınız hazırlandı. Gönderdiğinizde ön kaydınız bize ulaşır.": "Your email draft is ready. Once you send it, your pre-registration will reach us.",
   "Apikültür Gelecek Ön Kayıt": "Apiculture Future Pre-registration",
   "Nasıl başvurulur?": "How to apply",
-  "Başvurular ücretsizdir. Değerlendirme kriterleri program açılmadan önce belirlenir. Programın niteliğine göre değerlendirme dosyaları kimlik bilgilerinden ayrıştırılabilir ve birden fazla değerlendirici kullanılabilir.": "Applications are free of charge. Evaluation criteria are set before a programme opens. Depending on the programme, evaluation files may be separated from identity information and more than one evaluator may be used.",
   "Programını bul": "Find your programme",
   "Açık programları incele ve sana uygun destek programını seç.": "Explore the open programmes and choose the one that suits you.",
   "Koşulları incele": "Review the conditions",
   "Başvuru şartlarını, takvimi, destek kapsamını ve değerlendirme kriterlerini incele.": "Review the eligibility requirements, timeline, scope of support and evaluation criteria.",
   "Başvurunu tamamla": "Complete your application",
-  "Başvurunu çevrim içi olarak tamamla. Başvuru ücretsizdir.": "Complete your application online. Applying is free of charge.",
   "Başvurun, ilgili program için önceden belirlenmiş kriterler doğrultusunda değerlendirilir.": "Your application is evaluated against criteria set in advance for the relevant programme.",
   "Tahsis": "Allocation",
   "Destekler; değerlendirme sonuçları, program bütçesi ve kontenjan çerçevesinde Vakfın yetkili karar süreciyle tahsis edilir. Sonuç, program ilanında belirtilen kanal üzerinden bildirilir.": "Support is allocated through the Foundation’s authorised decision-making process, based on evaluation results, the programme budget and available places. Results are communicated through the channel stated in the programme announcement.",
