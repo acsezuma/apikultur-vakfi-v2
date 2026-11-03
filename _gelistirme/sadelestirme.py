@@ -10,7 +10,7 @@ def swap_section(s, comment, new, label):
     return s[:i] + new + s[j:]
 
 # Vizyon ve misyon (kurul onaylı metinler, Kasım 2026)
-VIZYON = "Arının, arıcılığın ve arı ürünlerinin insana ve ekosistemde kattığı değeri bilimle görünür kılan; tüketiciden üreticiye tüm tarafların başvurduğu küresel bir referans ve denge merkezi olmak."
+VIZYON = "Arıların biyoçeşitlilik ve verimlilik alanlarında küresel ölçekte ekosistemde yarattığı katma değerin finansal bir büyüklüğü olduğu gibi, toplumun yaşamsal döngüsünde başat aktörler olmaları da bilimsel bir gerçektir. Dolayısıyla Vakfımız, bu önemli konuyu toplumsal fayda yaratacak bir kapsayıcılıkla, sürdürülebilir ve dengeli bir yaklaşımla ele alarak küresel bir referans ve kültür merkezi olmayı hedefler."
 MISYON = "Arı ve arı ürünlerinin biyoyararlılığı ile arıların koloni kayıplarına yol açan ve sürdürülebilirliğini tehdit eden faktörleri bilimsel araştırmalarla ortaya koymak, bu hususlarda toplumsal bilinç ve farkındalık yaratmak, arı ürünlerinin değerini yükseltmek."
 
 # Beş eksen: (id, ikon, başlık, ana sayfa için kısa metin)
