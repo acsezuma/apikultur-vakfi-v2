@@ -1,0 +1,50 @@
+# main dalına her gönderimde siteyi apikulturvakfi.org sunucusuna (cPanel / FTPS) yükler.
+# Gerekli: Settings → Secrets and variables → Actions → "FTP_PASSWORD" (cPanel şifresi).
+# Şifre tanımlı değilse yayın adımı uyarıyla atlanır, hata vermez.
+name: Canlıya yayın (apikulturvakfi.org)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: canli-yayin
+  cancel-in-progress: false
+
+jobs:
+  yayin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Şifre tanımlı mı?
+        id: kontrol
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ -z "$FTP_PASSWORD" ]; then
+            echo "::warning::FTP_PASSWORD tanımlı değil, yayın atlandı. Settings → Secrets and variables → Actions → New repository secret."
+            echo "hazir=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "hazir=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.kontrol.outputs.hazir == 'true'
+
+      - name: Yayın klasörünü hazırla (geliştirme dosyaları hariç)
+        if: steps.kontrol.outputs.hazir == 'true'
+        run: |
+          rsync -a --exclude '.git*' --exclude '.github' --exclude '_gelistirme' --exclude '_yayin' \
+                   --exclude 'README.md' --exclude '*.zip' ./ ./_yayin/
+          echo "Yüklenecek dosya sayısı: $(find _yayin -type f | wc -l)"
+
+      - name: Sunucuya yükle
+        if: steps.kontrol.outputs.hazir == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: lin4.domainhizmetleri.com
+          username: apikulturvakfi
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./_yayin/
+          server-dir: public_html/

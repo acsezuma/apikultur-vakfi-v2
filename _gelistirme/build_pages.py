@@ -4,7 +4,7 @@ Her çalıştırmada index_base.html'den (7406807 sürümü) başlar; tekrar ça
 import re, sys, os
 SCR = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo kökü (_gelistirme/..)
-BASE_URL = "https://acsezuma.github.io/apikultur-vakfi-v2/"
+BASE_URL = "https://apikulturvakfi.org/"
 idx = open(f"{SCR}/index_base.html", encoding="utf-8").read()
 
 def once(s, old, new, label, count=1):
@@ -540,6 +540,6 @@ exec(open(f'{SCR}/gelecek_page.py', encoding='utf-8').read())
 # =====================================================================
 pages = ["", "vakif.html", "faaliyet.html", "genclik.html", "akademi.html", "gelecek.html", "projeler.html", "yonetim.html", "senet.html"]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
-    f'  <url><loc>{BASE_URL}{p}</loc><lastmod>2026-09-28</lastmod></url>\n' for p in pages) + '</urlset>\n'
+    f'  <url><loc>{BASE_URL}{p}</loc><lastmod>2026-11-09</lastmod></url>\n' for p in pages) + '</urlset>\n'
 open(f"{REPO}/sitemap.xml", "w").write(sm)
 print("OK  sitemap.xml")

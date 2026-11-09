@@ -4,9 +4,9 @@ import re, sys, os, json
 from urllib.parse import quote, unquote
 SCR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, SCR)
-from en_text import T, SUBJ
+from en_text import T, SUBJ, T_FORM
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo kökü (_gelistirme/..)
-BASE = "https://acsezuma.github.io/apikultur-vakfi-v2/"
+BASE = "https://apikulturvakfi.org/"
 SLUG = {"index.html": "index.html", "vakif.html": "about.html", "faaliyet.html": "areas-of-work.html", "genclik.html": "youth.html",
         "akademi.html": "academy.html", "projeler.html": "projects.html", "yonetim.html": "governance.html", "gelecek.html": "future.html"}
 ALLOWED_TR = ["Türkiye", "Düzce", "Şişli", "İzzetpaşa", "Yıldırım", "Mh.", "Sk.", "Apikültür"]
@@ -19,8 +19,8 @@ NGO_EN = '''<script type="application/ld+json">
   "@type": "NGO",
   "name": "Apiculture Foundation",
   "alternateName": "Apikültür Vakfı",
-  "url": "https://acsezuma.github.io/apikultur-vakfi-v2/en/",
-  "logo": "https://acsezuma.github.io/apikultur-vakfi-v2/assets/logo.png",
+  "url": "https://apikulturvakfi.org/en/",
+  "logo": "https://apikulturvakfi.org/assets/logo.png",
   "email": "info@apikulturvakfi.org",
   "telephone": "+90 212 222 0 222",
   "description": "An independent, non-profit foundation working through science, education and cooperation for beekeeping, pollination and sustainable living."
@@ -103,7 +103,7 @@ def build(fname):
     print(f"OK  en/{en}", len(s))
 
 for f in SLUG: build(f)
-unused = [k for k in T if k not in used]
+unused = [k for k in T if k not in used and k not in T_FORM]  # form kapalıyken T_FORM kullanılmaz
 print("kullanılmayan sözlük anahtarı:", len(unused))
 for u in unused: print("   -", u[:90])
 print("SORUNLAR:", len(problems))
@@ -111,6 +111,6 @@ for p in problems: print("   !", p)
 # sitemap'e EN sayfaları
 sm = open(f"{REPO}/sitemap.xml", encoding="utf-8").read()
 if "/en/" not in sm:
-    extra = ''.join(f'  <url><loc>{BASE}en/{(v if v != "index.html" else "")}</loc><lastmod>2026-09-28</lastmod></url>\n' for v in SLUG.values())
+    extra = ''.join(f'  <url><loc>{BASE}en/{(v if v != "index.html" else "")}</loc><lastmod>2026-11-09</lastmod></url>\n' for v in SLUG.values())
     open(f"{REPO}/sitemap.xml", "w", encoding="utf-8").write(sm.replace("</urlset>", extra + "</urlset>"))
     print("OK  sitemap.xml + EN")

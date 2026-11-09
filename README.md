@@ -4,7 +4,7 @@ Apikültür Vakfı'nın resmî web sitesi. **Doğayı Geleceğe Taşır.**
 
 Bu sürüm (**v2**), `apikültürsitedeneme2` tasarımını (Outfit + Hanken Grotesk tipografisi, terracotta/amber/espresso paleti) esas alır ve kurumsal kimliği birebir yansıtır.
 
-Yayın hedefi: **https://acsezuma.github.io/apikultur-vakfi-v2/**
+Canlı adres: **https://apikulturvakfi.org/** (önizleme: https://acsezuma.github.io/apikultur-vakfi-v2/)
 (apikulturvakfi.com bağlandığında güncellenecek)
 
 ## Yapı
@@ -35,12 +35,10 @@ Yayın hedefi: **https://acsezuma.github.io/apikultur-vakfi-v2/**
 
 1. Metni `_gelistirme/` içindeki betiklerde değiştirin (üretilen `.html` dosyalarını elle düzenlemeyin, bir sonraki üretimde ezilir).
 2. `python3 _gelistirme/build_pages.py && python3 _gelistirme/build_en.py`
-3. `main` dalına commit + push yapın. GitHub Pages otomatik yeniden yayınlar (1-2 dk).
+3. `main` dalına commit + push yapın. Site apikulturvakfi.org'a (ve GitHub Pages önizlemesine) otomatik yüklenir (1-2 dk).
 
 Apikültür Gelecek'e açık program eklemek için yalnızca `assets/programlar.json` düzenlenir (biçim: `_gelistirme/NOTLAR.md`).
 
-## Alan adı bağlanacağı zaman
+## Canlı yayın
 
-1. Repo → Settings → Pages → Custom domain
-2. DNS `A`/`CNAME` kayıtlarını GitHub Pages'e yönlendirin
-3. `_gelistirme/build_pages.py` (`BASE_URL`), `_gelistirme/build_en.py` (`BASE`) ve `_gelistirme/index_base.html` içindeki canonical / `og:url` / `og:image` / JSON-LD adreslerini ve `robots.txt`'yi güncelleyip sayfaları yeniden üretin.
+Site **https://apikulturvakfi.org/** adresinde yayındadır. `main` dalına yapılan her gönderim, GitHub Actions ile (`.github/workflows/yayin.yml`) sunucuya otomatik yüklenir. Şifre yalnızca GitHub Secrets'ta (`FTP_PASSWORD`) durur. Ayrıntılar: [`_gelistirme/NOTLAR.md`](_gelistirme/NOTLAR.md).

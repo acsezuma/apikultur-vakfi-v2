@@ -47,7 +47,14 @@ Kontrol: `build_en.py` çıktısında **`kullanılmayan sözlük anahtarı: 0`**
 
 Senet yalnızca Türkçedir (`senet.html`) ve yalnızca Yönetim & Şeffaflık sayfasından bağlanır.
 
-## 2. Apikültür Gelecek: açık program ekleme
+## 2. Canlı yayın (apikulturvakfi.org)
+
+- Canlı adres: **https://apikulturvakfi.org/** (cPanel hesabı: `apikulturvakfi`, sunucu `lin4.domainhizmetleri.com`, klasör `public_html/`). GitHub Pages adresi önizleme olarak çalışmaya devam eder; sayfalardaki canonical adresler .org'u gösterir.
+- `main` dalına her gönderimde `.github/workflows/yayin.yml` siteyi FTPS ile sunucuya yükler (`_gelistirme`, `.github`, `README.md` ve zip dosyaları hariç). Şifre repoda değil, GitHub → Settings → Secrets and variables → Actions → `FTP_PASSWORD` içindedir. Şifre değişirse yalnızca bu secret güncellenir. Elle tetiklemek için: Actions → "Canlıya yayın" → Run workflow.
+- `.htaccess`: ana sayfa olarak `index.html` açılır. SSL sertifikası aktif olunca dosyadaki https yönlendirme satırları açılmalı.
+- Adresler `build_pages.py` → `BASE_URL`, `build_en.py` → `BASE`, `index_base.html`, `robots.txt`, `senet.html` içinde.
+
+## 3. Apikültür Gelecek: açık program ekleme
 
 Betik çalıştırmaya gerek yoktur. `assets/programlar.json` dosyası (GitHub web arayüzünden de) düzenlenir; kartlar `gelecek.html` ve `en/future.html` sayfalarında kendiliğinden görünür, liste boşken "Yeni programlarımız hazırlanıyor" kutusu çıkar.
 
@@ -65,13 +72,13 @@ Betik çalıştırmaya gerek yoktur. `assets/programlar.json` dosyası (GitHub w
 
 Ön kayıt formu şu an bilgileri kullanıcının e-posta uygulamasında `info@apikulturvakfi.org` adresine hazır e-posta olarak açar (sunucu yok). İleride bir form servisi (Formspree, Tally vb.) bağlanabilir: `gelecek_page.py` içindeki `G_SCRIPT` bölümündeki gönderim kısmı değiştirilir.
 
-## 3. Önizleme ve paylaşım görselleri (isteğe bağlı)
+## 4. Önizleme ve paylaşım görselleri (isteğe bağlı)
 
 - `onizleme/build_preview2.py`: Tailwind CDN'e erişmeden birebir önizleme üretir. `onizleme/calisma/tw` altında `npm i tailwindcss@3.4.17 @tailwindcss/forms @tailwindcss/container-queries playwright-core material-symbols`, `onizleme/calisma/fonts` altında fontsource paketleri (outfit, hanken-grotesk, ibm-plex-mono) gerekir.
 - `onizleme/og.html`, `og_en.html`: paylaşım görsellerinin kaynağı. `node onizleme/og.js <og.html yolu> assets/og-image.png` (EN için `assets/og-image-en.png`). Görsel değişince sayfalardaki `?v=` sürümünü artırın (`build_pages.py` → `og-surum`, şu an `?v=4`; `build_en.py` → `og-image-en.png?v=2`).
 - Favicon, apple-touch-icon, senet sayfası başlığı ve paylaşım görsellerindeki işaret, resmî logodan (`assets/logo.png`) kırpılan `assets/logo-mark.png`'dir. Eski çizim (yeniden çizilmiş SVG arı) artık hiçbir yerde kullanılmıyor.
 
-## 4. Tasarım ve editoryal kurallar
+## 5. Tasarım ve editoryal kurallar
 
 - Tasarım dili: Tailwind + `tailwind.config` token'ları; Outfit (başlık), Hanken Grotesk (gövde). Renkler: terracotta `#B82618`, amber `#EA8512`, espresso `#33261B`, ekru `#F9EFE3`, zemin `#fff8f5`.
 - "Yapay zekâ kokmasın": chip/pill bulutu yok; mono büyük harf "eyebrow" etiketleri ve `Bilim · Eğitim · …` gibi noktalı slogan satırları yok; cümle ortasında " — " yok; büyük amber başlık yok; az sayıda, tutarlı kart tipi.
@@ -80,7 +87,7 @@ Betik çalıştırmaya gerek yoktur. `assets/programlar.json` dosyası (GitHub w
 - "kamu yararı" / "public benefit" ifadesi kullanılmaz (hukuki statü çağrışımı). Senet Md.7: organlar Mütevelli Heyeti ve Yönetim Kurulu; Bilim ve Danışma Kurulu destek yapılarıdır.
 - Yazım: "Apikültür" (sitenin her yerinde), "iş birliği" ayrı (TDK).
 
-## 5. Alınan kararlar (özet)
+## 6. Alınan kararlar (özet)
 
 - Menü: Vakıf · Faaliyet Alanlarımız · Gençlik · Akademi & Bilim · Apikültür Gelecek · Projeler · Yönetim & Şeffaflık · İletişim · Bağış Yap (açılır alt menü yok). Masaüstü menü 1280px'ten itibaren, altında hamburger.
 - **Vakıf senedi tek yerde:** Yönetim & Şeffaflık → Şeffaflık Merkezi satırı (Oku / PDF). Senedi yayımlama zorunluluğu olmadığı için menüde, header'da, footer'da, ana sayfada ve diğer sayfalarda senet bağlantısı ya da "senede göre / Md." atfı yok.
@@ -91,9 +98,9 @@ Betik çalıştırmaya gerek yoktur. `assets/programlar.json` dosyası (GitHub w
 - Beş eksenin 01–05 numaraları korunur; diğer süs numaraları kaldırıldı. Arıcı eğitimi eksen değil, 03 altında bir çalışma başlığıdır ("ilgili kurum ve birliklerle iş birliği içinde katkı").
 - Arı Dostum Olur Musun? durumu: Devam ediyor. COLOSS uluslararası ağlar listesinde.
 
-## 6. Vakıftan beklenenler
+## 7. Vakıftan beklenenler
 
-- KVKK aydınlatma metni, Gizlilik ve Çerez politikaları (footer bağlantıları boş; ön kayıt formunun onay kutusu bu metne bağlanmalı).
+- KVKK aydınlatma metni, Gizlilik ve Çerez politikaları (footer bağlantıları boş; metin gelince ön kayıt formu yeniden açılacak).
 - Adres: Şişli mi, senetteki Beylikdüzü mü?
 - FAO, Apimondia, COLOSS ile ilişkinin türü; ICYB ifadesi (özellikle İngilizce).
 - Takvim (19 Mayıs 2026, 23 Nisan 2027, Temmuz 2027 / DAGEM) ve kulüp modeli bilgilerinin teyidi.
@@ -103,9 +110,9 @@ Betik çalıştırmaya gerek yoktur. `assets/programlar.json` dosyası (GitHub w
 - SSS / değerlendirme metinlerinin AKG ile birebir uyumu ("Komisyon", maddi hata inceleme, fikrî haklar).
 - ICYB logosu; genç ve insan odaklı fotoğraflar.
 
-## 7. Sonraki işler
+## 8. Sonraki işler
 
 - **Apikültür Akademi** ayrı başlık/sayfa olacak (şu an Akademi & Bilim sayfasında bir bölüm).
-- Alan adı (apikulturvakfi.org/.com) bağlandığında: `build_pages.py` → `BASE_URL`, `build_en.py` → `BASE`, `index_base.html` içindeki canonical / og / JSON-LD adresleri, `robots.txt`.
+- Ön kayıt formu KVKK aydınlatma metni gelene kadar kapalı: `gelecek_page.py` → `ONKAYIT_FORMU = True` yapılınca geri gelir (onay kutusunu KVKK metnine bağlayın). Formun İngilizce metinleri `en_text.py` → `T_FORM` içinde duruyor.
 - Ön kayıt formuna gerçek bir form servisi bağlanması (KVKK metniyle birlikte).
 - Program sayısı artınca alt program sayfaları.

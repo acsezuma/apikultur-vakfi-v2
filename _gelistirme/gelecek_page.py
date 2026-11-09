@@ -53,7 +53,10 @@ def fld(fid, label, typ="text", span="", req=False, extra=""):
             f'<input id="{fid}" name="{fid}" type="{typ}" class="{INP}" data-alan{r}{extra}/></div>')
 
 PROG_OPTS = ''.join(f'<option value="{p[0]}">{p[2]}</option>' for p in G_PROGS) + '<option value="emin-degil">Henüz emin değilim</option>'
-ONKAYIT = f'''<div id="on-kayit" class="mt-16 grid lg:grid-cols-12 gap-10 lg:gap-16 reveal-on-scroll">
+# Ön kayıt formu KVKK aydınlatma metni gelene kadar kapalı: True yapılınca form geri gelir
+# (onay kutusu o zaman KVKK metnine bağlanmalı). Kapalıyken yerine e-posta bağlantısı gösterilir.
+ONKAYIT_FORMU = False
+ONKAYIT_FORM = f'''<div id="on-kayit" class="mt-16 grid lg:grid-cols-12 gap-10 lg:gap-16 reveal-on-scroll">
 <div class="lg:col-span-4">
 <h3 class="font-headline-md text-3xl text-espresso mb-4">Ön kayıt</h3>
 <p class="text-on-surface-variant text-lg leading-relaxed mb-4">Programlar açıldığında sizinle iletişime geçebilmemiz için kısa ön kayıt formunu doldurabilirsiniz.</p>
@@ -81,6 +84,13 @@ ONKAYIT = f'''<div id="on-kayit" class="mt-16 grid lg:grid-cols-12 gap-10 lg:gap
 </form>
 </div>
 '''
+ONKAYIT_EPOSTA = f'''<div id="on-kayit" class="mt-16 rounded-3xl border border-outline-variant/30 bg-white shadow-sm p-8 md:p-10 reveal-on-scroll">
+<h3 class="font-headline-md text-3xl text-espresso mb-4">Ön kayıt</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6 max-w-3xl">Programlar açıldığında haberdar olmak isterseniz bize e-posta ile yazabilirsiniz. Ön kayıt, başvuru yerine geçmez.</p>
+<a href="mailto:info@apikulturvakfi.org?subject=Apik%C3%BClt%C3%BCr%20Gelecek%20%C3%96n%20Kay%C4%B1t" class="inline-flex items-center gap-2 bg-terracotta text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all group">Ön Kayıt İçin Yazın {ARROW}</a>
+</div>
+'''
+ONKAYIT = ONKAYIT_FORM if ONKAYIT_FORMU else ONKAYIT_EPOSTA
 
 PROGRAMS_SEC = f'''<section class="py-24 md:py-32 bg-background" id="programlar">
 <div class="max-w-[1180px] mx-auto px-7">
@@ -200,7 +210,7 @@ FAQ_REST = [
  ("Destek aldıktan sonra ne oluyor?", "Programın niteliğine göre eğitim, araştırma veya gelişim süreci belirli aralıklarla izlenebilir. Amaç yalnızca kaynak aktarmak değil, desteğin oluşturduğu sonuçları da takip etmektir."),
  ("Apikültür Gelecek Ağı nedir?", "Öğrencileri, araştırmacıları, akademisyenleri, arıcıları ve ilgili alan uzmanlarını bilgi paylaşımı, mentorluk ve iş birliği amacıyla bir araya getirmeyi hedefleyen gönüllü bir ağdır."),
  ("Gelecek Ağı’na katılmak zorunlu mu?", "Hayır. Katılım tamamen gönüllüdür. Katılmamak mevcut veya gelecekteki burs ve destek değerlendirmelerinde olumsuz bir unsur olarak kullanılamaz."),
- ("Şu anda açık program yoksa ne yapmalıyım?", "Yeni programlar açıldığında bu sayfadaki Açık Programlar bölümünde yayımlanır. Bu süre içinde ön kayıt formunu doldurabilirsiniz."),
+ ("Şu anda açık program yoksa ne yapmalıyım?", "Yeni programlar açıldığında bu sayfadaki Açık Programlar bölümünde yayımlanır. " + ("Bu süre içinde ön kayıt formunu doldurabilirsiniz." if ONKAYIT_FORMU else "Bu süre içinde ön kayıt için bize e-posta ile yazabilirsiniz.")),
 ]
 def faq_item(q, a):
     return ('<details class="faq border-t border-outline-variant/40"><summary class="flex items-center justify-between gap-6 py-6 cursor-pointer">'

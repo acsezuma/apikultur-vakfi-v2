@@ -414,6 +414,12 @@ T = {
   "You can support clubs, training programmes and participation in international meetings.",
 "Yayınlar hazır oldukça dönem ve kaynak bilgileriyle birlikte bu bölüme eklenir.":
   "Publications will be added here as they become available, with their dates and sources.",
+"Programlar açıldığında haberdar olmak isterseniz bize e-posta ile yazabilirsiniz. Ön kayıt, başvuru yerine geçmez.":
+  "If you would like to hear when programmes open, you can write to us by email. Pre-registration is not an application.",
+"Ön Kayıt İçin Yazın":
+  "Email Us to Pre-register",
+"Yeni programlar açıldığında bu sayfadaki Açık Programlar bölümünde yayımlanır. Bu süre içinde ön kayıt için bize e-posta ile yazabilirsiniz.":
+  "New programmes are announced in the Open Programmes section of this page when they open. In the meantime, you can email us to pre-register.",
 }
 
 # e-posta konu satırları
@@ -426,6 +432,7 @@ SUBJ = {
  "Proje: Coğrafi İşaret & Yerel Değerler": "Project: Geographical Indications & Local Values",
  "Proje: Kadın ve Genç Arıcı Programı": "Project: Women & Young Beekeepers Programme",
  "Proje: Türkiye Arı Koridoru": "Project: Türkiye Bee Corridor",
+ "Apikültür Gelecek Ön Kayıt": "Apiculture Future Pre-registration",
 }
 
 # ---- Apikültür Gelecek (gelecek.html ve bağlantılı eklemeler) ----
@@ -508,23 +515,6 @@ T.update({
   "Son başvuru:": "Deadline:",
   "Programı İncele ve Başvur": "View Programme and Apply",
   "Ön kayıt": "Pre-registration",
-  "Programlar açıldığında sizinle iletişime geçebilmemiz için kısa ön kayıt formunu doldurabilirsiniz.": "You can fill in the short pre-registration form so that we can contact you when programmes open.",
-  "Ön kayıt, başvuru yerine geçmez. Başvurular ilgili program ilanında belirtilen koşullarla alınır.": "Pre-registration is not an application. Applications are accepted under the conditions set out in each programme announcement.",
-  "Ad *": "First name *",
-  "Soyad *": "Last name *",
-  "Yaş *": "Age *",
-  "Telefon *": "Phone *",
-  "E-posta *": "Email *",
-  "Okul / kurum *": "School / institution *",
-  "Bölüm": "Department",
-  "İlgilendiğiniz destek": "Support you are interested in",
-  "Henüz emin değilim": "Not sure yet",
-  "Proje veya çalışma konunuz": "Your project or field of study",
-  "Bu formdaki bilgilerimin, ön kaydımın değerlendirilmesi ve benimle iletişime geçilmesi amacıyla Apikültür Vakfı tarafından işlenmesini kabul ediyorum. 18 yaşından küçüksem formu velimin onayıyla gönderiyorum.": "I agree that the information in this form may be processed by the Apiculture Foundation to review my pre-registration and to contact me. If I am under 18, I am submitting this form with my parent’s or guardian’s consent.",
-  "Ön Kaydı Gönder": "Send Pre-registration",
-  "Gönder’e bastığınızda bilgileriniz e-posta uygulamanızda hazır bir e-posta olarak açılır; göndermeniz yeterlidir.": "When you press Send, your details open as a ready-made email in your email app; all you need to do is send it.",
-  "E-posta taslağınız hazırlandı. Gönderdiğinizde ön kaydınız bize ulaşır.": "Your email draft is ready. Once you send it, your pre-registration will reach us.",
-  "Apikültür Gelecek Ön Kayıt": "Apiculture Future Pre-registration",
   "Nasıl başvurulur?": "How to apply",
   "Programını bul": "Find your programme",
   "Açık programları incele ve sana uygun destek programını seç.": "Explore the open programmes and choose the one that suits you.",
@@ -615,11 +605,33 @@ T.update({
   "Gelecek Ağı’na katılmak zorunlu mu?": "Is joining the Future Network compulsory?",
   "Hayır. Katılım tamamen gönüllüdür. Katılmamak mevcut veya gelecekteki burs ve destek değerlendirmelerinde olumsuz bir unsur olarak kullanılamaz.": "No. Participation is entirely voluntary. Not joining cannot be held against you in current or future scholarship and support evaluations.",
   "Şu anda açık program yoksa ne yapmalıyım?": "What should I do if no programme is open right now?",
-  "Yeni programlar açıldığında bu sayfadaki Açık Programlar bölümünde yayımlanır. Bu süre içinde ön kayıt formunu doldurabilirsiniz.": "New programmes are published in the Open Programmes section of this page when they open. In the meantime, you can fill in the pre-registration form.",
   "Tüm Soruları Gör": "See All Questions",
   "Geleceğe yer aç.": "Make room for the future.",
   "Bilgiye, bilime ve onu ileriye taşıyacak insanlara yapılan yatırımın geleceği değiştirebileceğine inanıyoruz.": "We believe that investing in knowledge, science and the people who carry it forward can change the future.",
-  "Kısaca anlatın": "Tell us briefly",
   "Apikültür Gelecek; öğrencileri, genç araştırmacıları ve nitelikli çalışmaları burs, araştırma ve gelişim destekleriyle buluşturan destek programıdır.": "Apiculture Future connects students, young researchers and high-quality work with scholarships, research grants and development support.",
 })
 SUBJ["Gelecek Fonu"] = "Future Fund"
+
+# ---- Ön kayıt formu (gelecek_page.py → ONKAYIT_FORMU=False iken sayfada yok; form açılınca kullanılır) ----
+T_FORM = {
+  "Programlar açıldığında sizinle iletişime geçebilmemiz için kısa ön kayıt formunu doldurabilirsiniz.": "You can fill in the short pre-registration form so that we can contact you when programmes open.",
+  "Ön kayıt, başvuru yerine geçmez. Başvurular ilgili program ilanında belirtilen koşullarla alınır.": "Pre-registration is not an application. Applications are accepted under the conditions set out in each programme announcement.",
+  "Ad *": "First name *",
+  "Soyad *": "Last name *",
+  "Yaş *": "Age *",
+  "Telefon *": "Phone *",
+  "E-posta *": "Email *",
+  "Okul / kurum *": "School / institution *",
+  "Bölüm": "Department",
+  "İlgilendiğiniz destek": "Support you are interested in",
+  "Henüz emin değilim": "Not sure yet",
+  "Proje veya çalışma konunuz": "Your project or field of study",
+  "Bu formdaki bilgilerimin, ön kaydımın değerlendirilmesi ve benimle iletişime geçilmesi amacıyla Apikültür Vakfı tarafından işlenmesini kabul ediyorum. 18 yaşından küçüksem formu velimin onayıyla gönderiyorum.": "I agree that the information in this form may be processed by the Apiculture Foundation to review my pre-registration and to contact me. If I am under 18, I am submitting this form with my parent’s or guardian’s consent.",
+  "Ön Kaydı Gönder": "Send Pre-registration",
+  "Gönder’e bastığınızda bilgileriniz e-posta uygulamanızda hazır bir e-posta olarak açılır; göndermeniz yeterlidir.": "When you press Send, your details open as a ready-made email in your email app; all you need to do is send it.",
+  "E-posta taslağınız hazırlandı. Gönderdiğinizde ön kaydınız bize ulaşır.": "Your email draft is ready. Once you send it, your pre-registration will reach us.",
+  "Apikültür Gelecek Ön Kayıt": "Apiculture Future Pre-registration",
+  "Yeni programlar açıldığında bu sayfadaki Açık Programlar bölümünde yayımlanır. Bu süre içinde ön kayıt formunu doldurabilirsiniz.": "New programmes are published in the Open Programmes section of this page when they open. In the meantime, you can fill in the pre-registration form.",
+  "Kısaca anlatın": "Tell us briefly",
+}
+T.update(T_FORM)

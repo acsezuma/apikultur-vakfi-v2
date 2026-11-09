@@ -1,0 +1,11 @@
+# apikulturvakfi.org (cPanel / Apache)
+# Klasörde eski bir index.php kalmışsa bile ana sayfa olarak index.html açılsın
+DirectoryIndex index.html
+
+# Türkçe karakterler doğru görünsün
+AddDefaultCharset UTF-8
+
+# SSL (https) sertifikası aktif olduktan sonra aşağıdaki üç satırın başındaki # işaretini kaldırın:
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
