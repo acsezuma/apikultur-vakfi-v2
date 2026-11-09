@@ -51,7 +51,7 @@ Senet yalnızca Türkçedir (`senet.html`) ve yalnızca Yönetim & Şeffaflık s
 
 - Canlı adres: **https://apikulturvakfi.org/** (cPanel hesabı: `apikulturvakfi`, sunucu `lin4.domainhizmetleri.com`, klasör `public_html/`). GitHub Pages adresi önizleme olarak çalışmaya devam eder; sayfalardaki canonical adresler .org'u gösterir.
 - `main` dalına her gönderimde `.github/workflows/yayin.yml` siteyi FTPS ile sunucuya yükler (`_gelistirme`, `.github`, `README.md` ve zip dosyaları hariç). Şifre repoda değil, GitHub → Settings → Secrets and variables → Actions → `FTP_PASSWORD` içindedir. Şifre değişirse yalnızca bu secret güncellenir. Elle tetiklemek için: Actions → "Canlıya yayın" → Run workflow.
-- `.htaccess`: ana sayfa olarak `index.html` açılır. SSL sertifikası aktif olunca dosyadaki https yönlendirme satırları açılmalı.
+- `.htaccess`: ana sayfa olarak `index.html` açılır. SSL aktif; http → https yönlendirmesi cPanel'de açık (dosyadaki yönlendirme satırları bu yüzden yorumda).
 - Adresler `build_pages.py` → `BASE_URL`, `build_en.py` → `BASE`, `index_base.html`, `robots.txt`, `senet.html` içinde.
 
 ## 3. Apikültür Gelecek: açık program ekleme

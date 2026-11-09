@@ -5,7 +5,8 @@ DirectoryIndex index.html
 # Türkçe karakterler doğru görünsün
 AddDefaultCharset UTF-8
 
-# SSL (https) sertifikası aktif olduktan sonra aşağıdaki üç satırın başındaki # işaretini kaldırın:
+# https yönlendirmesi cPanel'de (Domains → Force HTTPS Redirect) açık; burada tekrar açmaya gerek yok.
+# cPanel ayarı kapatılırsa aşağıdaki üç satırın başındaki # işareti kaldırılabilir:
 # RewriteEngine On
 # RewriteCond %{HTTPS} off
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
