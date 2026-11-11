@@ -5,6 +5,9 @@ DirectoryIndex index.html
 # Türkçe karakterler doğru görünsün
 AddDefaultCharset UTF-8
 
+# SVG logolar ve favicon resim olarak sunulsun
+AddType image/svg+xml .svg
+
 # https yönlendirmesi cPanel'de (Domains → Force HTTPS Redirect) açık; burada tekrar açmaya gerek yok.
 # cPanel ayarı kapatılırsa aşağıdaki üç satırın başındaki # işareti kaldırılabilir:
 # RewriteEngine On
