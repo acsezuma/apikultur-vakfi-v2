@@ -20,7 +20,7 @@ NGO_EN = '''<script type="application/ld+json">
   "name": "Apiculture Foundation",
   "alternateName": "Apikültür Vakfı",
   "url": "https://apikulturvakfi.org/en/",
-  "logo": "https://apikulturvakfi.org/assets/logo.png",
+  "logo": "https://apikulturvakfi.org/assets/logo-en.png",
   "email": "info@apikulturvakfi.org",
   "telephone": "+90 212 222 0 222",
   "description": "An independent, non-profit foundation working through science, education and cooperation for beekeeping, pollination and sustainable living."
@@ -85,6 +85,10 @@ def build(fname):
         if v not in SUBJ: problems.append(f"{fname}: konu çevrilmedi: {v}"); return m.group(0)
         return "subject=" + quote(SUBJ[v])
     s = re.sub(r'(?<=href="mailto:info@apikulturvakfi.org\?)subject=([^"]*)', subj, s)
+    # İngilizce logo (header + footer)
+    n = s.count('src="assets/logo.png"')
+    if n != 2: problems.append(f"{fname}: logo {n}")
+    s = s.replace('src="assets/logo.png"', 'src="assets/logo-en.svg"')
     # yollar: varlıklar ve senet üst dizinde, sayfalar İngilizce adlarla
     s = re.sub(r'(src|href)="assets/', r'\1="../assets/', s)
     s = s.replace('href="senet.html"', 'href="../senet.html"')
